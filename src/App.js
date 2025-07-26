@@ -38,7 +38,7 @@ function App() {
       <div className='mainWrapper'>
         <Navbar activePage={curPage} switchPage={(page) => setCurPage(page)} />
         {loadPage()}
-        <Footer />
+        {/* <Footer /> */}
 
 
       </div>

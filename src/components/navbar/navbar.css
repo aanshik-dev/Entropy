@@ -169,6 +169,7 @@
 
 .burger>span {
   transition: all 0.3s ease;
+  display: flex;
 }
 
 .burger:hover>span {
@@ -201,12 +202,10 @@
   background-color: rgba(0, 0, 0, 0.8);
   overflow-y: scroll;
   scrollbar-width: none;
-  /* display: none; */
   visibility: hidden;
 }
 
 .dim-show {
-  /* display: block; */
   visibility: visible;
 }
 
@@ -401,4 +400,9 @@
 
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+  .burger {
+    font-size: 30px;
+  }
+
+}
