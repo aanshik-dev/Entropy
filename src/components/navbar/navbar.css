@@ -18,6 +18,7 @@
   user-select: none;
   /* overflow: hidden; */
   text-wrap: nowrap;
+  transition: all 0.2s ease-in-out;
 }
 
 #navParticles {
@@ -52,13 +53,15 @@
 
 .logo {
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .logo>img {
-  height: 100%;
+  height: 80%;
   aspect-ratio: 1;
   object-fit: contain;
-  transform: scale(0.7) translateY(-1px);
+  transform: translateY(-1px);
   transition: all 0.2s ease;
 }
 
@@ -147,7 +150,7 @@
   position: absolute;
   right: 0px;
   top: 50%;
-  transform: translate(120%, -50%);
+  transform: translate(100%, -50%);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -186,7 +189,7 @@
   top: 0px;
   right: 0px;
   transform: translate(-50%, 50%);
-  font-size: 35px;
+  font-size: 25px;
   background-color: #7b00ff;
 
   color: #ffffff;
@@ -200,9 +203,9 @@
   top: 0;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.8);
-  overflow-y: scroll;
   scrollbar-width: none;
   visibility: hidden;
+  overflow-y: scroll;
 }
 
 .dim-show {
@@ -210,9 +213,6 @@
 }
 
 .sidebar {
-  width: 30%;
-  min-width: 350px;
-  /* height: 100vh; */
   background: linear-gradient(120deg, rgba(31, 0, 49, 0.7), rgba(9, 0, 15, 0.7));
   border-left: 1px solid #470180;
   border-bottom: 1px solid #470180;
@@ -233,7 +233,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px 20px 20px;
+  padding: 60px 20px 20px;
   gap: 20px;
   border-bottom: 1px solid #470180;
 }
@@ -368,17 +368,8 @@
 
 @media (max-width: 1200px) {
 
-
   .navBox {
-    padding: 0px 35px 0px 20px;
-  }
-
-  .navLeft {
-    gap: 0px;
-  }
-
-  .logo>img {
-    transform: scale(0.6);
+    padding: 0px 30px;
   }
 
   .entropyTitle {
@@ -401,8 +392,74 @@
 }
 
 @media (max-width: 480px) {
+
+  .desktopNav {
+    height: 50px;
+  }
+
+  .navLeft {
+    gap: 10px;
+  }
+
+  .entropyTitle {
+    font-size: 20px;
+  }
+
+  .logo>img {
+    height: 70%;
+  }
+
+  .navBox {
+    padding: 0px 15px 0px 15px;
+  }
+
   .burger {
+    right: 20px;
     font-size: 30px;
+  }
+
+  .phHeader {
+    padding: 60px 15px 15px;
+  }
+
+  .phLogo>img {
+    height: 30px;
+  }
+
+  .phEntropy {
+    font-size: 18px;
+
+    span {
+      font-size: 14px;
+      margin: 0px;
+    }
+  }
+
+  .phDes {
+    margin: 0px;
+  }
+
+  .phTag {
+    font-size: 14px;
+  }
+
+  .phDates {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .phTab {
+    padding: 15px;
+  }
+
+  .phHead {
+    font-size: 14px;
+    margin: 15px 5px;
+  }
+
+  .phLink{
+    font-size: 18px;
+    padding: 6px 15px;
   }
 
 }
