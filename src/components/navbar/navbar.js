@@ -2,6 +2,7 @@ import './navbar.css';
 import Logo from '../../assets/Entropy.webp';
 import NavParticles from '../NavParticles';
 import React, { useState } from 'react';
+import { Icon } from '@iconify/react/dist/iconify.js';
 
 
 
@@ -22,37 +23,49 @@ const Navbar = ({ activePage, switchPage }) => {
 
   return (
     <nav className='navbar'>
-      <div className="navBox">
-        <div className="navLeft">
-          <div className="logo">
-            <img src={Logo} alt="" />
-          </div>
-          <div className="entropyTitle">
-            Entropy<span>2025</span>
-          </div>
-        </div>
+      <div className="desktopNav">
 
-        <div className="navRight">
-
-          <div className="navTabs">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.path}
-                className={`page-link`}
-                style={activePage === item.path ? active : {}}
-                onClick={(e) => {
-                  e.preventDefault();
-                  switchPage(item.path);
-                }}
-              >
-                {item.name}
-              </a>
-            ))}
+        <div className="navBox">
+          <div className="navLeft">
+            <div className="logo">
+              <img src={Logo} alt="" />
+            </div>
+            <div className="entropyTitle">
+              Entropy<span>2025</span>
+            </div>
           </div>
-          <div className="sideButton">Register</div>
+
+          <div className="navRight">
+            <div className="filler1"></div>
+            <div className="navTabs">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.path}
+                  className={`page-link`}
+                  style={activePage === item.path ? active : {}}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    switchPage(item.path);
+                  }}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+            <div className="filler"></div>
+
+            <div className="sideButton">Register</div>
+          </div>
         </div>
       </div>
+
+      <div className="burger">
+        <Icon icon="duo-icons:app-dots" className='burgerIcon'/>
+      </div>
+
+      {/* <div className="phoneNav"> */}
+      {/* </div> */}
     </nav>
   );
 };

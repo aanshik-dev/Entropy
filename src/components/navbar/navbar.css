@@ -1,14 +1,22 @@
 .navbar {
+  position: relative;
+  overflow: hidden;
+}
+
+.desktopNav {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 65px;
   background-image: linear-gradient(90deg, #1F0031, #09000f);
-  z-index: 10;
+  z-index: 5;
   position: relative;
   border-bottom: 1px solid #470180;
   box-shadow: 0 2px 50px rgba(31, 0, 49, 0.5);
   backdrop-filter: blur(8px);
   user-select: none;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-wrap: nowrap;
 }
 
@@ -29,6 +37,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
 }
 
 .navLeft {
@@ -36,6 +46,8 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  align-self: flex-start;
+  transition: all 0.2s ease;
 }
 
 .logo {
@@ -46,7 +58,8 @@
   height: 100%;
   aspect-ratio: 1;
   object-fit: contain;
-  transform: scale(0.8) translateY(-1px);
+  transform: scale(0.7) translateY(-1px);
+  transition: all 0.2s ease;
 }
 
 .entropyTitle {
@@ -55,6 +68,7 @@
   font-family: 'Lexend Exa', 'Inter', sans-serif;
   font-size: 30px;
   font-weight: 600;
+  letter-spacing: -1px;
 
   span {
     color: #ffcc00;
@@ -64,18 +78,30 @@
 
 .navRight {
   display: flex;
-  gap: 120px;
+  flex: 1;
   align-items: center;
   height: 100%;
+  transition: all 0.3s ease;
 }
 
+.filler1 {
+  height: 100%;
+  flex: 2;
+}
+
+.filler {
+  height: 100%;
+  flex: 1;
+}
 
 .navTabs {
   height: 100%;
   display: flex;
-  gap: 40px;
-  justify-content: right;
+  gap: calc(max(15px, 2.5vw));
+  justify-content: center;
   align-items: center;
+  transition: all 0.2s ease;
+  margin: 0px 20px;
 }
 
 .page-link {
@@ -105,4 +131,103 @@
   border-radius: 10px;
   color: rgb(0, 0, 0);
   background: linear-gradient(to right, #ffcc00, #EA00FF);
+}
+
+.burger {
+  font-size: 35px;
+  color: #ffffff;
+  display: flex;
+  z-index: 10;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translate(120%, -50%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.burgerIcon {
+  font-size: 2rem;
+  position: relative;
+  color: #ffffff; /* Default color */
+  transition: all 0.3s ease;
+}
+
+.burger:hover .burgerIcon {
+  color: transparent;
+}
+
+.burger::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #ff8a00, #e52e71);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.burger:hover::after {
+  opacity: 1;
+}
+
+/* Mask the gradient to the icon shape */
+.burger {
+  -webkit-mask: url("data:image/svg+xml,...") no-repeat center;
+  mask: url("data:image/svg+xml,...") no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+
+
+
+
+
+.phoneNav {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 120;
+  /* background-color: #ea00ff74; */
+}
+
+
+@media (max-width: 1200px) {
+
+
+  .navBox {
+    padding: 0px 35px 0px 20px;
+  }
+
+  .navLeft {
+    gap: 0px;
+  }
+
+  .logo>img {
+    transform: scale(0.6);
+  }
+
+  .entropyTitle {
+    font-size: 25px;
+  }
+
+
+}
+
+@media (max-width: 980px) {
+  .navRight {
+    transform: translateX(120%);
+  }
+
+  .burger {
+    right: 40px;
+    transform: translate(0%, -50%);
+  }
+
 }
