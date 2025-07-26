@@ -1,7 +1,8 @@
+import { use, useRef } from 'react';
 import './navbar.css';
-import Logo from '../../assets/Entropy.webp';
+
 import NavParticles from '../NavParticles';
-import React, { useState } from 'react';
+import Logo from '../../assets/Entropy.webp';
 import { Icon } from '@iconify/react/dist/iconify.js';
 
 
@@ -9,17 +10,30 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 const Navbar = ({ activePage, switchPage }) => {
 
   const navItems = [
-    { name: 'Home', path: 'home' },
-    { name: 'Events', path: 'events' },
-    { name: 'Sponsors', path: 'sponsors' },
-    { name: 'Team', path: 'team' },
-    { name: 'Contact Us', path: 'contacts' }
+    { name: 'Home', path: 'home', icon: 'typcn:home' },
+    { name: 'Events', path: 'events', icon: 'ep:list' },
+    { name: 'Sponsors', path: 'sponsors', icon: 'solar:hand-money-bold' },
+    { name: 'Team', path: 'team', icon: 'fluent:people-team-16-filled' },
+    { name: 'Contact Us', path: 'contacts', icon: 'icon-park-outline:customer' },
   ];
 
-  const active = {
-    opacity: 1,
-    fontWeight: 600
-  };
+  const dim = useRef(null);
+  const sideBar = useRef(null);
+  const iBurger = useRef(null);
+
+  const toggleSidebar = (t1, t2, t3) => {
+    setTimeout(() => {
+      dim.current.classList.toggle('dim-show');
+    }, t1)
+    setTimeout(() => {
+      sideBar.current.classList.toggle('nav-show');
+    }, t2)
+    setTimeout(() => {
+      iBurger.current.classList.toggle('burger-click');
+    }, t3)
+  }
+
+
 
   return (
     <nav className='navbar'>
@@ -28,7 +42,7 @@ const Navbar = ({ activePage, switchPage }) => {
         <div className="navBox">
           <div className="navLeft">
             <div className="logo">
-              <img src={Logo} alt="" />
+              <img src={Logo} alt="Entropy" />
             </div>
             <div className="entropyTitle">
               Entropy<span>2025</span>
@@ -42,8 +56,7 @@ const Navbar = ({ activePage, switchPage }) => {
                 <a
                   key={item.name}
                   href={item.path}
-                  className={`page-link`}
-                  style={activePage === item.path ? active : {}}
+                  className={`page-link ${activePage === item.path ? 'navActive' : 'navHover'}`}
                   onClick={(e) => {
                     e.preventDefault();
                     switchPage(item.path);
@@ -60,13 +73,80 @@ const Navbar = ({ activePage, switchPage }) => {
         </div>
       </div>
 
-      <div className="burger">
-        <Icon icon="duo-icons:app-dots" className='burgerIcon'/>
+      <div className="burger" onClick={(e) => {
+        e.stopPropagation();
+        toggleSidebar(300, 300, 0);
+      }}> <span>
+          <Icon icon="duo-icons:app-dots" ref={iBurger} className='burgerIcon' />
+        </span>
       </div>
 
-      {/* <div className="phoneNav"> */}
-      {/* </div> */}
-    </nav>
+      <div className="phoneNav" ref={dim} onClick={(e) => {
+        e.stopPropagation();
+        toggleSidebar(200, 0, 300);
+      }}>
+
+        <div className="sidebar" ref={sideBar} onClick={(e) => e.stopPropagation()}>
+          <div className="phClose" onClick={(e) => {
+            e.stopPropagation();
+            toggleSidebar(200, 0, 300);
+          }}>
+            <Icon icon="mingcute:close-fill" />
+          </div>
+          <div className="phHeader">
+            <div className="phTitle">
+              <div className="phLogo">
+                <img src={Logo} alt="Entropy" />
+              </div>
+              <div className="phEntropy">
+                Entropy<span>2025</span>
+              </div>
+            </div>
+            <div className="phDes">
+              <div className="phTag">Tech Fest</div>
+              <div className="phDates">October 15-17, 2025</div>
+            </div>
+          </div>
+
+          <div className="phTab">
+            <div className="phHead">Navigation</div>
+            <div className="phNav">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.path}
+                  className={"phLink " + (activePage === item.path ? "phActive" : "phHover")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    switchPage(item.path);
+                    toggleSidebar(200, 0, 300);
+                  }}
+                >
+                  <Icon icon={item.icon} />
+                  {item.name}
+                </a>
+              ))}
+            </div>
+            <div className="phHead">Social</div>
+
+            <div className="phSocial">
+              <a href="https://www.instagram.com/entropy.iiitg/" target='_blank'>
+                <Icon icon="simple-icons:instagram" />
+              </a>
+              <a href="https://www.linkedin.com/company/entropy-iiitg" target='_blank'>
+                <Icon icon="simple-icons:linkedin" />
+              </a>
+              <a href="https://www.facebook.com/entropyiiitg" target='_blank'>
+                <Icon icon="simple-icons:facebook" />
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </nav >
   );
 };
 

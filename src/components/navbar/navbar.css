@@ -116,7 +116,13 @@
   transition: all 0.3s ease;
 }
 
-.page-link:hover {
+
+.navActive {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.navHover:hover {
   transform: scale(0.9);
   opacity: 0.75;
 }
@@ -146,56 +152,219 @@
   transition: all 0.3s ease;
 }
 
-
 .burgerIcon {
-  font-size: 2rem;
-  position: relative;
-  color: #ffffff; /* Default color */
   transition: all 0.3s ease;
 }
 
-.burger:hover .burgerIcon {
-  color: transparent;
+.burgerIcon>path:nth-child(1) {
+  color: #ffcc00;
+  z-index: 10;
 }
 
-.burger::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, #ff8a00, #e52e71);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.burger:hover::after {
+.burgerIcon>path:nth-child(2) {
+  position: relative;
+  color: #AE22FF;
   opacity: 1;
 }
 
-/* Mask the gradient to the icon shape */
-.burger {
-  -webkit-mask: url("data:image/svg+xml,...") no-repeat center;
-  mask: url("data:image/svg+xml,...") no-repeat center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
+.burger>span {
+  transition: all 0.3s ease;
+}
+
+.burger:hover>span {
+  transform: scale(1.1);
+}
+
+.burger-click {
+  transform: rotate(180deg);
 }
 
 
+.phClose>* {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform: translate(-50%, 50%);
+  font-size: 35px;
+  background-color: #7b00ff;
 
-
-
+  color: #ffffff;
+  cursor: pointer;
+}
 
 .phoneNav {
   height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 120;
-  /* background-color: #ea00ff74; */
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* display: none; */
+  visibility: hidden;
 }
+
+.dim-show {
+  /* display: block; */
+  visibility: visible;
+}
+
+.sidebar {
+  width: 30%;
+  min-width: 350px;
+  /* height: 100vh; */
+  background: linear-gradient(120deg, rgba(31, 0, 49, 0.7), rgba(9, 0, 15, 0.7));
+  border-left: 1px solid #470180;
+  border-bottom: 1px solid #470180;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  right: 0;
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+}
+
+.nav-show {
+  transform: translateX(0%);
+}
+
+
+.phHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 20px 20px;
+  gap: 20px;
+  border-bottom: 1px solid #470180;
+}
+
+.phTitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.phLogo>img {
+  height: 50px;
+}
+
+.phEntropy {
+  color: #ffffff;
+  font-family: 'Lexend Exa', 'Inter', sans-serif;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -1px;
+
+  span {
+    font-size: 20px;
+    display: block;
+    color: #ffcc00;
+    margin: 5px 0px;
+  }
+}
+
+.phDes {
+  border-radius: 10px;
+  /* flex: 1; */
+  color: #ffffff;
+  background-color: #230039;
+  padding: 15px 20px;
+  margin: 10px;
+}
+
+.phTag {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: 'Inter', 'Nunito Sans', sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.phDates {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-family: 'Inter', 'Nunito Sans', sans-serif;
+}
+
+.phTab {
+  padding: 20px;
+}
+
+.phHead {
+  color: #ffcc00;
+  font-size: 16px;
+  font-family: 'Inter', 'Nunito Sans', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 20px 5px;
+}
+
+
+.phNav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+.phLink {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'AR one sans', 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  text-decoration: none;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  transition: opacity 0.3s ease;
+}
+
+.phActive {
+  opacity: 1;
+  font-weight: 600;
+  background: linear-gradient(90deg, rgba(84, 0, 162, 0.3), rgba(57, 0, 65, 0.3));
+  border: 1px solid #470180;
+}
+
+.phHover:hover {
+  border: 1px solid #470180;
+  opacity: 0.75;
+}
+
+
+
+.phSocial {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0px 10px 50px;
+}
+
+.phSocial>a {
+  text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  padding: 8px;
+  border-radius: 5px;
+  opacity: 0.8;
+  background: linear-gradient(45deg, #7b00ff,
+      #ae00ff 100%);
+
+  * {
+    color: #FFFFFF;
+  }
+}
+
 
 
 @media (max-width: 1200px) {
@@ -231,3 +400,5 @@
   }
 
 }
+
+@media (max-width: 480px) {}
