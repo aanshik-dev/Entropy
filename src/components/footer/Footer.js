@@ -17,6 +17,7 @@ const Footer = () => {
       <footer className='footer'>
         <div className="footerBody">
           <div className="footerWrapper">
+
             <div className="media">
               <div className="logos">
                 <img src={Logo} alt="Entropy" />
@@ -29,17 +30,20 @@ const Footer = () => {
                 <div className="footDes">
                   IIITG’s biggest tech fest of the year, packed with workshops, thrilling competitions, and exciting prizes.
                 </div>
+
+
                 <div className="social">
-                  <a href="https://www.instagram.com/entropy.iiitg/" target='_blank'>
-                    <Icon icon="simple-icons:instagram" />
-                  </a>
-                  <a href="https://www.facebook.com/entropyiiitg" target='_blank'>
-                    <Icon icon="simple-icons:facebook" />
-                  </a>
-                  <a href="https://www.linkedin.com/company/entropy-iiitg" target='_blank'>
+                  <a href="https://www.linkedin.com/company/entropy-iiitg" target='_blank' className='linkedin' rel='noopener noreferrer'>
                     <Icon icon="simple-icons:linkedin" />
                   </a>
+                  <a href="https://www.instagram.com/entropy.iiitg/" target='_blank' rel='noopener noreferrer' className='insta' >
+                    <Icon icon="simple-icons:instagram" />
+                  </a>
+                  <a href="https://www.facebook.com/entropyiiitg" target='_blank' rel='noopener noreferrer' className='facebook'>
+                    <Icon icon="simple-icons:facebook" />
+                  </a>
                 </div>
+
               </div>
 
             </div>
@@ -51,22 +55,18 @@ const Footer = () => {
                 Quick Links
               </div>
               <div className="links">
-                <div className="leftLinks">
-                  <div onClick={() => { }} className="link">Home</div>
-                  <div onClick={() => { }} className="link">Events</div>
-                  <div onClick={() => { }} className="link">Sponsors</div>
-                  <div onClick={() => { }} className="link">Team</div>
-                  <div onClick={() => { }} className="link">Contacts</div>
-                  <div onClick={() => { }} className="link">FAQs</div>
-                </div>
-                <div className="rightLinks">
-                  <div onClick={() => { }} className="link">Hackathon</div>
-                  <div onClick={() => { }} className="link">Notification</div>
-                  <div onClick={() => { }} className="link">Results</div>
-                  <div onClick={() => { }} className="link">Registration</div>
-                  <div onClick={() => { }} className="link">MicroMouse</div>
-                  <div onClick={() => { }} className="link">Workshop</div>
-                </div>
+                <div onClick={() => { }} className="link">Home</div>
+                <div onClick={() => { }} className="link">Sponsors</div>
+                <div onClick={() => { }} className="link">Events</div>
+                <div onClick={() => { }} className="link">Contacts</div>
+                <div onClick={() => { }} className="link">Team</div>
+                <div onClick={() => { }} className="link">Hackathon</div>
+                <div onClick={() => { }} className="link">FAQs</div>
+                <div onClick={() => { }} className="link">Notification</div>
+                <div onClick={() => { }} className="link">Results</div>
+                <div onClick={() => { }} className="link">Registration</div>
+                <div onClick={() => { }} className="link">MicroMouse</div>
+                <div onClick={() => { }} className="link">Workshop</div>
               </div>
 
             </div>
@@ -116,7 +116,7 @@ const Footer = () => {
                 <span>
                   <Icon icon="ic:baseline-tips-and-updates" />
                 </span>
-                Stay Updated
+                Stay Tuned
               </div>
               <div className="subDes">
                 Subscribe to our newsletter for the latest updates.
