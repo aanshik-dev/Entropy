@@ -9,7 +9,7 @@
   left: 0;
   width: 100%;
   height: 65px;
-  background-image: linear-gradient(90deg, #1F0031, #09000f);
+  background-image: linear-gradient(90deg, #1f00318f, #09000f);
   z-index: 5;
   position: relative;
   border-bottom: 1px solid #470180;
@@ -65,19 +65,61 @@
   transition: all 0.2s ease;
 }
 
-.entropyTitle {
-  color: #AE22FF;
-  text-transform: uppercase;
+.logoText {
   font-family: 'Lexend Exa', 'Inter', sans-serif;
   font-size: 30px;
   font-weight: 600;
   letter-spacing: -1px;
+}
 
-  span {
-    color: #ffcc00;
-    margin-left: 10px;
+.entropyTitle {
+  color: #ae22ffb6;
+  background: linear-gradient(120deg,
+      rgb(255, 255, 255, 0) 40%,
+      rgb(231, 224, 234) 50%,
+      rgb(255, 255, 255, 0) 60%);
+  background-size: 200% 100%;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+}
+
+.year-title {
+  color: #ffcc00a3;
+  margin-left: 10px;
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 40%,
+      rgb(255, 255, 246) 50%,
+      rgba(255, 255, 255, 0) 60%);
+  background-size: 200% 100%;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+  animation-delay: 1s;
+}
+
+
+
+.entropyTitle {
+  /* display: inline-block; */
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+
+  50% {
+    background-position: -90%;
+  }
+
+  100% {
+    background-position: -90%;
   }
 }
+
 
 .navRight {
   display: flex;
@@ -457,7 +499,7 @@
     margin: 15px 5px;
   }
 
-  .phLink{
+  .phLink {
     font-size: 18px;
     padding: 6px 15px;
   }

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ParticlesBackground from './components/BgParticles';
 import './App.css';
 
+import ClickSpark from './components/ClickSpark';
 // Pages And Components
 import Navbar from './components/navbar/navbar'
 import Home from './pages/Home/Home';
@@ -35,13 +36,26 @@ function App() {
 
   return (
     <>
-      <div className='mainWrapper'>
-        <Navbar activePage={curPage} switchPage={(page) => setCurPage(page)} />
-        {loadPage()}
-        <Footer />
 
 
-      </div>
+      <ClickSpark
+        sparkColor='#fff'
+        sparkSize={10}
+        sparkRadius={15}
+        sparkCount={8}
+        duration={400}
+      >
+        {/* Your content here */}
+
+        <div className='mainWrapper'>
+          <Navbar activePage={curPage} switchPage={(page) => setCurPage(page)} />
+          {loadPage()}
+          <Footer />
+
+
+
+        </div>
+      </ClickSpark>
     </>
   );
 }

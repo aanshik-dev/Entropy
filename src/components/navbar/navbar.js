@@ -44,8 +44,9 @@ const Navbar = ({ activePage, switchPage }) => {
             <div className="logo">
               <img src={Logo} alt="Entropy" />
             </div>
-            <div className="entropyTitle">
-              Entropy<span>2025</span>
+            <div className='logoText'>
+              <span className="entropyTitle">Entropy</span>
+              <span className="year-title">2025</span>
             </div>
           </div>
 

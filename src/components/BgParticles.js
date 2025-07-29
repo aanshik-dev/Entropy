@@ -8,7 +8,7 @@ const ParticleBackground = () => {
 
   useEffect(() => {
     const computeParticles = () => {
-      const num = Math.floor(window.innerWidth * window.innerHeight / 3000);
+      const num = Math.floor(window.innerWidth * window.innerHeight / 5000);
       setCount(num);
     };
     computeParticles();
@@ -43,13 +43,13 @@ const ParticleBackground = () => {
         enable: true
       },
       color: {
-        value: ["#5ae4ffff", "#99f5ffff", "#46F0F1"]
+        value: ["#c05affff", "#8400ffff", "#f1d446ff"]
       },
       shape: {
-        type: "circle"
+        type: ["circle"]
       },
       opacity: {
-        value: { min: 0.1, max: 0.35 },
+        value: { min: 0.1, max: 0.3 },
         random: true,
         anim: {
           enable: true,
@@ -59,7 +59,7 @@ const ParticleBackground = () => {
         }
       },
       size: {
-        value: { min: 2, max: 3 },
+        value: { min: 5, max: 25 },
         random: true,
         anim: {
           enable: true,
@@ -69,15 +69,16 @@ const ParticleBackground = () => {
         }
       },
       links: {
+        random: true,
         enable: true,
-        distance: 100,
-        color: "#3a86ff",
-        opacity: 0.2,
+        distance: 90,
+        color: ["#c500aeff", "#933affff", "#853affff"],
+        opacity: 0.8,
       },
       move: {
         enable: true,
-        speed: 0.3,
-        direction: "none",
+        speed: 1,
+        direction: "left",
         random: true,
         straight: false,
         outMode: "wrap",
@@ -95,11 +96,11 @@ const ParticleBackground = () => {
       events: {
         onHover: {
           enable: true,
-          mode: "bubble",
+          mode: ["bubble"],
           parallax: {
             enable: true,
-            force: 30,
-            smooth: 10
+            force: 100,
+            smooth: 50
           }
         },
         onClick: {
@@ -111,13 +112,13 @@ const ParticleBackground = () => {
       modes: {
         bubble: {
           distance: 200,
-          size: 6,
+          size: 10,
           duration: 2,
           opacity: 0.8,
           speed: 2
         },
         attract: {
-          enable: false
+          enable: true
         },
         push: {
           quantity: 1

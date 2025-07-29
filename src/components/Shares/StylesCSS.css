@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #13002d;
+  color: white;
+}
+
+.timeline {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+
+
+.day-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background-color: white;
+  margin: 0 1rem;
+}
+
+
+.day-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #ffcc00;
+  text-transform: uppercase;
+  margin: 3rem 0 2rem;
+  background: transparent;
+  position: relative;
+}
+
+/* Add horizontal lines before and after the label */
+.day-label::before,
+.day-label::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: #ffcc00;
+  margin: 0 1rem;
+}
+
+
+.event {
+  display: flex;
+  margin-bottom: 4rem;
+  align-items: stretch;
+}
+
+.time-block {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  z-index: 2;
+}
+
+.icon-circle.pink {
+  background: #ff00c8;
+}
+
+.icon-circle.orange {
+  background: #ffa600;
+}
+
+
+
+.time-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.time-label.pink {
+  color: #ff00c8;
+}
+
+.time-label.orange {
+  color: #ffa600;
+}
+
+.vertical-line {
+  width: 3px;
+  height: 100%;
+  flex-grow: 1;
+  margin-top: 4px;
+}
+
+.vertical-line.pink {
+  background: linear-gradient(to bottom, #ff00c8, #ff88e1);
+}
+
+.vertical-line.orange {
+  background: linear-gradient(to bottom, #ffa600, #ffcc66);
+}
+
+.icon-circle.purple {
+  background: #a020f0; /* Or any purple shade you prefer */
+  color: #fff;
+}
+
+.time-label.purple {
+  color: #a020f0;
+}
+
+.vertical-line.purple {
+  background: linear-gradient(to bottom, #a020f0, #ffb6ff);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.05); /* Transparent card effect */
+  backdrop-filter: blur(12px); /* Glassmorphism blur */
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Soft border */
+  transition: 0.3s ease;
+}
+
+.content img {
+  width: 180px;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.content-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #eee;
+}
+
+.tag {
+  font-size: 0.75rem;
+  background: rgba(255, 0, 200, 0.2);
+  color: #ff00c8;
+  font-weight: bold;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 0.4rem;
+  max-width: fit-content;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 0.8rem;
+}
+
+.location::before {
+  content: '\f3c5'; /* FontAwesome location icon */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  color:#ccc;
+  margin-bottom: 1rem;
+}
+
+.button {
+  align-self: flex-start;
+  background: linear-gradient(to right, #7a00ff, #bc00ff);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 0 12px #a700ff8a;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button-wrapper {
+  margin-top: auto; /* pushes it to the bottom */
+  display: flex;
+  justify-content: flex-end; /* aligns button to the right */
+}
+
+
+.button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #9a00ff, #d500ff);
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto 2rem;
+  max-width: 1000px;
+  gap: 1rem;
+}
+
+.section-header .line {
+  flex: 1;
+  height: 2px;
+  background-color: white;
+}
+
+.section-header h2 {
+  color: #ff00c8;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.section-header h2 span {
+  color: white;
+}
+.purple-line .line {
+  background: linear-gradient(to right, #a020f0, #ffb6ff);
+}

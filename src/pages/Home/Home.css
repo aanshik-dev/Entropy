@@ -1,0 +1,285 @@
+.home {
+  width: 100%;
+}
+
+.h-hero-content {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.h-hero-mask {
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  /* This is the key */
+  -webkit-mask-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7));
+  mask-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7));
+
+  /* Ensures the mask covers entire area */
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+#tsparticles {
+  width: 100%;
+  height: 100%;
+}
+
+.h-hero {
+  width: 100%;
+  padding: 8vw;
+}
+
+.h-hero-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.h-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.count-up-text {
+  font-size: 50px;
+  color: #ffffff;
+}
+
+.h-hero-btns {
+  display: flex;
+  gap: 30px;
+}
+
+.h-regBtn {
+  margin-top: 40px;
+  padding: 13px 30px 10px;
+  position: relative;
+  color: #ffffff00;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  font-family: 'Nunito Sans', 'Maven Pro', sans-serif;
+  text-transform: uppercase;
+  background-image: linear-gradient(90deg, #8C00ff, #320055);
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  text-wrap: nowrap;
+}
+
+.h-regBtn::before {
+  background: #9900ff;
+  content: "";
+  position: absolute;
+  top: 200%;
+  left: -50%;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+  width: 100%;
+  height: 400%;
+  filter: blur(15px);
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.h-regBtn::after {
+  content: "Register Now";
+  padding: 13px 30px 10px;
+  position: absolute;
+  color: #ffffff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  transition: all 0.2s ease-out;
+  width: 100%;
+  height: 100%;
+}
+
+.h-regBtn:hover::before {
+  height: 10%;
+  top: -10%;
+  left: 110%;
+}
+
+.h-regBtn:hover {
+  transform: scale(1.05);
+}
+
+.h-eventBtn {
+  margin-top: 40px;
+  padding: 13px 30px 10px;
+  /* position: relative; */
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 400;
+  border: 2px solid #8C00ff;
+  font-family: 'Nunito Sans', 'Maven Pro', sans-serif;
+  text-transform: uppercase;
+  background: none;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  text-wrap: nowrap;
+  position: relative;
+}
+
+.h-eventBtn::after, .h-eventBtn::before {
+  background: linear-gradient(90deg, #8C00ff, #320055);
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-70%, -50%);
+  z-index: -1;
+  transition: all 0.3s ease-out;
+  width: 100%;
+  height: 100%;
+  filter: blur(15px);
+}
+
+.h-eventBtn::after {
+  background: linear-gradient(-90deg, #8C00ff, #320055);
+  z-index: -5;
+  transform: translate(70%, 50%);
+}
+
+.h-eventBtn:hover::before {
+  transform: translate(-50%, -20%);
+}
+
+.h-eventBtn:hover::after {
+  transform: translate(50%, 20%);
+}
+
+.h-hero-updates {
+  display: flex;
+  align-items: center;
+  padding: 30px 5px;
+}
+
+.h-hero-live {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Nunito Sans', 'Maven Pro', sans-serif;
+  text-transform: uppercase;
+}
+
+.blink {
+  height: 15px;
+  width: 15px;
+  background-color: #ff0088;
+  margin-right: 20px;
+  border-radius: 50%;
+  animation: glow 2s ease-in-out infinite;
+  box-shadow: 0px 0px 10px #ff0088;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.h-title-wrap>h1 {
+  font-size: clamp(1.5rem, 15vw, 6rem);
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'Lexend Exa', 'Maven Pro', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.h-title-wrap>h1:nth-child(2) {
+  margin-top: -40px;
+}
+
+
+.h-title-wrap>h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-family: 'Maven Pro', 'Inter', sans-serif;
+  font-weight: 600;
+  padding: 0px 10px;
+  text-transform: uppercase;
+}
+
+
+.h-hero-anime>img {
+  height: 400px;
+  animation: Float 4s ease-in-out infinite;
+  transform: translateY(-20px);
+}
+
+
+@keyframes Float {
+  0% {
+    transform: translatey(20px) scale(1);
+  }
+
+  50% {
+    transform: translatey(-10px) scale(1.05);
+  }
+
+  100% {
+    transform: translatey(20px) scale(1);
+  }
+}
+
+
+.Intro {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #8400ff5d;
+  opacity: 0.5;
+}
+
+.Event {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(45deg, #7b00ff,
+      #ae00ff 100%);
+  opacity: 0.8;
+}
+
+.merch {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(45deg, #7b00ff,
+      #ae00ff 100%);
+  opacity: 0.5;
+}
