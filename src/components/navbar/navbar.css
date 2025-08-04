@@ -100,23 +100,17 @@
   animation-delay: 1s;
 }
 
-
-
-.entropyTitle {
-  /* display: inline-block; */
-}
-
 @keyframes shine {
   0% {
     background-position: 100%;
   }
 
   50% {
-    background-position: -90%;
+    background-position: -80%;
   }
 
   100% {
-    background-position: -90%;
+    background-position: -80%;
   }
 }
 
@@ -151,7 +145,7 @@
 
 .page-link {
   color: #ffffff;
-  font-size: 16x;
+  font-size: 16px;
   font-family: 'AR one sans', 'Inter', sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
@@ -159,8 +153,8 @@
   opacity: 0.6;
   text-decoration: none;
   transition: all 0.3s ease;
+  position: relative;
 }
-
 
 .navActive {
   opacity: 1;
@@ -172,9 +166,9 @@
   opacity: 0.75;
 }
 
-.sideButton {
+.navButton {
   display: inline-block;
-  padding: 4px 20px;
+  padding: 6px 20px 5px;
   text-transform: uppercase;
   font-family: 'nunito sans', 'Inter', sans-serif;
   font-weight: 700;
@@ -182,6 +176,13 @@
   border-radius: 10px;
   color: rgb(0, 0, 0);
   background: linear-gradient(to right, #ffcc00, #EA00FF);
+  text-align: center;
+}
+
+.phBtn {
+  font-size: 18px;
+  padding: 6px 20px;
+  margin: 5px 5px 20px;
 }
 
 .burger {
@@ -308,11 +309,10 @@
 
 .phDes {
   border-radius: 10px;
-  /* flex: 1; */
   color: #ffffff;
   background-color: #230039;
   padding: 15px 20px;
-  margin: 10px;
+  margin-top: 10px;
 }
 
 .phTag {
@@ -414,11 +414,9 @@
     padding: 0px 30px;
   }
 
-  .entropyTitle {
+  .logoText {
     font-size: 25px;
   }
-
-
 }
 
 @media (max-width: 980px) {
@@ -443,7 +441,7 @@
     gap: 10px;
   }
 
-  .entropyTitle {
+  .logoText {
     font-size: 20px;
   }
 

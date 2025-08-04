@@ -1,10 +1,13 @@
+:root{
+  --section-margin: 8vw;
+}
+
 .home {
   width: 100%;
 }
 
 .h-hero-content {
   width: 100%;
-  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,14 +21,10 @@
   left: 0;
   height: 100%;
   width: 50%;
-  /* This is the key */
   -webkit-mask-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7));
   mask-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7));
-
-  /* Ensures the mask covers entire area */
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
-
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
@@ -37,7 +36,7 @@
 
 .h-hero {
   width: 100%;
-  padding: 8vw;
+  padding: var(--section-margin);
 }
 
 .h-hero-wrapper {
@@ -52,31 +51,55 @@
   flex-direction: column;
 }
 
-.count-up-text {
-  font-size: 50px;
+.h-title-text, .h-title-year {
+  font-size: clamp(1.5rem, 15vw, 6rem);
+  font-weight: 700;
   color: #ffffff;
+  font-family: 'Lexend Exa', 'Maven Pro', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.tagline-wrap {
+  position: relative;
+  color: transparent;
+}
+
+.hero-tagline {
+  font-size: 1.8rem;
+  font-family: 'Maven Pro', 'Inter', sans-serif;
+  font-weight: 600;
+  padding: 10px 5px;
+  text-transform: uppercase;
+}
+
+.tag-overlap {
+  color: #ffffff;
+  position: absolute;
+  top: 0px;
+  left: 0;
 }
 
 .h-hero-btns {
   display: flex;
   gap: 30px;
+  padding-top: 20px;
 }
 
 .h-regBtn {
-  margin-top: 40px;
-  padding: 13px 30px 10px;
+  padding: 10px 30px;
   position: relative;
-  color: #ffffff00;
+  color: #00000000;
   font-size: 18px;
   font-weight: 400;
   border: none;
   font-family: 'Nunito Sans', 'Maven Pro', sans-serif;
   text-transform: uppercase;
-  background-image: linear-gradient(90deg, #8C00ff, #320055);
+  background-image: linear-gradient(90deg, #8c00ff, #3e0077);
   border-radius: 12px;
   cursor: pointer;
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   text-wrap: nowrap;
 }
 
@@ -87,7 +110,7 @@
   top: 200%;
   left: -50%;
   z-index: 1;
-  transition: all 0.3s ease-out;
+  transition: all 0.4s ease-in-out;
   width: 100%;
   height: 400%;
   filter: blur(15px);
@@ -96,16 +119,13 @@
 
 .h-regBtn::after {
   content: "Register Now";
-  padding: 13px 30px 10px;
+  padding: 14px 30px 10px;
   position: absolute;
   color: #ffffff;
-  top: 50%;
+  top: 0%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   z-index: 5;
-  transition: all 0.2s ease-out;
-  width: 100%;
-  height: 100%;
 }
 
 .h-regBtn:hover::before {
@@ -115,13 +135,11 @@
 }
 
 .h-regBtn:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .h-eventBtn {
-  margin-top: 40px;
-  padding: 13px 30px 10px;
-  /* position: relative; */
+  padding: 12px 30px;
   color: #FFFFFF;
   font-size: 18px;
   font-weight: 400;
@@ -135,6 +153,10 @@
   transition: all 0.2s ease;
   text-wrap: nowrap;
   position: relative;
+}
+
+.h-eventBtn:hover {
+  transform: scale(1.02);
 }
 
 .h-eventBtn::after, .h-eventBtn::before {
@@ -203,30 +225,6 @@
   }
 }
 
-.h-title-wrap>h1 {
-  font-size: clamp(1.5rem, 15vw, 6rem);
-  font-weight: 700;
-  color: #ffffff;
-  font-family: 'Lexend Exa', 'Maven Pro', sans-serif;
-  margin: 0px;
-  padding: 0px;
-}
-
-.h-title-wrap>h1:nth-child(2) {
-  margin-top: -40px;
-}
-
-
-.h-title-wrap>h2 {
-  color: #ffffff;
-  font-size: 2rem;
-  font-family: 'Maven Pro', 'Inter', sans-serif;
-  font-weight: 600;
-  padding: 0px 10px;
-  text-transform: uppercase;
-}
-
-
 .h-hero-anime>img {
   height: 400px;
   animation: Float 4s ease-in-out infinite;
@@ -248,6 +246,157 @@
   }
 }
 
+.h-description {
+  padding: 0px var(--section-margin);
+  width: 100%;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Nunito Sans', 'Maven Pro', sans-serif;
+}
+
+.main-title {
+  font-size: 30px;
+  font-weight: 600;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: 'Anybody', 'Maven Pro', sans-serif;
+  letter-spacing: 1px;
+  color: #AF25FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px 30px;
+}
+
+.title-light {
+  color: #ffffff;
+  margin: 0px 20px 0px 10px;
+}
+
+.title-ruler {
+  flex: 1;
+  height: 4px;
+  width: 100px;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #FF00E3, #AE22FF);
+}
+
+.h-des-textbox {
+  background-color: #3B0063;
+  border: 1px solid #AF25FF;
+  display: flex;
+  gap: 20px;
+}
+
+.des-text {
+  width: 65%;
+  padding: 35px 0px 35px 35px;
+}
+
+.text-title {
+  font-size: 22px;
+  font-weight: 500;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  font-family: 'Maven Pro', 'Inter', sans-serif;
+  margin-bottom: 20px;
+}
+
+.text-content {
+  font-size: 18px;
+  font-weight: 400;
+  width: 100%;
+  color: rgba(255, 255, 255);
+  font-family: 'League Spartan', 'Maven Pro', sans-serif;
+  margin-bottom: 30px;
+}
+
+.text-content>p {
+  margin: 15px 0px;
+}
+
+.feature {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.feature-icon {
+  width: 50px;
+  font-size: 24px;
+  color: #FFD700;
+  padding-top: 6px;
+  text-align: center;
+}
+
+.feature-data>h4 {
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+  color: #FF1493;
+  text-transform: uppercase;
+  font-family: 'Maven Pro', 'Inter', sans-serif;
+  margin-bottom: 5px;
+}
+
+.feature-data>p {
+  font-size: 18px;
+  font-weight: 400;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'League Spartan', 'Maven Pro', sans-serif;
+}
+
+.des-image {
+  width: 35%;
+  display: block;
+  padding: 10px;
+}
+
+.des-image>img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.stats {
+  width: 100%;
+  display: flex;
+  color: #ffffff;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 0px 40px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-value {
+  font-family: 'Baloo 2', 'Anybody', sans-serif;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.stat-tag {
+  font-family: 'blinker', 'Anybody', sans-serif;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 5px 0px;
+}
+
+.home-carousel {
+  padding: 0px var(--section-margin);
+}
+
+
+
 
 .Intro {
   height: 60vh;
@@ -261,7 +410,7 @@
 }
 
 .Event {
-  height: 60vh;
+  /* height: 60vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -269,7 +418,7 @@
   flex-direction: column;
   background: linear-gradient(45deg, #7b00ff,
       #ae00ff 100%);
-  opacity: 0.8;
+  opacity: 0.8; */
 }
 
 .merch {

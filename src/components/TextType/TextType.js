@@ -6,7 +6,7 @@ import "./TextType.css";
 
 const TextType = ({
   text,
-  as: Component = "div",
+  tag: Component = "span",
   typingSpeed = 50,
   initialDelay = 0,
   pauseDuration = 2000,

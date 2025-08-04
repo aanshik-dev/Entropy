@@ -69,7 +69,7 @@ const Navbar = ({ activePage, switchPage }) => {
             </div>
             <div className="filler"></div>
 
-            <div className="sideButton">Register</div>
+            <div className="navButton">Register</div>
           </div>
         </div>
       </div>
@@ -107,6 +107,8 @@ const Navbar = ({ activePage, switchPage }) => {
               <div className="phTag">Tech Fest</div>
               <div className="phDates">October 15-17, 2025</div>
             </div>
+            <div className="navButton phBtn">Register</div>
+
           </div>
 
           <div className="phTab">

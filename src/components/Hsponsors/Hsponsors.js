@@ -1,51 +1,52 @@
 import './Hsponsors.css';
-import logo from '../../assets/Comp.png';
+import logo from '../../assets/Rectangle.svg';
 
 const Hsponsors = () => {
 
-  <>
-    <section classname="sponsors-section">
-      <div classname="sponsor-header">
-        <h2>
-          <span classname="highlight">OUR</span> SPONSORS
-        </h2>
-        <div classname="line" />
-      </div>
-      <div classname="sponsor-grid">
-        <div classname="sponsor-card">
-          <img src="logo" alt="SBI Logo" />
-          <h3>STATE BANK OF INDIA</h3>
-          <p classname="subtext">India's largest public sector bank</p>
+  return (
+    <>
+      <section className="sponsors-section">
+        <div className="sponsor-header">
+          <h2>
+            <span className="highlight">OUR</span> SPONSORS
+          </h2>
+          <div className="line" />
         </div>
-        <div classname="sponsor-card">
-          <img src="logo" alt="SBI Logo" />
-          <h3>STATE BANK OF INDIA</h3>
-          <p classname="yellow-text">STATE BANK OF INDIA</p>
+        <div className="sponsor-grid">
+          <div className="sponsor-card">
+            <img src={logo} alt="SBI Logo" />
+            <h3>STATE BANK OF INDIA</h3>
+            <p className="subtext">India's largest public sector bank</p>
+          </div>
+          <div className="sponsor-card">
+            <img src={logo} alt="SBI Logo" />
+            <h3>STATE BANK OF INDIA</h3>
+            <p className="yellow-text">STATE BANK OF INDIA</p>
+          </div>
+          <div className="sponsor-card">
+            <img src={logo} alt="SBI Logo" />
+            <h3>STATE BANK OF INDIA</h3>
+            <p className="yellow-text">STATE BANK OF INDIA</p>
+          </div>
+          <div className="sponsor-card">
+            <img src={logo} alt="SBI Logo" />
+            <h3>STATE BANK OF INDIA</h3>
+            <p className="subtext">India's largest public sector bank</p>
+          </div>
+          <div className="sponsor-card">
+            <img src={logo} alt="SBI Logo" />
+            <h3>STATE BANK OF INDIA</h3>
+            <p className="yellow-text">STATE BANK OF INDIA</p>
+          </div>
+          <div className="sponsor-card">
+            <img src={logo} alt="SBI Logo" />
+            <h3>STATE BANK OF INDIA</h3>
+            <p className="yellow-text">STATE BANK OF INDIA</p>
+          </div>
         </div>
-        <div classname="sponsor-card">
-          <img src="logo" alt="SBI Logo" />
-          <h3>STATE BANK OF INDIA</h3>
-          <p classname="yellow-text">STATE BANK OF INDIA</p>
-        </div>
-        <div classname="sponsor-card">
-          <img src="logo" alt="SBI Logo" />
-          <h3>STATE BANK OF INDIA</h3>
-          <p classname="subtext">India's largest public sector bank</p>
-        </div>
-        <div classname="sponsor-card">
-          <img src="logo" alt="SBI Logo" />
-          <h3>STATE BANK OF INDIA</h3>
-          <p classname="yellow-text">STATE BANK OF INDIA</p>
-        </div>
-        <div classname="sponsor-card">
-          <img src="logo" alt="SBI Logo" />
-          <h3>STATE BANK OF INDIA</h3>
-          <p classname="yellow-text">STATE BANK OF INDIA</p>
-        </div>
-      </div>
-    </section>
-
-  </>
+      </section>
+    </>
+  )
 
 }
 
