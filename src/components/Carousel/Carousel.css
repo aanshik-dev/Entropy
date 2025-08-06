@@ -7,13 +7,16 @@
 .carousel-wrapper {
   color: #ffffff;
   display: flex;
-  margin: 20px 0px;
+  margin: 40px 0px;
+  align-items: baseline;
 }
 
 .slide-wrap {
   width: 30%;
   min-width: 30%;
   padding: 0px 10px;
+  transition: transform 0.2s ease-in-out;
+  scale: 0.95;
 }
 
 .h-slide {
@@ -162,4 +165,9 @@
   align-items: center;
   transform: scale(1.5);
   margin-left: 5px;
+}
+
+.slide-counter {
+  color: #ffffff;
+  font-size: 25px;
 }

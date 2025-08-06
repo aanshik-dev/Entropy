@@ -179,7 +179,7 @@ const Home = () => {
                   to={250}
                   separator=","
                   direction="up"
-                  duration={2}
+                  duration={1}
                   className="count-up-text"
                 />+
               </div>
@@ -195,7 +195,7 @@ const Home = () => {
                   to={50}
                   separator=","
                   direction="up"
-                  duration={2}
+                  duration={1}
                   className="count-up-text"
                 />+
               </div>

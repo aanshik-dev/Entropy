@@ -47,22 +47,36 @@ const Carousel = () => {
       tag: 'Day 5',
       data: '11:00 AM',
       button: 'Register Now'
+    },
+    {
+      icon: 'ion:radio',
+      title: 'Quantum Radio 2',
+      desc: 'Advanced techniques in quantum radio signal processing.',
+      tag: 'Day 6',
+      data: '11:00 AM',
+      button: 'Register Now'
     }
+
+
   ];
-
   const totalSlides = SlideData.length;
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleSlides, setVisibleSlides] = useState(3);
-  const [slideWidth, setSlideWidth] = useState(30);
-
-  const wrapperRef = useRef();
+  const cloneCount = 3;
   const intervalRef = useRef();
+
+  const [visibleSlides, setVisibleSlides] = useState(3);
+  const [counter, setCounter] = useState(1);
+  const [transitioning, setTransitioning] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(cloneCount);
+
+  const [slideWidth, setSlideWidth] = useState(30);
 
   const extendedSlides = [
     ...SlideData.slice(-visibleSlides),
     ...SlideData,
     ...SlideData.slice(0, visibleSlides),
   ]
+
+  //    3 4 5 1 2 3 4 5 1 2 3
 
   // Handle window resize to adjust visible slides
   useEffect(() => {
@@ -85,20 +99,33 @@ const Carousel = () => {
   }, []);
 
 
-  const goToSlide = (slideIndex) => {
+  const jumpSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
+    setCounter(slideIndex - cloneCount + 1);
   };
 
-  const goToPrev = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? SlideData.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
+  const swipeLeft = () => {
+    setCurrentIndex((prev) => prev - 1);
+    setTransitioning(true);
+    setCounter((count) => {
+      if (count === 1) {
+        return totalSlides;
+      } else {
+        return count - 1;
+      }
+    })
   };
 
-  const goToNext = () => {
-    const isLastSlide = currentIndex === SlideData.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
+  const swipeRight = () => {
+    setCurrentIndex((next) => next + 1);
+    setTransitioning(true);
+    setCounter((count) => {
+      if (count === totalSlides) {
+        return 1;
+      } else {
+        return count + 1;
+      }
+    })
   };
 
   const resetAutoSlide = () => {
@@ -108,20 +135,61 @@ const Carousel = () => {
 
   const startAutoSlide = () => {
     intervalRef.current = setInterval(() => {
-      goToNext();
+      swipeRight();
     }, 3000);
   };
 
+  useEffect(() => {
+    startAutoSlide();
+    return () => clearInterval(intervalRef.current);
+  }, []);
+
+  const handleTransitionEn = () => {
+    if (currentIndex >= totalSlides + cloneCount) {
+      setTransitioning(false);
+      setCurrentIndex(cloneCount);
+    } else if (currentIndex < cloneCount) {
+      setTransitioning(false);
+      setCurrentIndex(totalSlides + cloneCount - 1);
+    }
+  }
+
+  const handleTransitionEnd = () => {
+    if (currentIndex >= totalSlides + cloneCount) {
+      setTimeout(() => {
+        setTransitioning(false);
+        setCurrentIndex(cloneCount);
+      }, 200);
+    } else if (currentIndex < cloneCount) {
+      setTimeout(() => {
+        setTransitioning(false);
+        setCurrentIndex(totalSlides + cloneCount - 1);
+      }, 200);
+    }
+  };
+
+
+  const transformStyle = {
+    transform: `translateX(-${-20 + 30 * currentIndex}%)`,
+    transition: transitioning ? 'transform 0.5s ease' : 'none',
+  };
+
+  const scaleStyle = {
+    transform: `scale(${1.1}) translateY(-15px)`,
+    transition: transitioning ? 'transform 0.2s ease' : 'none',
+  };
 
 
   return (
     <>
       <div className="carousel-container">
-        <div className="carousel-wrapper">
+        <div className="carousel-wrapper"
+          style={transformStyle}
+          onTransitionEnd={handleTransitionEnd}>
 
           {
-            SlideData.map((slide, index) => (
-              <div className="slide-wrap">
+            extendedSlides.map((slide, index) => (
+              <div className="slide-wrap" key={index} style={index === currentIndex && (index !== 11) ? scaleStyle : {}}>
                 <div className="h-slide">
                   <div className="slide-iwrap">
                     <div className="h-slide-icon">
@@ -142,6 +210,7 @@ const Carousel = () => {
 
             ))
           }
+
           {/* <div className="slide-wrap">
             <div className="h-slide">
               <div className="slide-iwrap">
@@ -163,10 +232,16 @@ const Carousel = () => {
 
         </div>
         <div className="controls">
-          <div className="prev">
+          <div className="prev" onClick={() => {
+            swipeLeft();
+            resetAutoSlide();
+          }}>
             <Icon icon='fa-solid:angle-left' />
           </div>
-          <div className="next">
+          <div className="next" onClick={() => {
+            swipeRight();
+            resetAutoSlide();
+          }}>
             <Icon icon='fa-solid:angle-right' />
           </div>
         </div>
@@ -174,15 +249,24 @@ const Carousel = () => {
 
       <div className="slider-helper">
         <div className="slider-dots">
-          <div className="dot"></div>
-          <div className="dot active"></div>
-          <div className="dot"></div>
-          <div className="dot"></div>
-          <div className="dot"></div>
+
+          {SlideData.map((_, idx) => (
+            <div
+              key={idx}
+              className={`dot ${idx === (currentIndex - cloneCount + totalSlides) % totalSlides ? 'active' : ''}`}
+              onClick={() => { jumpSlide(idx + cloneCount); resetAutoSlide(); }}
+            ></div>
+          ))}
         </div>
         <div className="all-events-btn">
-          <span>View All Events</span>
-          <span><Icon icon='ic:baseline-double-arrow' /></span>
+          <span>View All Events  {currentIndex}</span>
+          <span><Icon icon='solar:double-alt-arrow-right-line-duotone' /></span>
+        </div>
+
+        <div className="slide-counter">
+          <span>{counter}</span>
+          <span>/</span>
+          <span>{totalSlides}</span>
         </div>
       </div>
 
