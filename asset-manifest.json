@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Entropy/static/css/main.d3bb125c.css",
-    "main.js": "/Entropy/static/js/main.4860ce03.js",
+    "main.css": "/Entropy/static/css/main.efc21f23.css",
+    "main.js": "/Entropy/static/js/main.18e17c8c.js",
     "static/media/Comp.png": "/Entropy/static/media/Comp.1af305f793a4d6017dc6.png",
     "static/media/Speaker2.svg": "/Entropy/static/media/Speaker2.cc49588ddac3df359e0deeff75744df6.svg",
     "static/media/Speaker3.svg": "/Entropy/static/media/Speaker3.7d2a5f885f3f181452141a98dcd84384.svg",
@@ -11,11 +11,11 @@
     "static/media/IIITG.webp": "/Entropy/static/media/IIITG.7d6bec9a4f340aff66d2.webp",
     "static/media/Logo.webp": "/Entropy/static/media/Logo.207dccaff25eb6b41779.webp",
     "index.html": "/Entropy/index.html",
-    "main.d3bb125c.css.map": "/Entropy/static/css/main.d3bb125c.css.map",
-    "main.4860ce03.js.map": "/Entropy/static/js/main.4860ce03.js.map"
+    "main.efc21f23.css.map": "/Entropy/static/css/main.efc21f23.css.map",
+    "main.18e17c8c.js.map": "/Entropy/static/js/main.18e17c8c.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3bb125c.css",
-    "static/js/main.4860ce03.js"
+    "static/css/main.efc21f23.css",
+    "static/js/main.18e17c8c.js"
   ]
 }
