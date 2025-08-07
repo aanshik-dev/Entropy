@@ -9,3 +9,7 @@
 .event-carousel {
   padding: 0px var(--section-margin);
 }
+
+.event-timeline {
+  padding: 0px var(--section-margin);
+}

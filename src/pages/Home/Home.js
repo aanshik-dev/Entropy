@@ -150,7 +150,7 @@ const Home = () => {
 
 
             <div className="des-image">
-              <img src={imgPath("home-des.png")} alt="Home-img" />
+              <img src={imgPath("homeDes.png")} alt="Home-img" />
             </div>
           </div>
 

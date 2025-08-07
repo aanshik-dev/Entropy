@@ -98,10 +98,12 @@ const Events = () => {
         <section className='event-carousel'>
           <EventCarousel />
         </section>
+        <section className='event-timeline'>
+          <EventsTimeline />
+        </section>
 
 
       </main >
-      <EventsTimeline />
     </>
   )
 }

@@ -10,7 +10,7 @@ const EventCarousel = () => {
 
   const SlideData = [
     {
-      image: 'home-des.png',
+      image: 'homeDes.png',
       icon: 'material-symbols:rocket-launch-rounded',
       title: 'Inauguration Ceremony',
       tagline: 'Where ideas ignite and Entropy begins',
@@ -235,7 +235,7 @@ const EventCarousel = () => {
             <div className="ev-slide">
               <div className="ev-slide-banner">
                 <div className="slide-image">
-                  <img src={imgPath("home-des.png")} alt="Home-img" />
+                  <img src={imgPath("homeDes.png")} alt="Home-img" />
                 </div>
               </div>
               <div className="ev-slide-data">
