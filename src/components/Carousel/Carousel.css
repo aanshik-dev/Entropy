@@ -1,7 +1,7 @@
 .carousel-container {
   position: relative;
   overflow-x: hidden;
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
 }
 
 .carousel-wrapper {
@@ -113,10 +113,16 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 6px;
+  padding: 6px 15px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.controls>div:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  scale: 1.1;
 }
 
 .slider-helper {
@@ -180,7 +186,7 @@
 
 .all-events-btn:hover>span:last-child {
   transform: scale(1.5);
-  margin-left: 10px;
+  margin-left: 8px;
 }
 
 .slide-counter {

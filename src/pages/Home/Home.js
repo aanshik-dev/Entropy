@@ -11,6 +11,7 @@ import BgParticles from '../../components/BgParticles';
 import Hsponsors from '../../components/Hsponsors/Hsponsors';
 import Comp from '../../assets/Comp.png'
 import Carousel from '../../components/Carousel/Carousel';
+import HomeSpeakers from '../../components/HomeSpeakers/HomeSpeakers';
 
 const Home = () => {
 
@@ -91,14 +92,14 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="h-description">
-          <div className="main-title">
+        <section className="h-description appear">
+          <div className="main-title appear">
             <span className='title-dark'>Discover</span>
             <span className='title-light'>The Chaos</span>
             <span className='title-ruler'></span>
           </div>
 
-          <div className="h-des-textbox">
+          <div className="h-des-textbox appear">
 
             <div className="des-text">
               <h3 className="text-title">Entropy: A fusion of code, creativity, innovation, and competition.</h3>
@@ -151,10 +152,9 @@ const Home = () => {
             <div className="des-image">
               <img src={imgPath("home-des.png")} alt="Home-img" />
             </div>
-
           </div>
 
-          <div className="stats">
+          <div className="stats appear">
 
             <div className="stat">
               <div className="stat-value">
@@ -223,7 +223,7 @@ const Home = () => {
         </section>
 
 
-        <section className='home-carousel'>
+        <section className='home-carousel appear'>
           <div className="main-title">
             <span className='title-dark'>Featured</span>
             <span className='title-light'>Events</span>
@@ -235,25 +235,34 @@ const Home = () => {
           </div>
         </section>
 
-
-
-        <section className="Intro">
-          <div className="About__content">
-            <h1 className="About__title">Discover</h1>
-            <h2 className="About__subtitle">The Chaos</h2>
+        <section className='merch-section appear'>
+          <div className="main-title">
+            <span className='title-dark'>Grab</span>
+            <span className='title-light'>The Chaos</span>
+            <span className='title-ruler'></span>
           </div>
+          <div className="merch">
+            {/* <Merch /> */}
+          </div>
+
         </section>
+
+        <section className='speaker-section'>
+          <div className="main-title appear" >
+            <span className='title-dark'>Visionary</span>
+            <span className='title-light'>Speaker</span>
+            <span className='title-ruler'></span>
+          </div>
+          <div className="speaker">
+            <HomeSpeakers />
+          </div>
+
+        </section>
+
 
         <section className="Event">
           <Hsponsors />
         </section>
-        {/*
-        <section className="merch">
-          <div className="About__content">
-            <h1 className="About__title">Merch</h1>
-            <h2 className="About__subtitle">Shop</h2>
-          </div>
-        </section> */}
 
       </main >
     </>

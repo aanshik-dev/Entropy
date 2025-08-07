@@ -1,4 +1,4 @@
-:root{
+:root {
   --section-margin: 8vw;
 }
 
@@ -267,6 +267,7 @@
   justify-content: center;
   align-items: center;
   margin: 20px 0px 30px;
+  animation: appear 1s ease-in-out;
 }
 
 .title-light {
@@ -395,40 +396,14 @@
   padding: 0px var(--section-margin);
 }
 
-
-
-
-.Intro {
-  height: 60vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: #8400ff5d;
-  opacity: 0.5;
+.merch-section {
+  padding: 0px var(--section-margin);
 }
 
-.Event {
-  /* height: 60vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: linear-gradient(45deg, #7b00ff,
-      #ae00ff 100%);
-  opacity: 0.8; */
+.merch{
+  height: 600px;
 }
 
-.merch {
-  height: 60vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: linear-gradient(45deg, #7b00ff,
-      #ae00ff 100%);
-  opacity: 0.5;
+.speaker-section {
+  padding: 0px var(--section-margin);
 }

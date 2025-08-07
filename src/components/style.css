@@ -1,0 +1,118 @@
+/* ----- Base & Layout ----- */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0e0016;
+  color: #fff;
+}
+
+.vs-speakers-section {
+  padding: 40px 5%;
+}
+
+/* ----- Header with Gradient Line ----- */
+.vs-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.vs-header h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.vs-highlight {
+  color: #b32fff;
+}
+
+.vs-line {
+  flex-grow: 1;
+  height: 2px;
+  background: linear-gradient(to right, #b32fff, #ff0099);
+}
+
+@media (max-width: 768px) {
+  .vs-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .vs-line {
+    width: 100%;
+  }
+}
+
+/* ----- Speaker Grid ----- */
+.vs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* ----- Speaker Card ----- */
+.vs-card {
+  position: relative;               /* enable absolute positioning inside */
+  background-color: #150021;
+  border: 1px solid #8000ff;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.vs-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Avatar Image */
+.vs-avatar {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Content */
+.vs-card-content {
+  padding: 20px;
+  padding-bottom: 60px;            /* extra bottom padding for socials */
+}
+
+.vs-name {
+  margin: 0 0 5px;
+  font-size: 1.1rem;
+  color: #ffcc00;
+}
+
+.vs-role {
+  margin: 0 0 15px;
+  font-size: 0.9rem;
+  color: #ff33aa;
+}
+
+.vs-bio {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #ccc;
+}
+
+/* ----- Social Icons at Bottom ----- */
+.vs-socials {
+  position: absolute;
+  bottom: 0;                        /* sticks to bottom edge */
+  left: 0;
+  width: 100%;
+       /* subtle backdrop */
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  padding-left: 20px;
+}
+
+.vs-social-icon {
+  height: 24px;
+  width: auto;
+}

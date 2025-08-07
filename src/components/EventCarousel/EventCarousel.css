@@ -1,0 +1,234 @@
+.ev-carousel {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  /* flex-shrink: 0; */
+}
+
+.ev-carousel-wrapper {
+  color: #ffffff;
+  display: flex;
+  margin: 80px 0px 80px;
+  align-items: stretch;
+}
+
+.ev-slide-wrap {
+  min-width: 80%;
+  width: 80%;
+  padding: 0px 20px;
+  display: flex;
+  transition: all 0.2s ease-in-out;
+}
+
+.ev-slide {
+  width: 100%;
+  aspect-ratio: 12/5;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  scale: 0.95;
+  background: linear-gradient(120deg, #4B0082, #130f16);
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+}
+
+.ev-slide-banner {
+  width: 100%;
+  border-radius: inherit;
+}
+
+.slide-image {
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.slide-image>img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 80%;
+}
+
+.ev-slide-data {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+}
+
+.ev-slide-float {
+  transition: all 0.5s ease-in-out;
+  font-family: 'Inter', 'Maven Pro', sans-serif;
+  background: linear-gradient(180deg, #3f006c74, #130f167a);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  transform: translateY(-70px);
+  left: 20px;
+  display: flex;
+  align-items: stretch;
+  opacity: 0;
+}
+
+.ev-slide-icon {
+  color: #ff1497;
+  font-size: 40px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #43008258;
+  display: flex;
+  align-items: center;
+}
+
+.ev-slide-head {
+  padding: 20px 30px 20px 10px;
+}
+
+.ev-slide-title {
+  font-weight: 500;
+  font-size: 20px;
+  color: #ffffffb1;
+  text-transform: uppercase;
+}
+
+.ev-slide-subhead {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffd900c7;
+}
+
+.ev-slide-float2 {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  font-family: 'Inter', 'Maven Pro', sans-serif;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 35%;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  transform: translateY(60px);
+  background: linear-gradient(0deg, #3f006c74, #130f167a);
+  backdrop-filter: blur(15px);
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.ev-slide-des {
+  color: #ffffff96;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Inter', 'Maven Pro', sans-serif;
+}
+
+.ev-slide-info {
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFD700c7;
+}
+
+.ev-venue {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ev-time {
+  color: #ff1497;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
+.ev-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.ev-controls>div {
+  font-size: 35px;
+  color: #ffffff;
+  aspect-ratio: 1/1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 15px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.ev-controls>div:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  scale: 1.1;
+}
+
+.ev-slider-helper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.ev-slider-dots {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+}
+
+.ev-dot {
+  width: 60px;
+  height: 15px;
+  background-color: rgb(234, 152, 255);
+  border-radius: 10px 50px 10px 50px;
+  transition: width 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.ev-dot:hover {
+  opacity: 0.7;
+}
+
+.ev-active {
+  background: linear-gradient(90deg, #FF1493, #ff14c4);
+  width: 120px;
+}
+
+.ev-slide-counter {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0px 30px 0px 10px;
+  font-family: 'baloo 2', 'Blinker', sans-serif;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.ev-count {
+  font-size: 40px;
+  color: #FF1493;
+}

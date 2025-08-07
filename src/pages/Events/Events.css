@@ -1,0 +1,11 @@
+:root {
+  --section-margin: 8vw;
+}
+
+.events {
+  width: 100%;
+}
+
+.event-carousel {
+  padding: 0px var(--section-margin);
+}

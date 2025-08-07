@@ -83,11 +83,11 @@ const Carousel = () => {
 
 
   ];
-  const totalSlides = SlideData.length;
-  const cloneCount = 3;
-  const intervalRef = useRef();
 
   const [visibleSlides, setVisibleSlides] = useState(3);
+  const totalSlides = SlideData.length;
+  const cloneCount = visibleSlides;
+  const intervalRef = useRef();
   const [counter, setCounter] = useState(1);
   const [transitioning, setTransitioning] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(cloneCount);
@@ -167,16 +167,6 @@ const Carousel = () => {
     startAutoSlide();
     return () => clearInterval(intervalRef.current);
   }, []);
-
-  const handleTransitionEn = () => {
-    if (currentIndex >= totalSlides + cloneCount) {
-      setTransitioning(false);
-      setCurrentIndex(cloneCount);
-    } else if (currentIndex < cloneCount) {
-      setTransitioning(false);
-      setCurrentIndex(totalSlides + cloneCount - 1);
-    }
-  }
 
   const handleTransitionEnd = () => {
     if (currentIndex >= totalSlides + cloneCount) {
