@@ -148,7 +148,6 @@ const Home = () => {
 
             </div>
 
-
             <div className="des-image">
               <img src={imgPath("HomeDes.png")} alt="Home-img" />
             </div>
