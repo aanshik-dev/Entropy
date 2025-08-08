@@ -1,7 +1,3 @@
-:root {
-  --section-margin: 8vw;
-}
-
 .home {
   width: 100%;
 }
@@ -36,14 +32,14 @@
 
 .h-hero {
   width: 100%;
-  padding: var(--section-margin);
+  padding: 60px var(--section-margin);
 }
 
 .h-hero-wrapper {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: top;
+  align-items: center;
 }
 
 .h-title-wrap {
@@ -69,7 +65,7 @@
   font-size: 1.8rem;
   font-family: 'Maven Pro', 'Inter', sans-serif;
   font-weight: 600;
-  padding: 10px 5px;
+  padding: 10px 5px 30px;
   text-transform: uppercase;
 }
 
@@ -78,6 +74,17 @@
   position: absolute;
   top: 0px;
   left: 0;
+}
+
+.h-hero-des {
+  color: #ffffffc7;
+  font-size: 20px;
+  max-width: 600px;
+  font-family: 'League Spartan', 'Inter', sant-serif;
+  line-height: 150%;
+  font-weight: 300;
+  padding: 10px 5px;
+  text-transform: uppercase;
 }
 
 .h-hero-btns {
@@ -226,7 +233,7 @@
 }
 
 .h-hero-anime>img {
-  height: 400px;
+  height: 500px;
   animation: Float 4s ease-in-out infinite;
   transform: translateY(-20px);
 }
@@ -244,122 +251,6 @@
   100% {
     transform: translatey(20px) scale(1);
   }
-}
-
-.h-description {
-  padding: 0px var(--section-margin);
-  width: 100%;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: 'Nunito Sans', 'Maven Pro', sans-serif;
-}
-
-.main-title {
-  font-size: 30px;
-  font-weight: 600;
-  width: 100%;
-  text-transform: uppercase;
-  font-family: 'Anybody', 'Maven Pro', sans-serif;
-  letter-spacing: 1px;
-  color: #AF25FF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0px 30px;
-}
-
-.title-light {
-  color: #ffffff;
-  margin: 0px 20px 0px 10px;
-}
-
-.title-ruler {
-  flex: 1;
-  height: 4px;
-  width: 100px;
-  border-radius: 50px;
-  background: linear-gradient(45deg, #FF00E3, #AE22FF);
-}
-
-.h-des-textbox {
-  background-color: #3B0063;
-  border: 1px solid #AF25FF;
-  display: flex;
-  gap: 20px;
-}
-
-.des-text {
-  width: 65%;
-  padding: 35px 0px 35px 35px;
-}
-
-.text-title {
-  font-size: 22px;
-  font-weight: 500;
-  width: 100%;
-  color: rgba(255, 255, 255, 0.75);
-  text-transform: uppercase;
-  font-family: 'Maven Pro', 'Inter', sans-serif;
-  margin-bottom: 20px;
-}
-
-.text-content {
-  font-size: 18px;
-  font-weight: 400;
-  width: 100%;
-  color: rgba(255, 255, 255);
-  font-family: 'League Spartan', 'Maven Pro', sans-serif;
-  margin-bottom: 30px;
-}
-
-.text-content>p {
-  margin: 15px 0px;
-}
-
-.feature {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.feature-icon {
-  width: 50px;
-  font-size: 24px;
-  color: #FFD700;
-  padding-top: 6px;
-  text-align: center;
-}
-
-.feature-data>h4 {
-  font-size: 20px;
-  font-weight: 500;
-  width: 100%;
-  color: #FF1493;
-  text-transform: uppercase;
-  font-family: 'Maven Pro', 'Inter', sans-serif;
-  margin-bottom: 5px;
-}
-
-.feature-data>p {
-  font-size: 18px;
-  font-weight: 400;
-  width: 100%;
-  color: rgba(255, 255, 255, 0.6);
-  font-family: 'League Spartan', 'Maven Pro', sans-serif;
-}
-
-.des-image {
-  width: 35%;
-  display: block;
-  padding: 10px;
-}
-
-.des-image>img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .stats {
@@ -399,7 +290,7 @@
   padding: 0px var(--section-margin);
 }
 
-.merch{
+.merch {
   height: 600px;
 }
 

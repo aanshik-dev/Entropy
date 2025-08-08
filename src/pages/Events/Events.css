@@ -1,10 +1,191 @@
-:root {
-  --section-margin: 8vw;
-}
-
 .events {
   width: 100%;
 }
+
+.ev-hero-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.ev-hero-mask {
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  -webkit-mask-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7));
+  mask-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7));
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+#tsparticles {
+  width: 100%;
+  height: 100%;
+}
+
+.ev-hero {
+  width: 100%;
+  padding: 60px var(--section-margin);
+}
+
+.ev-hero-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.ev-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.ev-title-text, .ev-title-year {
+  font-size: clamp(1.5rem, 15vw, 6rem);
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'Lexend Exa', 'Maven Pro', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.ev-tagline-wrap {
+  position: relative;
+  color: transparent;
+}
+
+.ev-hero-tagline {
+  font-size: 1.8rem;
+  font-family: 'Maven Pro', 'Inter', sans-serif;
+  font-weight: 600;
+  padding: 10px 5px 30px;
+  text-transform: uppercase;
+}
+
+.ev-tag-overlap {
+  color: #ffffff;
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+
+.ev-hero-des {
+  color: #ffffffc7;
+  font-size: 20px;
+  max-width: 550px;
+  font-family: 'League Spartan', 'Inter', sans-serif;
+  line-height: 150%;
+  font-weight: 300;
+  padding: 10px 5px;
+  text-transform: uppercase;
+}
+
+.ev-hero-tags {
+  color: #AF25FF;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ev-hero-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #1F0031;
+  padding: 5px 15px 7px;
+  border-radius: 100px;
+  border: 1px solid #AF25FF;
+  margin: 15px 0px 20px;
+}
+
+.ev-hero-tag>div {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.ev-tag2 {
+  color: #FF1497;
+  background-color: #1c001e;
+  border: 1px solid #FF1497;
+}
+
+.ev-tag3 {
+  color: #FFCC00;
+  background-color: #1e1d00;
+  border: 1px solid #FFCC00;
+}
+
+.ev-hero-updates {
+  display: flex;
+  align-items: center;
+  padding: 30px 5px;
+}
+
+.ev-hero-live {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Nunito Sans', 'Maven Pro', sans-serif;
+  text-transform: uppercase;
+}
+
+.ev-blink {
+  height: 15px;
+  width: 15px;
+  background-color: #ff0088;
+  margin-right: 20px;
+  border-radius: 50%;
+  animation: ev-glow 2s ease-in-out infinite;
+  box-shadow: 0px 0px 10px #ff0088;
+}
+
+@keyframes ev-glow {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.ev-hero-anime>img {
+  height: 400px;
+  animation: Float 4s ease-in-out infinite;
+  transform: translateY(-20px);
+}
+
+
+@keyframes Float {
+  0% {
+    transform: translatey(20px) scale(1);
+  }
+
+  50% {
+    transform: translatey(-10px) scale(1.05);
+  }
+
+  100% {
+    transform: translatey(20px) scale(1);
+  }
+}
+
+
+
+
 
 .event-carousel {
   padding: 0px var(--section-margin);

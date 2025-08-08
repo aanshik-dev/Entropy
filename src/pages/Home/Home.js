@@ -73,6 +73,23 @@ const Home = () => {
                       cursorCharacter="_"
                     />
                   </div>
+                  <div>
+                    <SplitText
+                      tag="h1"
+                      text="IIITG’s biggest tech fest of the year, packed with workshops, thrilling competitions, and exciting prizes."
+                      className="h-hero-des"
+                      delay={50}
+                      duration={0.6}
+                      ease="power3.out"
+                      splitType="lines"
+                      from={{ opacity: 0, y: 40 }}
+                      to={{ opacity: 1, y: 0 }}
+                      threshold={0.1}
+                      rootMargin="0px"
+                      textAlign="left"
+                      onLetterAnimationComplete={() => { }}
+                    />
+                  </div>
                 </div>
                 <div className="h-hero-btns">
                   <button className='h-regBtn'>Register Now</button>
@@ -92,8 +109,8 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="h-description appear">
-          <div className="main-title appear">
+        <section className="h-description">
+          <div className="main-title">
             <span className='title-dark'>Discover</span>
             <span className='title-light'>The Chaos</span>
             <span className='title-ruler'></span>

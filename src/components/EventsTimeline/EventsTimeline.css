@@ -235,6 +235,7 @@
   border-radius: 100px;
   box-shadow: 0 0 8px #a700ff8a;
   transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
 }
 
 .tl-event-btn:hover {

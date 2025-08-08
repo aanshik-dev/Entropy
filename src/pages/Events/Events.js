@@ -25,18 +25,18 @@ const Events = () => {
 
       <main className="events">
 
-        <section className="h-hero-content">
-          <div className="h-hero-mask">
+        <section className="ev-hero-content">
+          <div className="ev-hero-mask">
             <BgParticles />
           </div>
-          <div className="h-hero">
-            <div className="h-hero-wrapper">
-              <div className="h-hero-title">
-                <div className="h-title-wrap">
+          <div className="ev-hero">
+            <div className="ev-hero-wrapper">
+              <div className="ev-hero-title">
+                <div className="ev-title-wrap">
                   <SplitText
                     tag="h1"
-                    text="ENTROPY"
-                    className="h-title-text"
+                    text="EVENTS"
+                    className="ev-title-text"
                     delay={0}
                     duration={0.6}
                     ease="power3.out"
@@ -48,46 +48,60 @@ const Events = () => {
                     textAlign="left"
                     onLetterAnimationComplete={handleAnimationComplete}
                   />
-                  <SplitText
-                    tag="h1"
-                    text="2025"
-                    className="h-title-year"
-                    delay={100}
-                    duration={0.6}
-                    ease="power3.out"
-                    splitType="chars"
-                    from={{ opacity: 0, y: 40 }}
-                    to={{ opacity: 1, y: 0 }}
-                    threshold={0.1}
-                    rootMargin="0px"
-                    textAlign="left"
-                    onLetterAnimationComplete={handleAnimationComplete}
-                  />
-                  <div className="tagline-wrap hero-tagline">
-                    Where ideas converge, and entropy unfolds__
+                  <div className="ev-tagline-wrap ev-hero-tagline">
+                    Unleash your mind in challenging tech battles__
                     <TextType
                       tag="h2"
-                      className='hero-tagline tag-overlap'
-                      text={["Gear Up for IIITG’s Ultimate Tech Carnival", "Where ideas converge, and entropy unfolds"]}
+                      className='ev-hero-tagline ev-tag-overlap'
+                      text={["Unleash your mind in challenging tech battles", "Ignite your mind in epic tech showdowns"]}
                       typingSpeed={75}
                       pauseDuration={1500}
                       showCursor={true}
                       cursorCharacter="_"
                     />
                   </div>
+                  <div>
+                    <SplitText
+                      tag="h1"
+                      text="Explore our events — where tech, creativity, and challenges collide. get ready to innovate, compete, and be inspired!"
+                      className="ev-hero-des"
+                      delay={50}
+                      duration={0.6}
+                      ease="power3.out"
+                      splitType="lines"
+                      from={{ opacity: 0, y: 40 }}
+                      to={{ opacity: 1, y: 0 }}
+                      threshold={0.1}
+                      rootMargin="0px"
+                      textAlign="left"
+                      onLetterAnimationComplete={() => { }}
+                    />
+                  </div>
                 </div>
-                <div className="h-hero-btns">
-                  <button className='h-regBtn'>Register Now</button>
-                  <button className="h-eventBtn">Explore Events</button>
+
+                <div className="ev-hero-tags">
+                  <div className="ev-hero-tag ev-tag1">
+                    <Icon icon="material-symbols:event" />
+                    <div>10+ Events</div>
+                  </div>
+                  <div className="ev-hero-tag ev-tag2">
+                    <Icon icon="ri:medal-fill" />
+                    <div>₹ 50K+ Prize Pool</div>
+                  </div>
+                  <div className="ev-hero-tag ev-tag3">
+                    <Icon icon="ic:baseline-tips-and-updates" />
+                    <div>10+ Events</div>
+                  </div>
                 </div>
-                <div className="h-hero-updates">
-                  <div className="blink"></div>
-                  <div className="h-hero-live">
+
+                <div className="ev-hero-updates">
+                  <div className="ev-blink"></div>
+                  <div className="ev-hero-live">
                     Registration Live
                   </div>
                 </div>
               </div>
-              <div className="h-hero-anime">
+              <div className="ev-hero-anime">
                 <img src={Comp} alt="" />
               </div>
             </div>
