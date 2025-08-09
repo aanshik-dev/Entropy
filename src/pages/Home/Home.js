@@ -123,13 +123,13 @@ const Home = () => {
 
               <div className="text-content">
                 <p>
-                  Entropy is the annual tech fest of Indian Institute Of Information Technology, Guwahati, where innovation, creativity, and technology converge in a thrilling celebration of the future. Designed for students, by students, Entropy brings together brilliant minds from across the region to compete, collaborate, and create.
+                  Entropy is the annual tech fest of IIIT Guwahati — where innovation, creativity, and technology collide. Built by students, for students, it unites brilliant minds from across the region to compete, collaborate, and create.
                 </p>
                 <p>
-                  From coding challenges and robotics competitions to AI showcases, gaming zones, research talks, startup pitches, hackathons and cutting-edge workshops — Entropy is more than just a fest, it’s an experience.
+                  From coding battles and robotics to AI showcases, gaming, hackathons, and startup pitches — Entropy is more than a fest, it’s a full-blown tech experience.
                 </p>
                 <p>
-                  This year, Entropy returns bigger and bolder, with the theme revolving around “Quantum Tech”, inviting you to break boundaries, think differently, and build what's next.
+                  This year, Entropy returns bigger and bolder with a theme centered on Quantum Tech — challenging you to break boundaries and build what’s next.
                 </p>
               </div>
 
@@ -143,7 +143,7 @@ const Home = () => {
                     <p>Challenge yourself in hackathons, coding competitions, and tech quizzes</p>
                   </div>
                 </div>
-                <div className="feature">
+                {/* <div className="feature">
                   <div className="feature-icon">
                     <Icon icon="fa-solid:atom" />
                   </div>
@@ -151,7 +151,7 @@ const Home = () => {
                     <h4>Industry Workshops</h4>
                     <p>Hands-on sessions with cutting-edge quantum computing platforms</p>
                   </div>
-                </div>
+                </div> */}
                 <div className="feature">
                   <div className="feature-icon">
                     <Icon icon="zondicons:mic" />
@@ -165,8 +165,8 @@ const Home = () => {
 
             </div>
 
-            <div className="des-image">
-              <img src={imgPath("HomeDes.png")} alt="Home-img" />
+            <div className="des-image" style={{ backgroundImage: `url(${imgPath("HomeDes.png")})` }}>
+              {/* <img src={imgPath("HomeDes.png")} alt="Home-img" /> */}
             </div>
           </div>
 
@@ -213,7 +213,7 @@ const Home = () => {
                   direction="up"
                   duration={1}
                   className="count-up-text"
-                />+
+                />Cr+
               </div>
               <div className="stat-tag">
                 <p>Prize Pool</p>

@@ -63,14 +63,14 @@ body {
 
 .h-des-textbox {
   border-radius: 20px;
-  background-color: #3B0063;
+  background: linear-gradient(60deg, #49007a89, #1c002d9c);
   border: 1px solid #AF25FF;
   display: flex;
   gap: 20px;
 }
 
 .des-text {
-  width: 65%;
+  width: 60%;
   padding: 35px 0px 35px 35px;
 }
 
@@ -88,7 +88,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   width: 100%;
-  color: rgba(255, 255, 255);
+  color: rgba(255, 255, 255, 0.6);
   font-family: 'Maven Pro', sans-serif;
   margin-bottom: 30px;
 }
@@ -126,19 +126,73 @@ body {
   font-weight: 400;
   width: 100%;
   color: rgba(255, 255, 255, 0.6);
-  font-family:  'Maven Pro', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
 }
 
 .des-image {
-  width: 35%;
-  display: block;
-  padding: 10px;
+  width: 40%;
+  /* display: block; */
+  /* padding: 10px; */
+  background: url(../public/assets/TeamDes.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  margin: 5px;
 }
 
-.des-image>img {
+/* .des-image>img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   display: block;
   border-radius: 10px;
+} */
+
+.mid-heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+}
+
+.mid-head-title {
+  font-size: 30px;
+  color: #ff00c8;
+  font-weight: 650;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: 'Maven Pro', 'Inter', sans-serif;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px 20px;
+}
+
+.mid-title-dark {
+  margin: 0px 5px 0px 20px;
+}
+
+.mid-title-light {
+  color: #ffffff;
+  margin: 0px 20px 0px 5px;
+}
+
+.mid-ruler {
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, #8100f9, #ff00e15c, #ff00e100);
+}
+
+.mid-ruler-rev {
+  background: linear-gradient(-90deg, #8100f9, #ff00e15c, #ff00e100);
+}
+
+.mid-head-info {
+  font-size: 18px;
+  color: #bbbbbb;
+  width: 60%;
+  padding: 0px 10px;
+  margin-bottom: 20px;
 }

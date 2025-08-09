@@ -130,8 +130,8 @@ const Sponsors = () => {
 
             </div>
 
-            <div className="des-image">
-              <img src={imgPath("SponsorDes.webp")} alt="Home-img" />
+            <div className="des-image" style={{ backgroundImage: `url(${imgPath("SponsorDes.webp")})` }}>
+              {/* <img src={imgPath("SponsorDes.webp")} alt="Home-img" /> */}
             </div>
           </div>
         </section>
