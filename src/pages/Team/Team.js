@@ -8,7 +8,7 @@ import TextType from '../../components/TextType/TextType';
 import BgParticles from '../../components/BgParticles';
 
 import Comp from '../../assets/Comp.png'
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const Team = () => {
 
@@ -45,8 +45,447 @@ const Team = () => {
     }
   ]
 
+
+
+  const teamsData = [
+    {
+      Team: 'Tech',
+      data: [
+        {
+          name: 'Natasha Romanoff',
+          role: 'Head Coordinator',
+          level: '2',
+          image: 'teams/tech/Natasha.jpg',
+          pos: '50% 30%',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: '',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Tony Stark',
+          role: 'Team Lead',
+          level: '1',
+          image: 'teams/tech/Tony.jpg',
+          pos: 'center',
+          github: '',
+          linkedin: '',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        }
+      ]
+    },
+
+    {
+      Team: 'Tech',
+      data: [
+        {
+          name: 'Natasha Romanoff',
+          role: 'Head Coordinator',
+          level: '2',
+          image: 'teams/tech/Natasha.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: '',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Tony Stark',
+          role: 'Team Lead',
+          level: '1',
+          image: 'teams/tech/Tony.jpg',
+          pos: 'center',
+          github: '',
+          linkedin: '',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        }
+      ]
+    },
+
+    {
+      Team: 'Tech',
+      data: [
+        {
+          name: 'Natasha Romanoff',
+          role: 'Head Coordinator',
+          level: '2',
+          image: 'teams/tech/Natasha.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: '',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Tony Stark',
+          role: 'Team Lead',
+          level: '1',
+          image: 'teams/tech/Tony.jpg',
+          pos: 'center',
+          github: '',
+          linkedin: '',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        }
+      ]
+    },
+
+    {
+      Team: 'Tech',
+      data: [
+        {
+          name: 'Natasha Romanoff',
+          role: 'Head Coordinator',
+          level: '2',
+          image: 'teams/tech/Natasha.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: '',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Tony Stark',
+          role: 'Team Lead',
+          level: '1',
+          image: 'teams/tech/Tony.jpg',
+          pos: 'center',
+          github: '',
+          linkedin: '',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        }
+      ]
+    },
+
+    {
+      Team: 'Tech',
+      data: [
+        {
+          name: 'Natasha Romanoff',
+          role: 'Head Coordinator',
+          level: '2',
+          image: 'teams/tech/Natasha.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: '',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Tony Stark',
+          role: 'Team Lead',
+          level: '1',
+          image: 'teams/tech/Tony.jpg',
+          pos: 'center',
+          github: '',
+          linkedin: '',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+      ]
+    },
+
+    {
+      Team: 'Tech',
+      data: [
+        {
+          name: 'Natasha Romanoff',
+          role: 'Head Coordinator',
+          level: '2',
+          image: 'teams/tech/Natasha.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: '',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Tony Stark',
+          role: 'Team Lead',
+          level: '1',
+          image: 'teams/tech/Tony.jpg',
+          pos: 'center',
+          github: '',
+          linkedin: '',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker ',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Peter Parker',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
+          insta: 'https://www.instagram.com/aanshiq_singh/',
+          phone: 'https://wa.me/917999999999',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
+        }
+      ]
+    },
+  ]
+
+
+  const roleStyle = (level) => {
+    let barStyle, cardStyle, imgStyle;
+    if (level === '1') {
+      barStyle = { background: 'linear-gradient(90deg, #e3bd00, #aa6b00)' };
+      cardStyle = {
+        width: '30%',
+      };
+      imgStyle = { background: 'linear-gradient(45deg, #aa6b00, #e3bd00)' };
+
+    } else if (level === '2') {
+      barStyle = { background: 'linear-gradient(90deg, #fc44ffff, #9100a7ff)' };
+      cardStyle = {};
+      imgStyle = { background: 'linear-gradient(45deg, #8500aaff, #df00e3ff)' };
+
+    } else {
+      barStyle = { background: 'linear-gradient(90deg, #a600e3ff, #570091ff)' };
+      cardStyle = {};
+      imgStyle = { background: 'linear-gradient(45deg, #570091ff, #a600e3ff)' };
+    }
+    return { barStyle, cardStyle, imgStyle };
+  }
+
+
+
   const [teamNum, setTeamNum] = useState(0);
   const teamCount = navData.length;
+  const [containerHeight, setContainerHeight] = useState(0);
+  const teamRefs = useRef([]);
 
   const swipeStyle = {
     transform: `translateX(${teamNum * -100}%)`,
@@ -60,6 +499,24 @@ const Team = () => {
       setTeamNum((prevNum) => prevNum + 1);
     }
   };
+
+  useEffect(() => {
+    if (teamRefs.current[teamNum]) {
+      setContainerHeight(teamRefs.current[teamNum].offsetHeight);
+    }
+  }, [teamNum]);
+
+  // Whenever window resizes, recalculate height
+  useEffect(() => {
+    const handleResize = () => {
+      if (teamRefs.current[teamNum]) {
+        setContainerHeight(teamRefs.current[teamNum].offsetHeight);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [teamNum]);
+
 
   return (
     <>
@@ -145,7 +602,7 @@ const Team = () => {
             <span className='title-ruler'></span>
           </div>
 
-          <div className="h-des-textbox appear">
+          <div className="h-des-textbox">
 
             <div className="des-text">
               <h3 className="text-title">Entropy: A fusion of code, creativity, innovation, and competition.</h3>
@@ -180,16 +637,12 @@ const Team = () => {
               {/* <img src={imgPath("TeamDes.jpg")} alt="Home-img" /> */}
             </div>
           </div>
-          {/* 
-          <div className="group-photo">
-            <img src={imgPath("team.png")} alt="" />
-          </div> */}
         </section>
 
 
         <section className='teams-section'>
 
-          <div className="t-nav-content">
+          <div className="t-nav-content appear">
             <div className="t-nav-arrow" onClick={() => handleSwipe('left')}>
               <Icon icon="ep:arrow-left-bold" />
               <Icon className='t-arrow-left' icon="ep:arrow-left-bold" />
@@ -224,218 +677,92 @@ const Team = () => {
             </div>
           </div>
 
-          <div className="teams-container">
-            <div className="t-teams-wrap">
-
-              <div className="t-team-content">
-
-                <div className="t-mem-card">
-                  <div className="mem-image-box">
-                    <div className="mem-card-shade"></div>
-                    <div className="mem-image-wrap">
-                      <img src={imgPath("teams/tech/Aanshik.jpg")} alt="Aanshik" />
-                    </div>
-                  </div>
-                  <div className="t-mem-data">
-                    <div className='t-mem-name'>Anshik Singh</div>
-                    <div className='t-mem-role'>Team Memeber</div>
-                    <div className="t-mem-contacts">
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="cib:github" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="brandico:linkedin-rect" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="bi:instagram" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="el:phone" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="streamline:mail-send-envelope-solid" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mem-card-bar"></div>
-                </div>
-
-                <div className="t-mem-card">
-                  <div className="mem-image-box">
-                    <div className="mem-card-shade"></div>
-                    <div className="mem-image-wrap">
-                      <img src={imgPath("teams/tech/Aanshik.jpg")} alt="Aanshik" />
-                    </div>
-                  </div>
-                  <div className="t-mem-data">
-                    <div className='t-mem-name'>Anshik Singh</div>
-                    <div className='t-mem-role'>Team Memeber</div>
-                    <div className="t-mem-contacts">
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="cib:github" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="brandico:linkedin-rect" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="bi:instagram" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="el:phone" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="streamline:mail-send-envelope-solid" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mem-card-bar"></div>
-                </div>
-
-                <div className="t-mem-card">
-                  <div className="mem-image-box">
-                    <div className="mem-card-shade"></div>
-                    <div className="mem-image-wrap">
-                      <img src={imgPath("teams/tech/Aanshik.jpg")} alt="Aanshik" />
-                    </div>
-                  </div>
-                  <div className="t-mem-data">
-                    <div className='t-mem-name'>Anshik Singh</div>
-                    <div className='t-mem-role'>Team Memeber</div>
-                    <div className="t-mem-contacts">
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="cib:github" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="brandico:linkedin-rect" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="bi:instagram" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="el:phone" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="streamline:mail-send-envelope-solid" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mem-card-bar"></div>
-                </div>
-
-                <div className="t-mem-card">
-                  <div className="mem-image-box">
-                    <div className="mem-card-shade"></div>
-                    <div className="mem-image-wrap">
-                      <img src={imgPath("teams/tech/Aanshik.jpg")} alt="Aanshik" />
-                    </div>
-                  </div>
-                  <div className="t-mem-data">
-                    <div className='t-mem-name'>Anshik Singh</div>
-                    <div className='t-mem-role'>Team Memeber</div>
-                    <div className="t-mem-contacts">
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="cib:github" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="brandico:linkedin-rect" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="bi:instagram" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="el:phone" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="streamline:mail-send-envelope-solid" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mem-card-bar"></div>
-                </div>
-
-                <div className="t-mem-card">
-                  <div className="mem-image-box">
-                    <div className="mem-card-shade"></div>
-                    <div className="mem-image-wrap">
-                      <img src={imgPath("teams/tech/Aanshik.jpg")} alt="Aanshik" />
-                    </div>
-                  </div>
-                  <div className="t-mem-data">
-                    <div className='t-mem-name'>Anshik Singh</div>
-                    <div className='t-mem-role'>Team Memeber</div>
-                    <div className="t-mem-contacts">
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="cib:github" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="brandico:linkedin-rect" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="bi:instagram" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="el:phone" />
-                        </a>
-                      </div>
-                      <div className="t-mem-link">
-                        <a href="mailto:">
-                          <Icon icon="streamline:mail-send-envelope-solid" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mem-card-bar"></div>
-                </div>
 
 
-              </div>
+          <div className="teams-container" style={{ height: containerHeight }}>
+            <div className="t-teams-wrap" style={swipeStyle} >
+
+              {
+                teamsData.map((team, idx) => {
+
+                  return (
+                    <div className="t-team-wrap" key={idx}>
+
+                      <div className="t-team-content" ref={(el) => teamRefs.current[idx] = el}>
+                        {
+                          team.data.map((item, index) => {
+                            const styles = roleStyle(item.level);
+
+                            return (
+                              <div className="t-mem-card" key={index} style={styles.cardStyle}>
+                                <div className="mem-image-box">
+                                  <div className="mem-card-shade"></div>
+                                  <div className="mem-image-wrap" style={styles.imgStyle}>
+                                    <img src={imgPath(item.image)} alt={item.name} style={{objectPosition: item.pos}} />
+                                  </div>
+                                </div>
+                                <div className="t-mem-data">
+                                  <div className='t-mem-name'>{item.name}</div>
+                                  <div className='t-mem-role'>{item.role}</div>
+                                  <div className="t-mem-contacts">
+
+                                    {
+                                      item.github && (
+                                        <div className="t-mem-link">
+                                          <a href={item.github}>
+                                            <Icon icon="cib:github" />
+                                          </a>
+                                        </div>
+                                      )
+                                    }
+                                    {
+                                      item.linkedin && (
+                                        <div className="t-mem-link">
+                                          <a href={item.linkedin}>
+                                            <Icon icon="brandico:linkedin-rect" />
+                                          </a>
+                                        </div>
+                                      )
+                                    }
+                                    {
+                                      item.insta && (
+                                        <div className="t-mem-link">
+                                          <a href={item.insta}>
+                                            <Icon icon="bi:instagram" />
+                                          </a>
+                                        </div>
+                                      )
+                                    }
+                                    {
+                                      item.phone && (
+                                        <div className="t-mem-link">
+                                          <a href={item.phone}>
+                                            <Icon icon="el:phone" />
+                                          </a>
+                                        </div>
+                                      )
+                                    }
+                                    {
+                                      item.mail && (
+                                        <div className="t-mem-link">
+                                          <a href={item.mail}>
+                                            <Icon icon="streamline:mail-send-envelope-solid" />
+                                          </a>
+                                        </div>
+                                      )
+                                    }
+                                  </div>
+                                </div>
+                                <div className="mem-card-bar" style={styles.barStyle}></div>
+                              </div>
+                            )
+                          })
+                        }
+                      </div>
+                    </div>
+                  )
+                })
+              }
             </div>
           </div>
 

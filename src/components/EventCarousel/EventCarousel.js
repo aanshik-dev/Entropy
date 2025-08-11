@@ -54,6 +54,15 @@ const EventCarousel = () => {
       venue: 'Town Hall',
       date: '10:00 AM'
     },
+    {
+      image: 'Event5.png',
+      icon: 'material-symbols:rocket-launch-rounded',
+      title: 'AI Showdown',
+      tagline: 'Where ideas ignite and Entropy begins',
+      desc: 'Begin the journey of Entropy 2025 with a spectacular Inauguration—honoring special guests, unveiling the theme, and electrifying performances.',
+      venue: 'Town Hall',
+      date: '10:00 AM'
+    },
 
 
   ];
@@ -62,11 +71,10 @@ const EventCarousel = () => {
   const totalSlides = SlideData.length;
   const cloneCount = visibleSlides;
   const intervalRef = useRef();
-  const [counter, setCounter] = useState(1);
+  const [counter, setCounter] = useState(cloneCount);
   const [transitioning, setTransitioning] = useState(true);
-  const [currentIndex, setCurrentIndex] = useState(cloneCount);
+  const [currentIndex, setCurrentIndex] = useState(3);
   const [slideWidth, setSlideWidth] = useState(30);
-
 
 
   const extendedSlides = [
@@ -95,6 +103,11 @@ const EventCarousel = () => {
   }, []);
 
 
+  useEffect(() => {
+    console.log(currentIndex);
+  }, [currentIndex])
+
+
   const jumpSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
     setCounter(slideIndex - cloneCount + 1);
@@ -111,6 +124,8 @@ const EventCarousel = () => {
       }
     })
   };
+
+
 
   const swipeRight = () => {
     setCurrentIndex((next) => next + 1);
@@ -132,7 +147,7 @@ const EventCarousel = () => {
   const startAutoSlide = () => {
     intervalRef.current = setInterval(() => {
       swipeRight();
-    }, 3000);
+    }, 4000);
   };
 
   useEffect(() => {
@@ -192,81 +207,45 @@ const EventCarousel = () => {
           onTransitionEnd={handleTransitionEnd}>
 
           {
-            extendedSlides.map((slide, index) => (
-              <div className="ev-slide-wrap" key={index} style={index === currentIndex ? scaleStyle : {}}>
-                <div className="ev-slide" style={index === currentIndex ? opacityStyle : {}}>
-                  <div className="ev-slide-banner">
-                    <div className="slide-image">
-                      <img src={imgPath(slide.image)} alt="Home-img" />
-                    </div>
-                  </div>
-                  <div className="ev-slide-data">
-                    <div className="ev-slide-float" style={index === currentIndex ? translateStyleDown : {}}>
-                      <div className="ev-slide-icon">
-                        <Icon icon={slide.icon} />
-                      </div>
-                      <div className="ev-slide-head">
-                        <h3 className='ev-slide-title'>{slide.title}</h3>
-                        <h4 className='ev-slide-subhead'>{slide.tagline}</h4>
+            extendedSlides.map((slide, index) => {
+              return (
+                <div className="ev-slide-wrap" key={index} style={index === currentIndex ? scaleStyle : {}}>
+                  <div className="ev-slide" style={index === currentIndex ? opacityStyle : {}}>
+                    <div className="ev-slide-banner">
+                      <div className="slide-image">
+                        <img src={imgPath(slide.image)} alt="Home-img" />
                       </div>
                     </div>
-                    <div className="ev-slide-float2" style={index === currentIndex ? translateStyleUp : {}}>
-                      <p className='ev-slide-des'>{slide.desc}
-                      </p>
-                      <div className="ev-slide-info">
-                        <div className='ev-venue'>
-                          <span>
-                            <Icon icon="material-symbols:location-on" />
-                          </span> {slide.venue}</div>
-                        <div className='ev-time'>
-                          <span>
-                            <Icon icon="material-symbols:calendar-month" />
-                          </span> {slide.date}</div>
+                    <div className="ev-slide-data">
+                      <div className="ev-slide-float" style={index === currentIndex ? translateStyleDown : {}}>
+                        <div className="ev-slide-icon">
+                          <Icon icon={slide.icon} />
+                        </div>
+                        <div className="ev-slide-head">
+                          <h3 className='ev-slide-title'>{slide.title}</h3>
+                          <h4 className='ev-slide-subhead'>{slide.tagline}</h4>
+                        </div>
+                      </div>
+                      <div className="ev-slide-float2" style={index === currentIndex ? translateStyleUp : {}}>
+                        <p className='ev-slide-des'>{slide.desc}
+                        </p>
+                        <div className="ev-slide-info">
+                          <div className='ev-venue'>
+                            <span>
+                              <Icon icon="material-symbols:location-on" />
+                            </span> {slide.venue}</div>
+                          <div className='ev-time'>
+                            <span>
+                              <Icon icon="material-symbols:calendar-month" />
+                            </span> {slide.date}</div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))
+              )
+            })
           }
-
-          {/* 
-          <div className="ev-slide-wrap">
-            <div className="ev-slide">
-              <div className="ev-slide-banner">
-                <div className="slide-image">
-                  <img src={imgPath("HomeDes.png")} alt="Home-img" />
-                </div>
-              </div>
-              <div className="ev-slide-data">
-                <div className="ev-slide-float">
-                  <div className="ev-slide-icon">
-                    <Icon icon="material-symbols:rocket-launch-rounded" />
-                  </div>
-                  <div className="ev-slide-head">
-                    <h3 className='ev-slide-title'>Inauguration Ceremony</h3>
-                    <h4 className='ev-slide-subhead'>Where Ideas Ignite and Entropy Begins</h4>
-                  </div>
-                </div>
-                <div className="ev-slide-float2">
-                  <p className='ev-slide-des'>
-                    Begin the journey of Entropy 2025 with a spectacular Inauguration—honoring special guests, unveiling the theme, and electrifying performances.
-                  </p>
-                  <div className="ev-slide-info">
-                    <div className='ev-venue'>
-                      <span>
-                        <Icon icon="material-symbols:location-on" />
-                      </span> Town Hall</div>
-                    <div className='ev-time'>
-                      <span>
-                        <Icon icon="material-symbols:calendar-month" />
-                      </span>
-                      12:00 AM</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
 
         <div className="ev-controls">

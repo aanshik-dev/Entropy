@@ -99,7 +99,7 @@ const Sponsors = () => {
             <span className='title-ruler'></span>
           </div>
 
-          <div className="h-des-textbox appear">
+          <div className="h-des-textbox">
 
             <div className="des-text">
               <h3 className="text-title">Entropy: A fusion of code, creativity, innovation, and competition.</h3>

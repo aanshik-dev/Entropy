@@ -154,8 +154,6 @@
   gap: 5px;
 }
 
-
-
 .ev-controls {
   position: absolute;
   top: 0;
@@ -192,6 +190,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: -40px;
+  z-index: 5;
 }
 
 .ev-slider-dots {
