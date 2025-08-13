@@ -67,11 +67,12 @@ body {
   border: 1px solid #AF25FF;
   display: flex;
   gap: 20px;
+  padding: 5px;
 }
 
 .des-text {
   width: 60%;
-  padding: 35px 0px 35px 35px;
+  padding: 30px 0px 30px 30px;
 }
 
 .text-title {
@@ -104,12 +105,13 @@ body {
 }
 
 .feature-icon {
-  width: 50px;
+  min-width: 50px;
   font-size: 24px;
   color: #FFD700;
   padding-top: 6px;
   text-align: center;
 }
+
 
 .feature-data>h4 {
   font-size: 20px;
@@ -131,22 +133,11 @@ body {
 
 .des-image {
   width: 40%;
-  /* display: block; */
-  /* padding: 10px; */
   background: url(../public/assets/TeamDes.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 15px;
-  margin: 5px;
 }
-
-/* .des-image>img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 10px;
-} */
 
 .mid-heading {
   text-align: center;
@@ -195,4 +186,91 @@ body {
   width: 60%;
   padding: 0px 10px;
   margin-bottom: 20px;
+}
+
+section {
+  transition: all 0.2s ease-in-out;
+}
+
+
+@media (max-width: 1200px) {
+
+  .des-text {
+    width: 55%;
+    padding: 30px 0px 30px 30px;
+  }
+
+  .text-title {
+    font-size: 20px;
+  }
+
+  .text-content {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .text-content>p {
+    margin: 10px 0px;
+  }
+
+  .feature-icon {
+    min-width: 40px;
+    font-size: 20px;
+  }
+
+  .feature-data>h4 {
+    font-size: 18px;
+  }
+
+  .feature-data>p {
+    font-size: 16px;
+  }
+
+  .des-image {
+    width: 45%;
+  }
+}
+
+
+@media (max-width: 992px) {
+  :root {
+    --section-margin: 7vw;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-margin: 30px;
+  }
+  
+  .main-title {
+    font-size: 25px;
+  }
+
+  .h-des-textbox {
+    flex-direction: column-reverse;
+  }
+
+  .des-text {
+    width: 100%;
+    padding: 10px 20px 20px 20px;
+  }
+
+  .des-image {
+    width: 100%;
+    height: 50vmax;
+  }
+
+  .feature-icon {
+    min-width: 30px;
+    font-size: 18px;
+  }
+
+  .feature-data>h4 {
+    font-size: 16px;
+  }
+
+  .feature-data>p {
+    font-size: 14px;
+  }
 }

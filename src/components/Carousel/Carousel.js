@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import './Carousel.css'
 import { Icon } from '@iconify/react/dist/iconify.js';
 
@@ -94,26 +94,25 @@ const Carousel = () => {
 
   const [slideWidth, setSlideWidth] = useState(30);
 
-  const extendedSlides = [
-    ...SlideData.slice(-visibleSlides),
-    ...SlideData,
-    ...SlideData.slice(0, visibleSlides),
-  ]
+  // const extendedSlides = [
+  //   ...SlideData.slice(-visibleSlides),
+  //   ...SlideData,
+  //   ...SlideData.slice(0, visibleSlides),
+  // ]
 
-  //    3 4 5 1 2 3 4 5 1 2 3
+  const extendedSlides = useMemo(() => {
+    return [
+      ...SlideData.slice(-visibleSlides),
+      ...SlideData,
+      ...SlideData.slice(0, visibleSlides),
+    ];
+  }, [visibleSlides]);
 
-  // Handle window resize to adjust visible slides
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setVisibleSlides(1);
-        setSlideWidth(90);
-      } else if (window.innerWidth < 1024) {
-        setVisibleSlides(2);
-        setSlideWidth(45);
-      } else {
-        setVisibleSlides(3);
-        setSlideWidth(30);
+        setSlideWidth(60);
       }
     };
 
@@ -121,6 +120,15 @@ const Carousel = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  useEffect(() => {
+    setCurrentIndex(cloneCount);
+  }, [cloneCount]);
+
+
+  useEffect(() => {
+    console.log("Visible slides:", visibleSlides);
+  }, [visibleSlides]);
 
 
   const jumpSlide = (slideIndex) => {
@@ -184,15 +192,13 @@ const Carousel = () => {
 
 
   const transformStyle = {
-    transform: `translateX(-${-20 + 30 * currentIndex}%)`,
+    transform: `translateX(-${-17 + slideWidth * currentIndex}%)`,
     transition: transitioning ? 'transform 0.5s ease' : 'none',
   };
 
   const scaleStyle = {
-    transform: `scale(${1.08}) translateY(-10px)`,
     transition: transitioning ? 'all 0.2s ease' : 'none',
-    padding: '0 25px',
-    zIndex: 2,
+    // minWidth: `36%`
   };
 
 
@@ -204,7 +210,7 @@ const Carousel = () => {
           onTransitionEnd={handleTransitionEnd}>
           {
             extendedSlides.map((slide, index) => (
-              <div className="slide-wrap" key={index} style={index === currentIndex ? scaleStyle : {}}>
+              <div key={index} className={`slide-wrap ${index === currentIndex ? 'h-slide-active' : ''}`} style={index === currentIndex ? scaleStyle : {}}>
                 <div className="h-slide">
                   <div className="slide-iwrap">
                     <div className="h-slide-icon" style={{ backgroundColor: slide.iconBg, color: slide.iconColor }}>
@@ -225,27 +231,6 @@ const Carousel = () => {
 
             ))
           }
-          {/* 
-          <div className="slide-wrap">
-            <div className="h-slide">
-              <div className="slide-iwrap">
-                <div className="h-slide-icon">
-                  <Icon icon='fa7-solid:robot' />
-                </div>
-              </div>
-              <div className="slide-title">AI Showdown</div>
-              <div className="slide-desc">Pit your AI models against others in this thrilling competition.Solve real- world problems using artificial intelligence and machine learning.</div>
-              <div className="slide-data">
-                <div className="slide-info">10:00 AM</div>
-                <div className="slide-tag">
-                  <span> Day 1 </span>
-                </div>
-              </div>
-              <div className="slide-button">Register Now</div>
-            </div>
-          </div> */}
-
-
 
         </div>
         <div className="controls">
@@ -262,7 +247,7 @@ const Carousel = () => {
             <Icon icon='fa-solid:angle-right' />
           </div>
         </div>
-      </div>
+      </div >
 
       <div className="slider-helper">
         <div className="slider-dots">
@@ -282,7 +267,7 @@ const Carousel = () => {
         </div>
 
         <div className="all-events-btn">
-          <span>View All Events</span>
+          <span>View All</span>
           <span><Icon icon='solar:double-alt-arrow-right-line-duotone' /></span>
         </div>
 

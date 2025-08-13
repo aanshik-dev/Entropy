@@ -1,8 +1,9 @@
 import './Home.css';
+import { useRef, useState, useEffect } from 'react';
 import { imgPath } from '../../utils/utilityFunctions'
 import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react/dist/iconify.js';
-
+import TextUp from '../../components/TextUp';
 import CountUp from '../../components/CountUp';
 import SplitText from "../../components/SplitText";
 import TextType from '../../components/TextType/TextType';
@@ -15,9 +16,18 @@ import HomeSpeakers from '../../components/HomeSpeakers/HomeSpeakers';
 
 const Home = () => {
 
-  const handleAnimationComplete = () => {
-    // console.log('');
-  };
+  const texts = ["Gear Up for IIITG’s Ultimate Tech Carnival ", "Where ideas converge, and entropy unfolds"];
+
+  const el = useRef(null);
+  let i = 0;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      i = (i + 1) % texts.length;
+      if (el.current) el.current.textContent = texts[i];
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -44,7 +54,7 @@ const Home = () => {
                     threshold={0.1}
                     rootMargin="0px"
                     textAlign="left"
-                    onLetterAnimationComplete={handleAnimationComplete}
+                    onLetterAnimationComplete={() => { }}
                   />
                   <SplitText
                     tag="h1"
@@ -59,24 +69,17 @@ const Home = () => {
                     threshold={0.1}
                     rootMargin="0px"
                     textAlign="left"
-                    onLetterAnimationComplete={handleAnimationComplete}
+                    onLetterAnimationComplete={() => { }}
                   />
-                  <div className="tagline-wrap hero-tagline">
-                    Where ideas converge, and entropy unfolds__
-                    <TextType
-                      tag="h2"
-                      className='hero-tagline tag-overlap'
-                      text={["Gear Up for IIITG’s Ultimate Tech Carnival", "Where ideas converge, and entropy unfolds"]}
-                      typingSpeed={75}
-                      pauseDuration={1500}
-                      showCursor={true}
-                      cursorCharacter="_"
-                    />
+
+                  <div className="hero-tagline">
+                    <TextUp texts={texts} intervalTime={4000} animDuration={200} />
                   </div>
+
                   <div>
                     <SplitText
                       tag="h1"
-                      text="IIITG’s biggest tech fest of the year, packed with workshops, thrilling competitions, and exciting prizes."
+                      text="IIITG's biggest tech fest of the year, packed with workshops, thrilling competitions, and exciting prizes."
                       className="h-hero-des"
                       delay={50}
                       duration={0.6}
@@ -98,7 +101,7 @@ const Home = () => {
                 <div className="h-hero-updates">
                   <div className="blink"></div>
                   <div className="h-hero-live">
-                    Registration Live
+                    Registration Live Soon
                   </div>
                 </div>
               </div>
@@ -213,7 +216,7 @@ const Home = () => {
                   direction="up"
                   duration={1}
                   className="count-up-text"
-                />Cr+
+                />K+
               </div>
               <div className="stat-tag">
                 <p>Prize Pool</p>
