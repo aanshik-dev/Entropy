@@ -14,7 +14,7 @@ const Carousel = () => {
       iconColor: '#000000',
       title: 'AI Showdown',
       headColor: '#FF1497',
-      desc: 'Pit your AI models against others in this thrilling competition.Solve real- world problems using artificial intelligence and machine learning.',
+      desc: 'Pit your AI models against others in this thrilling competition.',
       tag: 'Day 1',
       data: '10:00 AM',
       dataColor: '#FFD700',
@@ -26,7 +26,7 @@ const Carousel = () => {
       iconColor: '#FFFFFF',
       title: 'Gaming Tournament',
       headColor: '#FFD700',
-      desc: 'Step into the quantum realm with our immersive VR experience. Visualize quantum phenomena and interact with quantum particles in virtual reality.',
+      desc: 'Step into the quantum realm with our immersive VR experience.',
       tag: 'Day 2',
       data: '09:00 AM',
       dataColor: '#FF1493',
@@ -36,7 +36,7 @@ const Carousel = () => {
       icon: 'uil:processor',
       iconBg: '#FF1493',
       iconColor: '#FFFFFF',
-      title: 'Quantum Computing Workshop',
+      title: 'Workshop',
       headColor: '#FFD700',
       desc: 'Learn the fundamentals of quantum computing and how it can revolutionize the world of technology.',
       tag: 'Day 3',
@@ -60,9 +60,9 @@ const Carousel = () => {
       icon: 'fa6-solid:vr-cardboard',
       iconBg: '#a74affff',
       iconColor: '#FFFFFF',
-      title: 'Quantum Radio 2',
+      title: 'Quantum Radio',
       headColor: '#FFD700',
-      desc: '48-hour coding marathon to build quantum algorithms and applications. Teams of 3-4 members will compete for the grand prize.',
+      desc: '48-hour coding marathon to build quantum algorithms and applications.',
       tag: 'Day 5',
       data: '11:00 AM',
       dataColor: '#FF1493',
@@ -72,7 +72,7 @@ const Carousel = () => {
       icon: 'ion:radio',
       iconBg: '#FF1493',
       iconColor: '#FFFFFF',
-      title: 'Quantum Radio 2',
+      title: 'Quantum Radio',
       headColor: '#FFD700',
       desc: 'Advanced techniques in quantum radio signal processing.',
       tag: 'Day 6',
@@ -92,13 +92,8 @@ const Carousel = () => {
   const [transitioning, setTransitioning] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(cloneCount);
 
-  const [slideWidth, setSlideWidth] = useState(30);
-
-  // const extendedSlides = [
-  //   ...SlideData.slice(-visibleSlides),
-  //   ...SlideData,
-  //   ...SlideData.slice(0, visibleSlides),
-  // ]
+  const [slideWidth, setSlideWidth] = useState(33);
+  const [shift, setShift] = useState(17);
 
   const extendedSlides = useMemo(() => {
     return [
@@ -110,9 +105,22 @@ const Carousel = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 480) {
+        setVisibleSlides(1);
+        setSlideWidth(80);
+        setShift(10);
+      } else if (window.innerWidth < 768) {
         setVisibleSlides(1);
         setSlideWidth(60);
+        setShift(13);
+      } else if (window.innerWidth < 992) {
+        setVisibleSlides(3);
+        setSlideWidth(40);
+        setShift(10);
+      } else {
+        setVisibleSlides(3);
+        setSlideWidth(33);
+        setShift(17);
       }
     };
 
@@ -192,13 +200,12 @@ const Carousel = () => {
 
 
   const transformStyle = {
-    transform: `translateX(-${-17 + slideWidth * currentIndex}%)`,
+    transform: `translateX(-${-shift + slideWidth * currentIndex}%)`,
     transition: transitioning ? 'transform 0.5s ease' : 'none',
   };
 
   const scaleStyle = {
     transition: transitioning ? 'all 0.2s ease' : 'none',
-    // minWidth: `36%`
   };
 
 
@@ -217,7 +224,9 @@ const Carousel = () => {
                       <Icon icon={slide.icon} />
                     </div>
                   </div>
-                  <div className="slide-title" style={{ color: slide.headColor }}>{slide.title}</div>
+                  <div className="slide-title" style={{ color: slide.headColor }}>
+                    {slide.title}
+                  </div>
                   <div className="slide-desc">{slide.desc}</div>
                   <div className="slide-data">
                     <div className="slide-info" style={{ color: slide.dataColor }}>{slide.data}</div>
@@ -250,12 +259,12 @@ const Carousel = () => {
       </div >
 
       <div className="slider-helper">
+        <div className="slide-counter">
+          <span className='count'>{counter}</span>
+          <span> / </span>
+          <span className='total-slides'>{totalSlides}</span>
+        </div>
         <div className="slider-dots">
-          <div className="slide-counter">
-            <span className='count'>{counter}</span>
-            <span> / </span>
-            <span className='total-slides'>{totalSlides}</span>
-          </div>
           {SlideData.map((_, idx) => (
             <div
               key={idx}

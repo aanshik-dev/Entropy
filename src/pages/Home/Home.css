@@ -43,6 +43,11 @@
   align-items: center;
 }
 
+.h-hero-title {
+  position: relative;
+  z-index: 5;
+}
+
 .h-title-wrap {
   display: flex;
   flex-direction: column;
@@ -234,6 +239,8 @@
   animation: Float 4s ease-in-out infinite;
   transform: translateY(-20px);
   transition: all 0.2s ease;
+  z-index: -10;
+  position: relative;
 }
 
 
@@ -343,7 +350,7 @@
 @media (max-width: 768px) {
 
   .h-hero {
-    padding: 80px 10vw;
+    padding: 70px 7vw 50px;
   }
 
   .h-hero-wrapper {
@@ -362,9 +369,13 @@
     height: 50vw;
   }
 
+  .h-hero-btns {
+    gap: 15px;
+  }
+
   .h-regBtn, .h-eventBtn {
     font-size: 14px;
-    padding: 5px 15px;
+    padding: 5px 10px;
   }
 
 }
