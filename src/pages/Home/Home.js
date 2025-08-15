@@ -272,15 +272,22 @@ const Home = () => {
             <span className='title-light'>Speaker</span>
             <span className='title-ruler'></span>
           </div>
-          <div className="speaker">
+          <div className="speaker-container">
             <HomeSpeakers />
           </div>
 
         </section>
 
+        <section className='sponsors-section'>
+          <div className="main-title appear" >
+            <span className='title-dark'>Our</span>
+            <span className='title-light'>Sponsors</span>
+            <span className='title-ruler'></span>
+          </div>
+          <div className="speaker-container">
+            <Hsponsors />
+          </div>
 
-        <section className="Event">
-          <Hsponsors />
         </section>
 
       </main >

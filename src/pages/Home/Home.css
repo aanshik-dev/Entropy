@@ -297,10 +297,11 @@
   padding: 0px var(--section-margin);
 }
 
-.merch {
+.speaker-section {
+  padding: 0px var(--section-margin);
 }
 
-.speaker-section {
+.sponsors-section {
   padding: 0px var(--section-margin);
 }
 
@@ -382,7 +383,7 @@
 
 @media (max-width: 480px) {
   .stats {
-    margin: 15px 0px 35px;
+    margin: 30px 0px 60px;
     gap: 10px 0px;
   }
 

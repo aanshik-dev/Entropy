@@ -1,51 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Sponsors</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsor Showcase</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+        body {
+            background: #18001e;
+            color: #fff;
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sponsor-btn {
+            display: inline-block;
+            padding: 18px 44px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border: none;
+            border-radius: 40px;
+            background: linear-gradient(270deg, #ff00c8, #ffe600, #a100ff, #ff00c8);
+            background-size: 400% 400%;
+            color: #fff;
+            box-shadow: 0 4px 32px 0 rgba(255, 0, 200, 0.18);
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+            animation: gradientMove 6s ease-in-out infinite;
+        }
+
+        .sponsor-btn:hover {
+            transform: scale(1.07);
+            box-shadow: 0 8px 40px 0 #ff00c8cc, 0 2px 8px 0 rgba(0, 0, 0, 0.18);
+            filter: brightness(1.1);
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .sponsor-btn:active {
+            transform: scale(0.98);
+        }
+
+        .section {
+            margin: 56px 0 0 0;
+            text-align: center;
+        }
+
+        .section .section-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        .section .section-title .line {
+            flex: 1;
+            height: 4px;
+            border-radius: 2px;
+            margin: 0 16px;
+            position: relative;
+            overflow: hidden;
+            min-width: 60px;
+            background: linear-gradient(90deg, #ff00c8 0%, #fff 100%);
+            background-size: 200% 200%;
+            animation: shimmer 2.5s linear infinite;
+        }
+
+        .section.legacy .section-title .line {
+            background: linear-gradient(90deg, #ff00c8 0%, #fff 100%);
+        }
+
+        .section.power .section-title .line {
+            background: linear-gradient(90deg, #ffe600 0%, #fff 100%);
+        }
+
+        .section.innovation .section-title .line {
+            background: linear-gradient(90deg, #ff00c8 0%, #fff 100%);
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        .section .section-title span {
+            font-size: 2.1rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1), text-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-shadow: 0 2px 24px #ff00c855, 0 0px 2px #fff8;
+        }
+
+        .section.legacy .section-title .highlight {
+            color: #ff00c8;
+            text-shadow: 0 2px 16px #ff00c8cc;
+        }
+
+        .section.power .section-title .highlight {
+            color: #ffe600;
+            text-shadow: 0 2px 16px #ffe600cc;
+        }
+
+        .section.innovation .section-title .highlight {
+            color: #ff00c8;
+            text-shadow: 0 2px 16px #ff00c8cc;
+        }
+
+        .section .subtitle {
+            font-size: 1.08rem;
+            color: #bdbdbd;
+            margin-bottom: 36px;
+            letter-spacing: 1.2px;
+            font-weight: 600;
+        }
+
+        .sponsor-cards {
+            display: flex;
+            justify-content: center;
+            gap: 36px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+
+        .sponsor-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 2.5px solid transparent;
+            border-radius: 20px;
+            padding: 28px 28px 18px 28px;
+            width: 230px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 24px 0 rgba(161, 0, 255, 0.10), 0 1.5px 8px 0 rgba(0, 0, 0, 0.13);
+            transition:
+                box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                background 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(8px) saturate(1.2);
+            animation: floatCard 2.2s cubic-bezier(0.4, 0, 0.2, 1) both;
+        }
+
+        @keyframes floatCard {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+            }
+
+            60% {
+                opacity: 1;
+                transform: translateY(-8px) scale(1.03);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .sponsor-card:hover {
+            transform: translateY(-10px) scale(1.06) rotate(-0.5deg);
+            box-shadow: 0 12px 48px 0 rgba(255, 0, 200, 0.22), 0 2px 8px 0 rgba(0, 0, 0, 0.18);
+            background: rgba(255, 255, 255, 0.13);
+            z-index: 2;
+            border-color: transparent;
+        }
+
+        .sponsor-card::before {
+            content: '';
+            position: absolute;
+            inset: -2.5px;
+            border-radius: 22px;
+            padding: 0;
+            z-index: 0;
+            background: linear-gradient(120deg, #ff00c8, #ffe600, #a100ff, #ff00c8);
+            background-size: 300% 300%;
+            opacity: 0;
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            filter: blur(2px);
+            animation: cardBorderAnim 4s linear infinite;
+        }
+
+        .sponsor-card:hover::before {
+            opacity: 1;
+        }
+
+        @keyframes cardBorderAnim {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .sponsor-card img {
+            width: 104px;
+            height: 104px;
+            object-fit: contain;
+            background: #f3eaff;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 0 0 transparent;
+        }
+
+        .sponsor-card:hover img {
+            transform: scale(1.13) rotate(-2deg);
+            box-shadow: 0 4px 24px 0 rgba(255, 0, 200, 0.13);
+        }
+
+        .sponsor-card::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(255, 0, 200, 0.10) 0%, transparent 80%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1), height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .section.legacy .sponsor-card:hover::after,
+        .section.innovation .sponsor-card:hover::after {
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(255, 0, 200, 0.16) 0%, transparent 80%);
+        }
+
+        .section.power .sponsor-card:hover::after {
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(255, 230, 0, 0.16) 0%, transparent 80%);
+        }
+
+        .sponsor-card>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .sponsor-card .bank-name {
+            font-weight: 800;
+            font-size: 1.13rem;
+            margin-bottom: 4px;
+            letter-spacing: 1.1px;
+            text-shadow: 0 1px 8px #ff00c822;
+        }
+
+        .sponsor-card .bank-desc {
+            font-size: 0.93rem;
+            color: #bdbdbd;
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        .sponsor-card .bank-highlight {
+            color: #ffe600;
+            font-weight: 700;
+            font-size: 0.98rem;
+            margin-bottom: 0;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 8px #ffe60044;
+        }
+
+        @media (max-width: 900px) {
+            .sponsor-cards {
+                flex-direction: column;
+                align-items: center;
+                gap: 22px;
+            }
+
+            .sponsor-card {
+                width: 90vw;
+                max-width: 340px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <section class="sponsors-section">
-    <div class="sponsor-header">
-      <h2><span class="highlight">OUR</span> SPONSORS</h2>
-      <div class="line"></div>
+    <!-- LEGACY SPONSOR -->
+    <div class="section legacy">
+        <div class="section-title">
+            <div class="line"></div>
+            <span><span class="highlight">LEGACY</span> SPONSOR</span>
+            <div class="line"></div>
+        </div>
+        <div class="subtitle">BEHIND EVERY INNOVATION, THERE'S A SPONSOR WHO BELIEVED IN POSSIBILITY</div>
+        <div class="sponsor-cards">
+            <div class="sponsor-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/SBI-logo.svg" alt="SBI Logo">
+                <div class="bank-name">STATE BANK OF INDIA</div>
+                <div class="bank-desc">India's largest public sector bank</div>
+            </div>
+            <div class="sponsor-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/SBI-logo.svg" alt="SBI Logo">
+                <div class="bank-name">STATE BANK OF INDIA</div>
+                <div class="bank-highlight">STATE BANK OF INDIA</div>
+            </div>
+            <div class="sponsor-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/SBI-logo.svg" alt="SBI Logo">
+                <div class="bank-name">STATE BANK OF INDIA</div>
+                <div class="bank-highlight">STATE BANK OF INDIA</div>
+            </div>
+        </div>
     </div>
 
-    <div class="sponsor-grid">
-      <!-- Sponsor Card -->
-      <div class="sponsor-card">
-        <img src="Rectangle 14.svg" alt="SBI Logo" />
-        <h3>STATE BANK OF INDIA</h3>
-        <p class="subtext">India's largest public sector bank</p>
-      </div>
-      <div class="sponsor-card">
-        <img src="Rectangle 14.svg" alt="SBI Logo" />
-        <h3>STATE BANK OF INDIA</h3>
-        <p class="yellow-text">STATE BANK OF INDIA</p>
-      </div>
-      <div class="sponsor-card">
-        <img src="Rectangle 14.svg" alt="SBI Logo" />
-        <h3>STATE BANK OF INDIA</h3>
-        <p class="yellow-text">STATE BANK OF INDIA</p>
-      </div>
-      <div class="sponsor-card">
-        <img src="Rectangle 14.svg" alt="SBI Logo" />
-        <h3>STATE BANK OF INDIA</h3>
-        <p class="subtext">India's largest public sector bank</p>
-      </div>
-      <div class="sponsor-card">
-        <img src="Rectangle 14.svg" alt="SBI Logo" />
-        <h3>STATE BANK OF INDIA</h3>
-        <p class="yellow-text">STATE BANK OF INDIA</p>
-      </div>
-      <div class="sponsor-card">
-        <img src="Rectangle 14.svg" alt="SBI Logo" />
-        <h3>STATE BANK OF INDIA</h3>
-        <p class="yellow-text">STATE BANK OF INDIA</p>
-      </div>
+    <!-- POWER SPONSOR -->
+    <div class="section power">
+        <div class="section-title">
+            <div class="line"></div>
+            <span><span class="highlight">POWER</span> SPONSOR</span>
+            <div class="line"></div>
+        </div>
+        <div class="subtitle">BEHIND EVERY INNOVATION, THERE'S A SPONSOR WHO BELIEVED IN POSSIBILITY</div>
+        <div class="sponsor-cards">
+            <div class="sponsor-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/SBI-logo.svg" alt="SBI Logo">
+                <div class="bank-name">STATE BANK OF INDIA</div>
+                <div class="bank-desc">India's largest public sector bank</div>
+            </div>
+            <div class="sponsor-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/SBI-logo.svg" alt="SBI Logo">
+                <div class="bank-name">STATE BANK OF INDIA</div>
+                <div class="bank-highlight">STATE BANK OF INDIA</div>
+            </div>
+            <div class="sponsor-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/SBI-logo.svg" alt="SBI Logo">
+                <div class="bank-name">STATE BANK OF INDIA</div>
+                <div class="bank-highlight">STATE BANK OF INDIA</div>
+            </div>
+        </div>
     </div>
-  </section>
+
+    <!-- INNOVATION PARTNER -->
+    <div class="section innovation">
+        <div class="section-title">
+            <div class="line"></div>
+            <span><span class="highlight">INNOVATION</span> PARTNER</span>
+            <div class="line"></div>
+        </div>
+        <div class="subtitle">BEHIND EVERY INNOVATION, THERE'S A SPONSOR WHO BELIEVED IN POSSIBILITY</div>
+        <div class="sponsor-cards">
+            <div class="sponsor-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/SBI-logo.svg" alt="SBI Logo">
+                <div class="bank-name">STATE BANK OF INDIA</div>
+            </div>
+            <div class="sponsor-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/SBI-logo.svg" alt="SBI Logo">
+                <div class="bank-name">STATE BANK OF INDIA</div>
+            </div>
+            <div class="sponsor-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/SBI-logo.svg" alt="SBI Logo">
+                <div class="bank-name">STATE BANK OF INDIA</div>
+            </div>
+            <div class="sponsor-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/SBI-logo.svg" alt="SBI Logo">
+                <div class="bank-name">STATE BANK OF INDIA</div>
+            </div>
+        </div>
+    </div>
+    <!-- Become a Sponsor Button (Bottom) -->
+    <div style="display: flex; justify-content: center; margin: 48px 0 56px 0;">
+        <a href="#" class="sponsor-btn">Become a Sponsor</a>
+    </div>
 </body>
+
 </html>

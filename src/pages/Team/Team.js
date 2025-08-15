@@ -60,8 +60,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: '',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Tony Stark',
@@ -72,8 +72,8 @@ const Team = () => {
           github: '',
           linkedin: '',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -84,8 +84,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -96,8 +96,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -108,8 +108,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -120,8 +120,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         }
       ]
     },
@@ -138,8 +138,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: '',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Tony Stark',
@@ -150,8 +150,8 @@ const Team = () => {
           github: '',
           linkedin: '',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -162,8 +162,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -174,8 +174,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -186,8 +186,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -198,8 +198,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -210,8 +210,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -222,8 +222,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         }
       ]
     },
@@ -240,8 +240,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: '',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Tony Stark',
@@ -252,8 +252,8 @@ const Team = () => {
           github: '',
           linkedin: '',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -264,8 +264,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -276,8 +276,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         }
       ]
     },
@@ -294,8 +294,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: '',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Tony Stark',
@@ -306,8 +306,8 @@ const Team = () => {
           github: '',
           linkedin: '',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -318,8 +318,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -330,8 +330,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         }
       ]
     },
@@ -348,8 +348,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: '',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Tony Stark',
@@ -360,8 +360,8 @@ const Team = () => {
           github: '',
           linkedin: '',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -372,8 +372,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
       ]
     },
@@ -390,8 +390,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: '',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Tony Stark',
@@ -402,8 +402,8 @@ const Team = () => {
           github: '',
           linkedin: '',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker ',
@@ -414,8 +414,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -426,8 +426,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -438,8 +438,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -450,8 +450,8 @@ const Team = () => {
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: 'https://wa.me/917999999999',
-          mail: 'ansik.tomar24b@iiitg.ac.in',
+          phone: '7999999999',
+          mail: 'entropy@iiitg.ac.in',
         }
       ]
     },
@@ -736,7 +736,7 @@ const Team = () => {
                                     {
                                       item.phone && (
                                         <div className="t-mem-link">
-                                          <a href={item.phone}>
+                                          <a href={`tel:+91${item.phone}`}>
                                             <Icon icon="el:phone" />
                                           </a>
                                         </div>
@@ -745,7 +745,7 @@ const Team = () => {
                                     {
                                       item.mail && (
                                         <div className="t-mem-link">
-                                          <a href={item.mail}>
+                                          <a href={`mailto:${item.mail}`}>
                                             <Icon icon="streamline:mail-send-envelope-solid" />
                                           </a>
                                         </div>

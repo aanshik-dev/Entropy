@@ -5,7 +5,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 0px 0px 50px;
+  padding: 0px 0px 20px;
 }
 
 .merch-wrap {
@@ -20,9 +20,9 @@
   z-index: 10;
   border-radius: 20px;
   padding: 15px 10px;
-  border: 1px solid #B300FF;
+  border: 1px solid #8A2BE2;
   transition: all 0.3s ease-in-out;
-  background: linear-gradient(45deg, #220038, #2E004D);
+  background: linear-gradient(45deg, #180028, #2E004D);
 }
 
 .merch-img-content {
@@ -127,6 +127,7 @@
   padding: 10px;
   border-radius: 100px;
   cursor: pointer;
+  user-select: none;
 }
 
 .merch-flip-btn:hover {

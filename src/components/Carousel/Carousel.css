@@ -6,7 +6,7 @@
 .carousel-wrapper {
   color: #ffffff;
   display: flex;
-  margin: 20px 0px 20px;
+  margin: 0px 0px 20px;
   align-items: stretch;
 }
 
@@ -137,7 +137,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
 }
 
 .slider-dots {
@@ -258,10 +257,6 @@
     width: 80px;
   }
 
-  .slider-helper {
-    margin-bottom: 30px;
-  }
-
 }
 
 @media (max-width: 768px) {
@@ -298,7 +293,7 @@
 @media (max-width: 480px) {
 
   .carousel-wrapper {
-    margin: 10px 0px 10px;
+    margin: 10px 0px 20px;
   }
 
   .controls {

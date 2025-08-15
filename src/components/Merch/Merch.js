@@ -7,8 +7,12 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 const Merch = () => {
 
 
-  const toggleClass = () => {
-    const merchCard = document.querySelector('.merch-card');
+  const flipMerch1 = () => {
+    const merchCard = document.querySelector('#merch1');
+    merchCard.classList.toggle('flipped');
+  }
+  const flipMerch2 = () => {
+    const merchCard = document.querySelector('#merch2');
     merchCard.classList.toggle('flipped');
   }
 
@@ -20,7 +24,7 @@ const Merch = () => {
           <div className="merch">
             <div className="merch-img-content">
 
-              <div className="merch-card" onClick={toggleClass}>
+              <div className="merch-card" id="merch1" onClick={flipMerch1}>
                 <img className='merch-front' src={imgPath('TshirtFront.webp')} alt="Merch 01" />
                 <img className='merch-back' src={imgPath('TshirtBack.webp')} alt="Merch 01" />
               </div>
@@ -31,7 +35,7 @@ const Merch = () => {
                   <div className="sale-offer">10% off</div>
                 </div>
               </div>
-              <div className="merch-flip-btn" onClick={toggleClass}>
+              <div className="merch-flip-btn" onClick={flipMerch1}>
                 <Icon icon={"gis:flip-h"} />
               </div>
 
@@ -69,7 +73,7 @@ const Merch = () => {
           <div className="merch">
             <div className="merch-img-content">
 
-              <div className="merch-card" onClick={toggleClass}>
+              <div className="merch-card" id="merch2" onClick={flipMerch2}>
                 <img className='merch-front' src={imgPath('TshirtFront.webp')} alt="Merch 01" />
                 <img className='merch-back' src={imgPath('TshirtBack.webp')} alt="Merch 01" />
               </div>
@@ -80,7 +84,7 @@ const Merch = () => {
                   <div className="sale-offer">10% off</div>
                 </div>
               </div>
-              <div className="merch-flip-btn" onClick={toggleClass}>
+              <div className="merch-flip-btn" onClick={flipMerch2}>
                 <Icon icon={"gis:flip-h"} />
               </div>
 

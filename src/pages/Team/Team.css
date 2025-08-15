@@ -384,10 +384,18 @@
   padding: 10px 0px 20px;
 }
 
+.t-mem-link {
+  transition: all 0.2s ease;
+}
+
 .t-mem-link>a {
   color: #ffffff;
   font-size: 20px;
   text-decoration: none;
+}
+
+.t-mem-link:hover {
+  transform: scale(1.2);
 }
 
 .mem-card-bar {
