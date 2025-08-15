@@ -1,0 +1,394 @@
+.merch-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0px 0px 50px;
+}
+
+.merch-wrap {
+  width: 35%;
+  aspect-ratio: 7/8;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.merch {
+  position: relative;
+  z-index: 10;
+  border-radius: 20px;
+  padding: 15px 10px;
+  border: 1px solid #B300FF;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(45deg, #220038, #2E004D);
+}
+
+.merch-img-content {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: linear-gradient(-45deg, #130024, #200034);
+  border-radius: 15px;
+  position: relative;
+}
+
+.merch-card {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  z-index: 0;
+}
+
+.merch-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.merch-card>img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+.merch-back {
+  transform: rotateY(180deg);
+}
+
+.sale-tag-wrap {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-70%, 20%) rotate(-45deg);
+  transform-origin: right center;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+  z-index: 5;
+}
+
+.sale-tag-wrap:hover {
+  transform: translate(-70%, 20%) rotate(-30deg);
+}
+
+.sale-hole {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #000000bc;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.sale-tag {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'League Spartan', 'Inter', sans-serif;
+  clip-path: polygon(0 0, 0 100%, 75% 100%, 100% 50%, 75% 0);
+  background: linear-gradient(0deg, #7400B7, #CB53FF);
+  border-radius: 10px;
+  padding: 8px 30px 8px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+
+}
+
+.sale-text {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.sale-offer {
+  font-size: 16px;
+}
+
+
+.merch-flip-btn {
+  font-size: 20px;
+  color: #ffffff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #0b000faa;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.merch-flip-btn:hover {
+  background-color: #0b000fbb;
+}
+
+
+.merch-detail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px 20px 5px;
+  font-family: 'League Spartan', 'Inter', sans-serif;
+}
+
+.merch-text, .merch-deal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: #ffffff;
+}
+
+.merch-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #AE22FF;
+  font-family: 'Anybody', 'Inter', sans-serif;
+}
+
+.merch-des {
+  display: flex;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  gap: 10px;
+  padding-right: 5px;
+}
+
+.m-price-wrap {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.m-price {
+  font-size: 20px;
+}
+
+.m-price-old {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.m-price-old>span {
+  text-decoration: line-through;
+}
+
+.merch-btn {
+  padding: 7px 15px 6px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'Nunito Sans', 'Maven Pro', sans-serif;
+  background: linear-gradient(45deg, #8C00FF, #320055);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.merch-btn:hover {
+  scale: 1.05;
+  background: linear-gradient(45deg, #AE22FF, #51218F);
+}
+
+.merch-sizes {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  gap: 4px;
+  transform: translateX(100%);
+}
+
+.merch-size {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: 'League Spartan', 'Inter', sans-serif;
+  border-radius: 0px 8px 8px 0px;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #AE22FF, #51218F);
+  padding: 8px 6px 6px;
+  transition: all 0.1s ease-in-out;
+  user-select: none;
+}
+
+.merch-size:hover {
+  background: linear-gradient(135deg, #7600bb, #51218F);
+  scale: 1.08;
+}
+
+
+@media (max-width: 1200px) {
+
+  .sale-tag {
+    padding: 6px 30px 6px 15px;
+  }
+
+  .sale-text {
+    font-size: 18px;
+  }
+
+  .sale-offer {
+    font-size: 12px;
+  }
+
+  .merch-flip-btn {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .merch-detail {
+    gap: 8px;
+    padding: 15px 15px 5px;
+  }
+
+  .merch-name {
+    font-size: 22px;
+  }
+
+  .m-price {
+    font-size: 18px;
+  }
+
+  .merch-btn {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+
+  .merch-size {
+    padding: 7px 4px 6px;
+  }
+
+}
+
+@media (max-width: 992px) {
+
+  .merch-wrap {
+    width: 38%;
+  }
+
+  .merch {
+    padding: 12px 8px;
+  }
+
+  .sale-tag {
+    padding: 5px 25px 5px 10px;
+  }
+
+  .sale-text {
+    font-size: 15px;
+  }
+
+  .merch-flip-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .merch-detail {
+    gap: 8px;
+    padding: 12px 10px 5px;
+  }
+
+  .merch-name {
+    font-size: 20px;
+  }
+
+  .m-price {
+    font-size: 16px;
+  }
+
+  .m-price-old {
+    font-size: 14px;
+  }
+
+  .merch-btn {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  .merch-size {
+    padding: 7px 4px 6px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .merch-content {
+    gap: 5vw;
+  }
+
+  .merch-wrap {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .merch-content {
+    gap: 30px;
+  }
+
+  .merch-wrap {
+    width: 78%;
+  }
+
+  .merch {
+    padding: 10px 5px;
+  }
+
+  .sale-tag {
+    padding: 5px 20px 5px 10px;
+  }
+
+  .sale-text {
+    font-size: 14px;
+  }
+
+  .merch-flip-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .merch-detail {
+    gap: 6px;
+    padding: 12px 10px 3px;
+  }
+
+  .merch-name {
+    font-size: 18px;
+  }
+
+  .m-price {
+    font-size: 14px;
+  }
+
+  .m-price-old {
+    font-size: 12px;
+  }
+
+  .merch-btn {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .merch-size {
+    font-size: 12px;
+    padding: 7px 3px 6px;
+  }
+
+}

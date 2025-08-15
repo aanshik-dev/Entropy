@@ -137,7 +137,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px 0px 30px 0px;
+  margin-bottom: 50px;
 }
 
 .slider-dots {
@@ -258,6 +258,10 @@
     width: 80px;
   }
 
+  .slider-helper {
+    margin-bottom: 30px;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -339,5 +343,9 @@
 
   .all-events-btn {
     padding: 5px 15px;
+  }
+
+  .count {
+    font-size: 25px;
   }
 }

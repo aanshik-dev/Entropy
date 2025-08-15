@@ -6,13 +6,13 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import TextUp from '../../components/TextUp';
 import CountUp from '../../components/CountUp';
 import SplitText from "../../components/SplitText";
-import TextType from '../../components/TextType/TextType';
 import BgParticles from '../../components/BgParticles';
 
 import Hsponsors from '../../components/Hsponsors/Hsponsors';
 import Comp from '../../assets/Comp.png'
 import Carousel from '../../components/Carousel/Carousel';
 import HomeSpeakers from '../../components/HomeSpeakers/HomeSpeakers';
+import Merch from '../../components/Merch/Merch';
 
 const Home = () => {
 
@@ -169,11 +169,26 @@ const Home = () => {
             </div>
 
             <div className="des-image" style={{ backgroundImage: `url(${imgPath("HomeDes.png")})` }}>
-              {/* <img src={imgPath("HomeDes.png")} alt="Home-img" /> */}
             </div>
           </div>
 
           <div className="stats appear">
+
+            <div className="stat">
+              <div className="stat-value">
+                <CountUp
+                  from={0}
+                  to={20}
+                  separator=","
+                  direction="up"
+                  duration={1}
+                  className="count-up-text"
+                />+
+              </div>
+              <div className="stat-tag">
+                <p>Speakers</p>
+              </div>
+            </div>
 
             <div className="stat">
               <div className="stat-value">
@@ -222,21 +237,6 @@ const Home = () => {
                 <p>Prize Pool</p>
               </div>
             </div>
-            <div className="stat">
-              <div className="stat-value">
-                <CountUp
-                  from={0}
-                  to={20}
-                  separator=","
-                  direction="up"
-                  duration={1}
-                  className="count-up-text"
-                />+
-              </div>
-              <div className="stat-tag">
-                <p>Speakers</p>
-              </div>
-            </div>
           </div>
 
         </section>
@@ -260,8 +260,8 @@ const Home = () => {
             <span className='title-light'>The Chaos</span>
             <span className='title-ruler'></span>
           </div>
-          <div className="merch">
-            {/* <Merch /> */}
+          <div className="merch-container">
+            <Merch />
           </div>
 
         </section>
