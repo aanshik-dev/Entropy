@@ -1,23 +1,20 @@
 {
   "files": {
-    "main.css": "/Entropy/static/css/main.f19dcadd.css",
-    "main.js": "/Entropy/static/js/main.65af8726.js",
+    "main.css": "/Entropy/static/css/main.a1f71f31.css",
+    "main.js": "/Entropy/static/js/main.c6beb87f.js",
     "static/media/Comp.png": "/Entropy/static/media/Comp.1af305f793a4d6017dc6.png",
-    "static/media/Speaker2.svg": "/Entropy/static/media/Speaker2.cc49588ddac3df359e0deeff75744df6.svg",
-    "static/media/Speaker3.svg": "/Entropy/static/media/Speaker3.7d2a5f885f3f181452141a98dcd84384.svg",
     "static/media/Rectangle.svg": "/Entropy/static/media/Rectangle.1a4749976ab3f1c01de49829565ae255.svg",
-    "static/media/Speaker1.svg": "/Entropy/static/media/Speaker1.dac3d1a8a75b5eba1cd244b17964536d.svg",
     "static/media/TlEventBg.jpg": "/Entropy/static/media/TlEventBg.45c6ad895f091c9e6097.jpg",
     "static/media/TeamDes.jpg": "/Entropy/static/media/TeamDes.3bb10822bf5f05eed941.jpg",
     "static/media/Entropy.webp": "/Entropy/static/media/Entropy.d8f64aec53067ca84084.webp",
     "static/media/IIITG.webp": "/Entropy/static/media/IIITG.7d6bec9a4f340aff66d2.webp",
     "static/media/Logo.webp": "/Entropy/static/media/Logo.207dccaff25eb6b41779.webp",
     "index.html": "/Entropy/index.html",
-    "main.f19dcadd.css.map": "/Entropy/static/css/main.f19dcadd.css.map",
-    "main.65af8726.js.map": "/Entropy/static/js/main.65af8726.js.map"
+    "main.a1f71f31.css.map": "/Entropy/static/css/main.a1f71f31.css.map",
+    "main.c6beb87f.js.map": "/Entropy/static/js/main.c6beb87f.js.map"
   },
   "entrypoints": [
-    "static/css/main.f19dcadd.css",
-    "static/js/main.65af8726.js"
+    "static/css/main.a1f71f31.css",
+    "static/js/main.c6beb87f.js"
   ]
 }
