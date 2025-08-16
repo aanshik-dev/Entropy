@@ -391,11 +391,19 @@
     margin-top: 15px;
   }
 
-  .tl-time-wrap{
+  .tl-time-wrap {
     padding: 0px;
   }
+
+  .tl-clock-icon {
+    font-size: 20px;
+    width: 35px;
+  }
+
   .tl-time {
     font-size: 12px;
+    text-wrap: wrap;
+    text-align: center;
   }
 
   .tl-event-card-wrap {

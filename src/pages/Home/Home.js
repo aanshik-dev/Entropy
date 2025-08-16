@@ -73,7 +73,7 @@ const Home = () => {
                   />
 
                   <div className="h-hero-tagline">
-                    <TextUp texts={texts} intervalTime={4000} animDuration={200} />
+                    <TextUp texts={texts} intervalTime={4000} animDuration={300} />
                   </div>
 
                   <div>

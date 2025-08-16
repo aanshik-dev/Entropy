@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ParticlesBackground from './components/BgParticles';
 import './App.css';
 
@@ -13,7 +13,19 @@ import Contacts from './pages/Contacts/Contacts';
 import Footer from './components/footer/Footer';
 
 function App() {
-  const [curPage, setCurPage] = useState('home');
+  const [curPage, setCurPage] = useState(() => {
+    return window.location.hash.replace('#', '') || 'home';
+  });
+
+  useEffect(() => {
+    const pageFromHash = window.location.hash.replace('#', '');
+    if (pageFromHash) setCurPage(pageFromHash);
+  }, []);
+
+  useEffect(() => {
+    window.location.hash = curPage;
+    document.title = `Entropy 2025 | ${curPage.charAt(0).toUpperCase() + curPage.slice(1)}`;
+  }, [curPage]);
 
   const loadPage = () => {
     switch (curPage) {
@@ -33,10 +45,8 @@ function App() {
   }
 
 
-
   return (
     <>
-
 
       <ClickSpark
         sparkColor='#fff'
@@ -45,14 +55,11 @@ function App() {
         sparkCount={8}
         duration={400}
       >
-        {/* Your content here */}
 
         <div className='mainWrapper'>
           <Navbar activePage={curPage} switchPage={(page) => setCurPage(page)} />
           {loadPage()}
           <Footer />
-
-
 
         </div>
       </ClickSpark>

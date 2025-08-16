@@ -16,7 +16,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 50%;
+  width: 75%;
   -webkit-mask-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7));
   mask-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7));
   -webkit-mask-size: 100% 100%;
@@ -33,13 +33,22 @@
 .s-hero {
   width: 100%;
   padding: 60px var(--section-margin);
+  transition: all 0.2s ease;
+  overflow: hidden;
 }
 
 .s-hero-wrapper {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: top;
+  align-items: center;
+}
+
+
+.s-hero-title {
+  position: relative;
+  z-index: 5;
+  width: 65%;
 }
 
 .s-title-wrap {
@@ -47,8 +56,8 @@
   flex-direction: column;
 }
 
-.s-title-text, .s-title-year {
-  font-size: clamp(1.5rem, 15vw, 6rem);
+.s-title-text {
+  font-size: clamp(3rem, 7.5vw, 5.7rem);
   font-weight: 700;
   color: #ffffff;
   font-family: 'Lexend Exa', 'Maven Pro', sans-serif;
@@ -56,30 +65,22 @@
   padding: 0px;
 }
 
-.s-tagline-wrap {
-  position: relative;
-  color: transparent;
-}
-
 .s-hero-tagline {
-  font-size: 1.8rem;
+  height: 6vmax;
+  color: #ffffff;
+  font-size: clamp(1rem, 2vw, 3rem);
   font-family: 'Maven Pro', 'Inter', sans-serif;
   font-weight: 600;
-  padding: 10px 5px 30px;
+  margin: 10px 5px;
   text-transform: uppercase;
-}
-
-.s-tag-overlap {
-  color: #ffffff;
-  position: absolute;
-  top: 0px;
-  left: 0;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
 }
 
 .s-hero-des {
   color: #ffffffc7;
-  font-size: 20px;
-  max-width: 550px;
+  font-size: clamp(1rem, 1.4vw, 2rem);
   font-family: 'League Spartan', 'Inter', sans-serif;
   line-height: 150%;
   font-weight: 300;
@@ -92,6 +93,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  padding: 15px 0px 20px
 }
 
 .s-hero-tag {
@@ -104,7 +106,6 @@
   padding: 5px 15px 7px;
   border-radius: 100px;
   border: 1px solid #AF25FF;
-  margin: 15px 0px 20px;
 }
 
 .s-hero-tag>div {
@@ -136,6 +137,7 @@
   font-weight: 400;
   font-family: 'Nunito Sans', 'Maven Pro', sans-serif;
   text-transform: uppercase;
+  transition: all 0.2s ease;
 }
 
 .s-blink {
@@ -160,6 +162,10 @@
   100% {
     opacity: 1;
   }
+}
+
+.s-hero-anime {
+  width: 35%;
 }
 
 .s-hero-anime>img {

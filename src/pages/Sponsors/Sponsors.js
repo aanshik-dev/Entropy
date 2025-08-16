@@ -4,13 +4,16 @@ import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react/dist/iconify.js';
 
 import SplitText from "../../components/SplitText";
-import TextType from '../../components/TextType/TextType';
+import TextUp from '../../components/TextUp';
 import BgParticles from '../../components/BgParticles';
 
 import Comp from '../../assets/Comp.png'
 
 
 const Sponsors = () => {
+
+  const texts = ["Tech meets trust — These brands are believing in madness", "Where trust and chaos unite to power true disruption"];
+
   return (
     <>
       <main className="sponsors">
@@ -38,18 +41,11 @@ const Sponsors = () => {
                     textAlign="left"
                     onLetterAnimationComplete={() => { }}
                   />
-                  <div className="tagline-wrap hero-tagline">
-                    Tech meets trust — brands believing madness__
-                    <TextType
-                      tag="h2"
-                      className='hero-tagline tag-overlap'
-                      text={["Tech meets trust — brands believing madness", "Trusted by brands, driven by disruption"]}
-                      typingSpeed={75}
-                      pauseDuration={1500}
-                      showCursor={true}
-                      cursorCharacter="_"
-                    />
+
+                  <div className="s-hero-tagline">
+                    <TextUp texts={texts} intervalTime={4000} animDuration={300} />
                   </div>
+
                   <div>
                     <SplitText
                       tag="h1"

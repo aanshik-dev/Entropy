@@ -56,7 +56,7 @@ const Navbar = ({ activePage, switchPage }) => {
               {navItems.map((item) => (
                 <a
                   key={item.name}
-                  href={item.path}
+                  href={`#${item.path}`}
                   className={`page-link ${activePage === item.path ? 'navActive' : 'navHover'}`}
                   onClick={(e) => {
                     e.preventDefault();
@@ -117,7 +117,7 @@ const Navbar = ({ activePage, switchPage }) => {
               {navItems.map((item) => (
                 <a
                   key={item.name}
-                  href={item.path}
+                  href={`#${item.path}`}
                   className={"phLink " + (activePage === item.path ? "phActive" : "phHover")}
                   onClick={(e) => {
                     e.preventDefault();

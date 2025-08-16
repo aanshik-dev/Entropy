@@ -6,11 +6,15 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import SplitText from "../../components/SplitText";
 import TextType from '../../components/TextType/TextType';
 import BgParticles from '../../components/BgParticles';
+import TextUp from '../../components/TextUp';
+
 
 import Comp from '../../assets/Comp.png'
 import { useState, useRef, useEffect } from 'react';
 
 const Team = () => {
+
+  const texts = ["Creators of Order in Controlled Chaos", "Shaping Structure from the Unpredictable"];
 
   const navData = [
     {
@@ -459,25 +463,20 @@ const Team = () => {
 
 
   const roleStyle = (level) => {
-    let barStyle, cardStyle, imgStyle;
+    let barStyle, imgStyle;
     if (level === '1') {
       barStyle = { background: 'linear-gradient(90deg, #e3bd00, #aa6b00)' };
-      cardStyle = {
-        width: '30%',
-      };
       imgStyle = { background: 'linear-gradient(45deg, #aa6b00, #e3bd00)' };
 
     } else if (level === '2') {
       barStyle = { background: 'linear-gradient(90deg, #fc44ffff, #9100a7ff)' };
-      cardStyle = {};
       imgStyle = { background: 'linear-gradient(45deg, #8500aaff, #df00e3ff)' };
 
     } else {
       barStyle = { background: 'linear-gradient(90deg, #a600e3ff, #570091ff)' };
-      cardStyle = {};
       imgStyle = { background: 'linear-gradient(45deg, #570091ff, #a600e3ff)' };
     }
-    return { barStyle, cardStyle, imgStyle };
+    return { barStyle, imgStyle };
   }
 
 
@@ -506,13 +505,17 @@ const Team = () => {
     }
   }, [teamNum]);
 
-  // Whenever window resizes, recalculate height
   useEffect(() => {
+    let timeout;
     const handleResize = () => {
-      if (teamRefs.current[teamNum]) {
-        setContainerHeight(teamRefs.current[teamNum].offsetHeight);
-      }
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        if (teamRefs.current[teamNum]) {
+          setContainerHeight(teamRefs.current[teamNum].offsetHeight);
+        }
+      }, 200);
     };
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [teamNum]);
@@ -545,17 +548,8 @@ const Team = () => {
                     textAlign="left"
                     onLetterAnimationComplete={() => { }}
                   />
-                  <div className="tagline-wrap hero-tagline">
-                    Shaping Structure from the Unpredictable__
-                    <TextType
-                      tag="h2"
-                      className='hero-tagline tag-overlap'
-                      text={["Creators of Order in Controlled Chaos", "Shaping Structure from the Unpredictable"]}
-                      typingSpeed={75}
-                      pauseDuration={1500}
-                      showCursor={true}
-                      cursorCharacter="_"
-                    />
+                  <div className="s-hero-tagline">
+                    <TextUp texts={texts} intervalTime={4000} animDuration={300} />
                   </div>
                   <div>
                     <SplitText
@@ -694,11 +688,11 @@ const Team = () => {
                             const styles = roleStyle(item.level);
 
                             return (
-                              <div className="t-mem-card" key={index} style={styles.cardStyle}>
+                              <div className={`t-mem-card ${item.level === '1' ? 't-lead' : ''}`} key={index}>
                                 <div className="mem-image-box">
                                   <div className="mem-card-shade"></div>
                                   <div className="mem-image-wrap" style={styles.imgStyle}>
-                                    <img src={imgPath(item.image)} alt={item.name} style={{objectPosition: item.pos}} />
+                                    <img src={imgPath(item.image)} alt={item.name} style={{ objectPosition: item.pos }} />
                                   </div>
                                 </div>
                                 <div className="t-mem-data">
