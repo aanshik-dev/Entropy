@@ -64,7 +64,7 @@
 }
 
 
-.hero-tagline {
+.h-hero-tagline {
   height: 6vmax;
   color: #ffffff;
   font-size: clamp(1rem, 2vw, 3rem);
@@ -233,6 +233,7 @@
     opacity: 1;
   }
 }
+
 
 .h-hero-anime>img {
   height: 35vw;

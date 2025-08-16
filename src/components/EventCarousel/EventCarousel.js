@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import './EventCarousel.css'
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { imgPath } from '../../utils/utilityFunctions'
@@ -75,25 +75,24 @@ const EventCarousel = () => {
   const [transitioning, setTransitioning] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(3);
   const [slideWidth, setSlideWidth] = useState(30);
+  const [shift, setShift] = useState(17);
 
-
-  const extendedSlides = [
-    ...SlideData.slice(-visibleSlides),
-    ...SlideData,
-    ...SlideData.slice(0, visibleSlides),
-  ]
+  const extendedSlides = useMemo(() => {
+    return [
+      ...SlideData.slice(-visibleSlides),
+      ...SlideData,
+      ...SlideData.slice(0, visibleSlides),
+    ];
+  }, [visibleSlides]);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setVisibleSlides(1);
-        setSlideWidth(90);
-      } else if (window.innerWidth < 1024) {
-        setVisibleSlides(2);
-        setSlideWidth(45);
+      if (window.innerWidth < 480) {
+        setSlideWidth(84);
+        setShift(8);
       } else {
-        setVisibleSlides(3);
-        setSlideWidth(30);
+        setSlideWidth(80);
+        setShift(10);
       }
     };
 
@@ -102,11 +101,9 @@ const EventCarousel = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-
   useEffect(() => {
-    console.log(currentIndex);
-  }, [currentIndex])
-
+    setCurrentIndex(cloneCount);
+  }, [cloneCount]);
 
   const jumpSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
@@ -171,7 +168,7 @@ const EventCarousel = () => {
 
 
   const transformStyle = {
-    transform: `translateX(-${80 * currentIndex - 10}%)`,
+    transform: `translateX(-${slideWidth * currentIndex - shift}%)`,
     transition: transitioning ? 'transform 0.5s ease' : 'none',
   };
 
@@ -189,7 +186,7 @@ const EventCarousel = () => {
 
   const translateStyleDown = {
     opacity: 1,
-    transform: `translateY(-40px)`,
+    transform: `translateY(-50%)`,
     transition: transitioning ? 'transform 0.7s ease' : 'none',
   };
   const translateStyleUp = {

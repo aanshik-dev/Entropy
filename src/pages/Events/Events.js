@@ -1,28 +1,22 @@
-import EventsTimeline from '../../components/EventsTimeline/EventsTimeline.js'
-
 import './Events.css'
+
 import { imgPath } from '../../utils/utilityFunctions'
-import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react/dist/iconify.js';
 
-import SplitText from "../../components/SplitText";
-import TextType from '../../components/TextType/TextType';
 import BgParticles from '../../components/BgParticles';
-
+import SplitText from "../../components/SplitText";
+import TextUp from '../../components/TextUp';
 import EventCarousel from '../../components/EventCarousel/EventCarousel';
-import Comp from '../../assets/Comp.png'
+import EventsTimeline from '../../components/EventsTimeline/EventsTimeline.js'
+
 
 
 const Events = () => {
 
-  const handleAnimationComplete = () => {
-    // console.log('');
-  };
-
+  const texts = ["Unleash your mind in challenging tech battles", "Ignite your mind in epic tech showdowns"];
 
   return (
     <>
-
       <main className="events">
 
         <section className="ev-hero-content">
@@ -46,20 +40,13 @@ const Events = () => {
                     threshold={0.1}
                     rootMargin="0px"
                     textAlign="left"
-                    onLetterAnimationComplete={handleAnimationComplete}
+                    onLetterAnimationComplete={() => { }}
                   />
-                  <div className="ev-tagline-wrap ev-hero-tagline">
-                    Unleash your mind in challenging tech battles__
-                    <TextType
-                      tag="h2"
-                      className='ev-hero-tagline ev-tag-overlap'
-                      text={["Unleash your mind in challenging tech battles", "Ignite your mind in epic tech showdowns"]}
-                      typingSpeed={75}
-                      pauseDuration={1500}
-                      showCursor={true}
-                      cursorCharacter="_"
-                    />
+
+                  <div className="ev-hero-tagline">
+                    <TextUp texts={texts} intervalTime={4000} animDuration={200} />
                   </div>
+
                   <div>
                     <SplitText
                       tag="h1"
@@ -101,8 +88,14 @@ const Events = () => {
                   </div>
                 </div>
               </div>
+
               <div className="ev-hero-anime">
-                <img src={Comp} alt="" />
+                <img className='ev-ribbon rib1' src={imgPath('ribbon.svg')} alt="" />
+                <img className='ev-ribbon rib2' src={imgPath('ribbon.svg')} alt="" />
+                <img className='ev-ribbon rib3' src={imgPath('ribbon.svg')} alt="" />
+                <img className='ev-ribbon rib4' src={imgPath('ribbon.svg')} alt="" />
+                <img className='ev-hero-ring' src={imgPath('atomRing.svg')} alt="" />
+                <div className="ev-glow-blob"></div>
               </div>
             </div>
           </div>

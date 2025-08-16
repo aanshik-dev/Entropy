@@ -134,11 +134,6 @@ const Carousel = () => {
   }, [cloneCount]);
 
 
-  useEffect(() => {
-    console.log("Visible slides:", visibleSlides);
-  }, [visibleSlides]);
-
-
   const jumpSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
     setCounter(slideIndex - cloneCount + 1);
