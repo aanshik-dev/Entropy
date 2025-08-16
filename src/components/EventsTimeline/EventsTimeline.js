@@ -109,7 +109,8 @@ const EventTimeline = () => {
                 return (
                   <div className="tl-event-layout" key={index}>
 
-                    <div className="tl-bar-layout">
+
+                    <div className="tl-time-wrap">
                       <div className="tl-time-box">
                         <div className="tl-clock-icon" style={{ backgroundColor: event.clockColor }}>
                           <Icon icon='majesticons:clock' />
@@ -118,6 +119,7 @@ const EventTimeline = () => {
                       </div>
                       <div className="tl-bar"></div>
                     </div>
+
 
                     <div className="tl-event-card-wrap">
                       <div className="tl-event-card-bg">
@@ -206,7 +208,7 @@ const EventTimeline = () => {
                 return (
                   <div className="tl-event-layout" key={index}>
 
-                    <div className="tl-bar-layout">
+                    <div className="tl-time-wrap">
                       <div className="tl-time-box">
                         <div className="tl-clock-icon" style={{ backgroundColor: event.clockColor }}>
                           <Icon icon='majesticons:clock' />
@@ -249,7 +251,7 @@ const EventTimeline = () => {
           </div>
 
         </div>
-        
+
       </div >
     </>
 

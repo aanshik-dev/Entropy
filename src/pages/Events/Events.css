@@ -451,14 +451,15 @@
 
   .ev-hero-anime {
     position: absolute;
+    transform: translateY(50px);
     align-self: flex-end;
     opacity: 0.4;
     width: 50%;
   }
 
   .ev-glow-blob {
-    width: clamp(80px, 25vmax, 120px);
-    height: clamp(80px, 25vmax, 120px);
+    width: clamp(60px, 25vmax, 120px);
+    height: clamp(60px, 25vmax, 120px);
   }
 
   .ev-ribbon {

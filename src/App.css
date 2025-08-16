@@ -64,7 +64,6 @@ body {
 .h-des-textbox {
   border-radius: 20px;
   background: linear-gradient(60deg, #49007a89, #1c002d9c);
-  /* border: 1px solid #AF25FF; */
   display: flex;
   gap: 20px;
   padding: 5px;
