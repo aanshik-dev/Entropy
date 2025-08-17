@@ -1,6 +1,5 @@
 import './Sponsors.css';
 import { imgPath } from '../../utils/utilityFunctions'
-import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react/dist/iconify.js';
 
 import SplitText from "../../components/SplitText";
@@ -13,6 +12,28 @@ import Comp from '../../assets/Comp.png'
 const Sponsors = () => {
 
   const texts = ["Tech meets trust — These brands are believing in madness", "Where trust and chaos unite to power true disruption"];
+
+  const sponsorData = [
+    {
+      name: "State Bank Of India",
+      img: 'sponsors/sbi.svg',
+      description: "India's largest public sector bank",
+      level: 1
+    },
+    {
+      name: "State Bank Of India",
+      img: 'sponsors/sbi.svg',
+      description: "India's largest public sector bank",
+      level: 1
+    },
+    {
+      name: "State Bank Of India",
+      img: 'sponsors/sbi.svg',
+      description: "India's largest public sector bank",
+      level: 1
+    },
+  ]
+
 
   return (
     <>
@@ -127,7 +148,6 @@ const Sponsors = () => {
             </div>
 
             <div className="des-image" style={{ backgroundImage: `url(${imgPath("SponsorDes.webp")})` }}>
-              {/* <img src={imgPath("SponsorDes.webp")} alt="Home-img" /> */}
             </div>
           </div>
         </section>
@@ -145,7 +165,26 @@ const Sponsors = () => {
               Behind every innovation, there’s a sponsor who believed in possibility
             </div>
           </div>
+          <div className="s-spon-content">
 
+            {
+              sponsorData.map((sponsor) => (
+                <div className="s-sponsor-wrap">
+                  <div className="s-sponsor">
+                    <div className="s-sponsor-img">
+                      <img src={imgPath(sponsor.img)} alt="SBI Logo" />
+                    </div>
+                    <div className="s-sponsor-info">
+                      <h3>{sponsor.name}</h3>
+                      <p>{sponsor.description}</p>
+                    </div>
+                  </div>
+                  <div className="s-sponsor-bar"></div>
+                </div>
+              ))
+            }
+
+          </div>
         </section>
 
 

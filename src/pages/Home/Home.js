@@ -18,17 +18,6 @@ const Home = () => {
 
   const texts = ["Gear Up for IIITG’s Ultimate Tech Carnival ", "Where ideas converge, and entropy unfolds"];
 
-  // const el = useRef(null);
-  // let i = 0;
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     i = (i + 1) % texts.length;
-  //     if (el.current) el.current.textContent = texts[i];
-  //   }, 4000);
-  //   return () => clearInterval(interval);
-  // }, []);
-
   return (
     <>
       <main className="home">
