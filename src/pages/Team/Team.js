@@ -1,15 +1,11 @@
 import './Team.css';
 import { imgPath } from '../../utils/utilityFunctions'
-import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react/dist/iconify.js';
 
 import SplitText from "../../components/SplitText";
-import TextType from '../../components/TextType/TextType';
 import BgParticles from '../../components/BgParticles';
 import TextUp from '../../components/TextUp';
 
-
-import Comp from '../../assets/Comp.png'
 import { useState, useRef, useEffect } from 'react';
 
 const Team = () => {
@@ -583,7 +579,7 @@ const Team = () => {
 
               </div>
               <div className="t-hero-anime">
-                <img src={Comp} alt="" />
+                <img src={imgPath("Comp.png")} alt="SBI Logo" />
               </div>
             </div>
           </div>

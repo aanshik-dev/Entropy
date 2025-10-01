@@ -1,14 +1,10 @@
 import './Contacts.css';
 import { imgPath } from '../../utils/utilityFunctions'
-import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react/dist/iconify.js';
 
 import SplitText from "../../components/SplitText";
 import TextType from '../../components/TextType/TextType';
 import BgParticles from '../../components/BgParticles';
-
-import Comp from '../../assets/Comp.png'
-
 
 const Contacts = () => {
   return (
@@ -86,7 +82,7 @@ const Contacts = () => {
 
               </div>
               <div className="s-hero-anime">
-                <img src={Comp} alt="" />
+                <img src={imgPath("Comp.png")} alt="SBI Logo" />
               </div>
             </div>
           </div>

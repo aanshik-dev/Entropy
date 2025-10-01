@@ -81,7 +81,7 @@
 
 .t-hero-des {
   color: #ffffffc7;
-  font-size: 20px;
+  font-size: clamp(1rem, 1.4vw, 2rem);
   font-family: 'League Spartan', 'Inter', sant-serif;
   line-height: 150%;
   font-weight: 300;
@@ -396,6 +396,10 @@
     font-size: 30px;
   }
 
+  .t-hero-tag {
+    font-size: clamp(1rem, 2vw, 3rem);
+  }
+
   .t-lead {
     width: 33% !important;
   }
@@ -406,6 +410,19 @@
 }
 
 @media screen and (max-width: 992px) {
+
+  .t-hero-tags {
+    gap: 10px;
+  }
+
+  .t-hero-tag {
+    padding: 4px 10px 6px;
+  }
+
+  .t-hero-anime>img {
+    height: 38vw;
+  }
+
   .t-team-content {
     padding: 40px 5px 80px;
   }
@@ -433,6 +450,35 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .t-hero {
+    padding: 70px 7vw 50px;
+  }
+
+  .t-hero-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .t-hero-title {
+    width: 100%;
+  }
+
+  .t-hero-anime {
+    position: absolute;
+    align-self: flex-end;
+    opacity: 0.2;
+  }
+
+  .t-hero-tags {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .t-hero-anime>img {
+    height: 46vw;
+  }
 
   .t-nav-content {
     padding-top: 50px;
@@ -518,7 +564,7 @@
     font-size: 15px;
   }
 
-  .t-mem-contacts{
+  .t-mem-contacts {
     padding: 10px 0px 10px;
   }
 

@@ -9,7 +9,6 @@ import SplitText from "../../components/SplitText";
 import BgParticles from '../../components/BgParticles';
 
 import Hsponsors from '../../components/Hsponsors/Hsponsors';
-import Comp from '../../assets/Comp.png'
 import Carousel from '../../components/Carousel/Carousel';
 import HomeSpeakers from '../../components/HomeSpeakers/HomeSpeakers';
 import Merch from '../../components/Merch/Merch';
@@ -95,7 +94,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="h-hero-anime">
-                <img src={Comp} alt="" />
+                <img src={imgPath("Comp.png")} alt="SBI Logo" />
               </div>
             </div>
           </div>

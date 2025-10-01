@@ -6,8 +6,6 @@ import SplitText from "../../components/SplitText";
 import TextUp from '../../components/TextUp';
 import BgParticles from '../../components/BgParticles';
 
-import Comp from '../../assets/Comp.png'
-
 
 const Sponsors = () => {
 
@@ -38,7 +36,6 @@ const Sponsors = () => {
   return (
     <>
       <main className="sponsors">
-
         <section className="s-hero-content">
           <div className="s-hero-mask">
             <BgParticles />
@@ -103,7 +100,7 @@ const Sponsors = () => {
 
               </div>
               <div className="s-hero-anime">
-                <img src={Comp} alt="" />
+                <img src={imgPath("SponWheel.svg")} alt="SBI Logo" />
               </div>
             </div>
           </div>
@@ -187,10 +184,7 @@ const Sponsors = () => {
           </div>
         </section>
 
-
-
       </main >
-
 
     </>
   )

@@ -110,7 +110,7 @@
 
 .s-hero-tag>div {
   color: #ffffff;
-  font-size: 16px;
+  font-size: clamp(0.8rem, 1vw, 2rem);
 }
 
 .s-tag2 {
@@ -170,22 +170,20 @@
 
 .s-hero-anime>img {
   height: 400px;
-  animation: Float 4s ease-in-out infinite;
-  transform: translateY(-20px);
+  animation: Rotation 15s linear infinite;
+  position: relative;
+  scale: 2.3;
+  left: 70%;
 }
 
 
-@keyframes Float {
+@keyframes Rotation {
   0% {
-    transform: translatey(20px) scale(1);
-  }
-
-  50% {
-    transform: translatey(-10px) scale(1.05);
+    transform: rotate(0deg);
   }
 
   100% {
-    transform: translatey(20px) scale(1);
+    transform: rotate(360deg);
   }
 }
 
@@ -269,18 +267,65 @@
 
 
 @media (max-width: 1200px) {
+  .s-hero-tag {
+    font-size: clamp(1rem, 2vw, 3rem);
+  }
+
   .s-sponsor-wrap {
     width: 30%;
   }
 }
 
 @media (max-width: 992px) {
+
+  .s-hero-tags {
+    gap: 10px;
+  }
+
+  .s-hero-tag {
+    padding: 4px 10px 6px;
+  }
+
+  .s-hero-anime>img {
+    scale: 1.8;
+  }
+
+
   .s-sponsor-wrap {
     width: 35%;
   }
+
 }
 
 @media (max-width: 768px) {
+
+  .s-hero {
+    padding: 70px 7vw 50px;
+  }
+
+  .s-hero-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .s-hero-title {
+    width: 100%;
+  }
+
+  .s-hero-anime {
+    width: 80%;
+    position: absolute;
+    top: 0%;
+    overflow: hidden;
+    opacity: 0.3;
+  }
+
+  .s-hero-anime>img {
+    width: 100%;
+    left: 0%;
+    scale: 1;
+  }
 
   .sponsors-content {
     gap: 20px;
@@ -292,6 +337,11 @@
 
   .s-sponsor-info {
     font-size: 14px;
+  }
+
+  .s-hero-tags {
+    flex-wrap: wrap;
+    gap: 15px;
   }
 }
 
