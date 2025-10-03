@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Entropy/static/css/main.791451c0.css",
+    "main.css": "/Entropy/static/css/main.1d89a935.css",
     "main.js": "/Entropy/static/js/main.32722589.js",
     "static/media/TlEventBg.jpg": "/Entropy/static/media/TlEventBg.45c6ad895f091c9e6097.jpg",
     "static/media/TeamDes.jpg": "/Entropy/static/media/TeamDes.3bb10822bf5f05eed941.jpg",
@@ -8,11 +8,11 @@
     "static/media/IIITG.webp": "/Entropy/static/media/IIITG.7d6bec9a4f340aff66d2.webp",
     "static/media/Logo.webp": "/Entropy/static/media/Logo.207dccaff25eb6b41779.webp",
     "index.html": "/Entropy/index.html",
-    "main.791451c0.css.map": "/Entropy/static/css/main.791451c0.css.map",
+    "main.1d89a935.css.map": "/Entropy/static/css/main.1d89a935.css.map",
     "main.32722589.js.map": "/Entropy/static/js/main.32722589.js.map"
   },
   "entrypoints": [
-    "static/css/main.791451c0.css",
+    "static/css/main.1d89a935.css",
     "static/js/main.32722589.js"
   ]
 }
