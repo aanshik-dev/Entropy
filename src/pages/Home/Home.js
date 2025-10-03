@@ -17,6 +17,22 @@ const Home = () => {
 
   const texts = ["Gear Up for IIITG’s Ultimate Tech Carnival ", "Where ideas converge, and entropy unfolds"];
 
+  const click = (e, page, sectionId = null) => {
+    e.preventDefault();
+    window.location.hash = page;
+    if (sectionId) {
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    } else {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 50)
+    }
+  };
+
+
   return (
     <>
       <main className="home">
@@ -83,8 +99,9 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="h-hero-btns">
-                  <button className='h-regBtn'>Register Now</button>
-                  <button className="h-eventBtn">Explore Events</button>
+                  <button onClick={(e) => click(e, "events", "eventTimeline")} className='h-regBtn'>Register Now
+                  </button>
+                  <button onClick={(e) => click(e, "events", "eventCarousel")} className="h-eventBtn">Explore Events</button>
                 </div>
                 <div className="h-hero-updates">
                   <div className="blink"></div>

@@ -3,12 +3,63 @@ import { Icon } from "@iconify/react";
 
 import Logo from '../../assets/Logo.webp'
 import IIITG from '../../assets/IIITG.webp'
+import { useState } from 'react';
+
 
 
 
 const Footer = () => {
   const mobile = "+91 94xx551024";
   const mail = "entropy@iiitg.ac.in";
+
+  const click = (e, page, sectionId = null) => {
+    e.preventDefault();
+    window.location.hash = page;
+    if (sectionId) {
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    } else {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 50)
+    }
+  };
+
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.email) {
+      alert("Please fill all required fields!");
+      return;
+    }
+
+    const googleFormData = new FormData();
+    googleFormData.append("entry.1759579994", formData.name);
+    googleFormData.append("entry.444416730", formData.email);
+
+    fetch("https://docs.google.com/forms/d/e/1FAIpQLSc-o2NSAHADjZwZ3xIlgBKkHk8J1aqM17PU0GQCGNhhz0qYkw/formResponse", {
+      method: "POST",
+      body: googleFormData,
+      mode: "no-cors"
+    }).then(() => {
+      alert("Thanks for Subscribing! We will keep you updated!!");
+      setFormData({ name: '', email: '' });
+    }).catch(() => {
+      alert("Something went wrong!");
+    });
+  };
 
 
 
@@ -55,18 +106,18 @@ const Footer = () => {
                 Quick Links
               </div>
               <div className="links">
-                <div onClick={() => { }} className="link">Home</div>
-                <div onClick={() => { }} className="link">Sponsors</div>
-                <div onClick={() => { }} className="link">Events</div>
-                <div onClick={() => { }} className="link">Contacts</div>
-                <div onClick={() => { }} className="link">Team</div>
-                <div onClick={() => { }} className="link">Hackathon</div>
-                <div onClick={() => { }} className="link">FAQs</div>
-                <div onClick={() => { }} className="link">Notification</div>
-                <div onClick={() => { }} className="link">Results</div>
-                <div onClick={() => { }} className="link">Registration</div>
-                <div onClick={() => { }} className="link">MicroMouse</div>
-                <div onClick={() => { }} className="link">Workshop</div>
+                <div onClick={(e) => { click(e, 'home') }} className="link">Home</div>
+                <div onClick={(e) => { click(e, 'sponsors') }} className="link">Sponsors</div>
+                <div onClick={(e) => { click(e, 'events') }} className="link">Events</div>
+                <div onClick={(e) => { click(e, 'contacts') }} className="link">Contacts</div>
+                <div onClick={(e) => { click(e, 'team') }} className="link">Team</div>
+                <div onClick={(e) => { click(e, 'events') }} className="link">Hackathon</div>
+                <div onClick={(e) => { click(e, 'contacts') }} className="link">FAQs</div>
+                <div onClick={(e) => { click(e, 'home') }} className="link">Notification</div>
+                <div onClick={(e) => { click(e, 'events') }} className="link">Results</div>
+                <div onClick={(e) => { click(e, 'events') }} className="link">Registration</div>
+                <div onClick={(e) => { click(e, 'events') }} className="link">MicroMouse</div>
+                <div onClick={(e) => { click(e, 'events') }} className="link">Workshop</div>
               </div>
 
             </div>
@@ -121,12 +172,14 @@ const Footer = () => {
               <div className="subDes">
                 Subscribe to our newsletter for the latest updates.
               </div>
-              <div className="dataInput">
-                <input type="text" placeholder='Enter your Name' />
-                <input type="text" placeholder='Enter your email' />
-                <div className="subscribeBtn">Subscribe</div>
-              </div>
+              <form onSubmit={handleSubmit} className="dataInput">
+                <input id='name' type="text" placeholder='Enter your Name' value={formData.name} onChange={handleChange} required />
+                <input id='email' value={formData.email} onChange={handleChange} required type="text" placeholder='Enter your email' />
+                <button className="subscribeBtn">Subscribe</button>
+              </form>
             </div>
+
+            {/* https://docs.google.com/forms/d/e/1FAIpQLSc-o2NSAHADjZwZ3xIlgBKkHk8J1aqM17PU0GQCGNhhz0qYkw/viewform?usp=pp_url&entry.1759579994=sadjl&entry.444416730=adf */}
 
           </div>
         </div>

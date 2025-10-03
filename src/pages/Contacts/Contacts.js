@@ -3,26 +3,31 @@ import { imgPath } from '../../utils/utilityFunctions'
 import { Icon } from '@iconify/react/dist/iconify.js';
 
 import SplitText from "../../components/SplitText";
-import TextType from '../../components/TextType/TextType';
 import BgParticles from '../../components/BgParticles';
+import TextUp from '../../components/TextUp';
+import ContactForm from '../../components/ContactForm/ContactForm';
+
 
 const Contacts = () => {
+  const texts = ["Reach out — because even particles communicate", "Let’s connect — our inbox is always charged"
+  ];
+
   return (
     <>
-      <main className="sponsors">
+      <main className="contacts">
 
-        <section className="s-hero-content">
-          <div className="s-hero-mask">
+        <section className="c-hero-content">
+          <div className="c-hero-mask">
             <BgParticles />
           </div>
-          <div className="s-hero">
-            <div className="s-hero-wrapper">
-              <div className="s-hero-title">
-                <div className="s-title-wrap">
+          <div className="c-hero">
+            <div className="c-hero-wrapper">
+              <div className="c-hero-title">
+                <div className="c-title-wrap">
                   <SplitText
                     tag="h1"
-                    text="CONTACT US"
-                    className="s-title-text"
+                    text="REACH OUT"
+                    className="c-title-text"
                     delay={0}
                     duration={0.6}
                     ease="power3.out"
@@ -34,23 +39,14 @@ const Contacts = () => {
                     textAlign="left"
                     onLetterAnimationComplete={() => { }}
                   />
-                  <div className="tagline-wrap hero-tagline">
-                    Reach out—because even particles communicate__
-                    <TextType
-                      tag="h2"
-                      className='hero-tagline tag-overlap'
-                      text={["Reach out—because even particles communicate", "Let’s connect — our inbox is always charged"]}
-                      typingSpeed={75}
-                      pauseDuration={1500}
-                      showCursor={true}
-                      cursorCharacter="_"
-                    />
+                  <div className="c-hero-tagline">
+                    <TextUp texts={texts} intervalTime={4000} animDuration={300} />
                   </div>
                   <div>
                     <SplitText
                       tag="h1"
-                      text="A HUGE THANK YOU TO OUR AMAZING SPONSORS! YOUR SUPPORT MEANS THE WORLD TO US, AND WE TRULY APPRECIATE YOUR GENEROSITY."
-                      className="s-hero-des"
+                      text="HAVE QUESTIONS, SUGGESTIONS, OR IDEAS TO SHARE? WE’RE ALWAYS EAGER TO CONNECT. YOUR THOUGHTS AND FEEDBACK INSPIRE US TO GROW STRONGER EACH DAY. DON’T HESITATE TO REACH OUT — WE’RE JUST A MESSAGE AWAY, ALWAYS READY TO HELP!"
+                      className="c-hero-des"
                       delay={50}
                       duration={0.6}
                       ease="power3.out"
@@ -65,33 +61,29 @@ const Contacts = () => {
                   </div>
                 </div>
 
-                <div className="s-hero-tags">
-                  <div className="s-hero-tag s-tag1">
-                    <Icon icon="material-symbols:star-shine-rounded" />
-                    <div>20+ Brands</div>
+                <div className="c-hero-tags">
+                  <div className="c-hero-tag c-tag1">
+                    <Icon icon="solar:phone-bold-duotone" />
+                    <div>+91 88888 88888</div>
                   </div>
-                  <div className="s-hero-tag s-tag2">
-                    <Icon icon="ic:outline-business" />
-                    <div>Industry partners</div>
-                  </div>
-                  <div className="s-hero-tag s-tag3">
-                    <Icon icon="ic:baseline-tips-and-updates" />
-                    <div>Innovation Leaders</div>
+                  <div className="c-hero-tag c-tag2">
+                    <Icon icon="dashicons:email" />
+                    <div>entropy@iiitg.ac.in</div>
                   </div>
                 </div>
 
               </div>
-              <div className="s-hero-anime">
-                <img src={imgPath("Comp.png")} alt="SBI Logo" />
-              </div>
+              {/* <div className="c-hero-anime">
+                <img src={imgPath("Comp.png")} alt="" />
+              </div> */}
             </div>
           </div>
         </section>
-
+{/* 
         <section className="h-description">
           <div className="main-title">
-            <span className='title-dark'>The Fuel</span>
-            <span className='title-light'>Behind the Future</span>
+            <span className='title-dark'>Team</span>
+            <span className='title-light'>Message</span>
             <span className='title-ruler'></span>
           </div>
 
@@ -102,13 +94,13 @@ const Contacts = () => {
 
               <div className="text-content">
                 <p>
-                  It takes more than code to power a tech fest like Entropy 2025 — it takes belief.Our sponsors didn’t just fund an event; they backed a vision. From tech titans to local legends, these partners invested in creativity, innovation, and the next generation of disruptors.
+                  Entropy 2025 is more than just a tech fest — it’s a vision brought to life by an incredible team. Every idea shared, every late night coding session, every creative spark added to the magic of this event.
                 </p>
                 <p>
-                  Their support helped us craft unforgettable experiences, spark curiosity, and launch dreams into the digital cosmos.
+                  To every team member who contributed their time, talent, and energy — your dedication turned dreams into reality. Together, we didn’t just build an event; we created experiences, inspired curiosity, and shaped the future of innovation.
                 </p>
                 <p>
-                  To every brand, company, and contributor who believed in Entropy — this madness was made possible because of you.
+                  This fest is ours, and it wouldn’t have been possible without each one of you.
                 </p>
               </div>
 
@@ -118,7 +110,7 @@ const Contacts = () => {
                     <Icon icon="fa-solid:atom" />
                   </div>
                   <div className="feature-data">
-                    <h4>20+ Sponsors</h4>
+                    <h4>50+ Members</h4>
                     <p>Proudly supported by 20+ leading tech and industry partners</p>
                   </div>
                 </div>
@@ -127,26 +119,13 @@ const Contacts = () => {
             </div>
 
             <div className="des-image" style={{ backgroundImage: `url(${imgPath("SponsorDes.webp")})` }}>
-              {/* <img src={imgPath("SponsorDes.webp")} alt="Home-img" /> */}
             </div>
           </div>
-        </section>
+        </section> */}
 
-
-        <section className='legacy-sponsors'>
-          <div className="mid-heading">
-            <div className="mid-head-title">
-              <span className='mid-ruler'></span>
-              <div className='mid-title-dark'>Legacy</div>
-              <div className='mid-title-light'>Sponsors</div>
-              <span className='mid-ruler ruler-rev'></span>
-            </div>
-            <div className="mid-head-info">
-              Behind every innovation, there’s a sponsor who believed in possibility
-            </div>
-          </div>
-
-        </section>
+        <div className="c-form-sec">
+          <ContactForm />
+        </div>
 
       </main >
 

@@ -49,7 +49,7 @@ const Team = () => {
 
   const teamsData = [
     {
-      Team: 'Tech',
+      Team: 'Heads',
       data: [
         {
           name: 'Natasha Romanoff',
@@ -64,11 +64,11 @@ const Team = () => {
           mail: 'entropy@iiitg.ac.in',
         },
         {
-          name: 'Tony Stark',
+          name: 'Ansik',
           role: 'Team Lead',
           level: '1',
           image: 'teams/tech/Tony.jpg',
-          pos: 'center',
+          pos: '50% 50%',
           github: '',
           linkedin: '',
           insta: 'https://www.instagram.com/aanshiq_singh/',
@@ -229,7 +229,7 @@ const Team = () => {
     },
 
     {
-      Team: 'Tech',
+      Team: 'event',
       data: [
         {
           name: 'Natasha Romanoff',
@@ -283,7 +283,7 @@ const Team = () => {
     },
 
     {
-      Team: 'Tech',
+      Team: 'Sponsors',
       data: [
         {
           name: 'Natasha Romanoff',
@@ -337,7 +337,7 @@ const Team = () => {
     },
 
     {
-      Team: 'Tech',
+      Team: 'marketing',
       data: [
         {
           name: 'Natasha Romanoff',
@@ -379,7 +379,7 @@ const Team = () => {
     },
 
     {
-      Team: 'Tech',
+      Team: 'pr',
       data: [
         {
           name: 'Natasha Romanoff',

@@ -1,0 +1,278 @@
+.contact-form {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  color: #ffffff;
+  padding-bottom: 40px;
+}
+
+.info-container {
+  flex: 20;
+  border-radius: 15px 0px 0px 15px;
+  background: linear-gradient(135deg, #460087, #630089);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  flex: 30;
+  border-radius: 0px 15px 15px 0px;
+  background: linear-gradient(135deg, #240048, #3d0066);
+  padding: 30px;
+}
+
+.info-head {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 600;
+  color: #ffdd00;
+  font-family: 'Maven Pro', 'Inter', sans-serif;
+  letter-spacing: 2px;
+  padding: 10px 0px;
+}
+
+.info-des {
+  font-size: 16px;
+  padding: 10px 0px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.info-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0px 70px;
+}
+
+.info-wrap {
+  display: flex;
+  align-items: start;
+  gap: 15px;
+}
+
+.info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 8px;
+  background-color: blueviolet;
+  aspect-ratio: 1;
+  font-size: 20px;
+  color: #ff00e6;
+  position: relative;
+  top: 10px;
+}
+
+.info-title {
+  font-size: 20px;
+  color: #ffdd00;
+  font-size: "Maven Pro", "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.form-info-des {
+  font-size: 16px;
+  padding: 5px 0px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.social-title {
+  font-size: 20px;
+  color: #ffdd00;
+  font-size: "Maven Pro", "Inter", sans-serif;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.form-head {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: 'Maven Pro', 'Inter', sans-serif;
+  letter-spacing: 2px;
+  padding: 10px 0px 30px;
+}
+
+.input-row {
+  display: flex;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.form-label {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Baloo 2', sans-serif;
+  margin: 0px 0px 5px 5px;
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+  font-size: 16px;
+  font-family: 'Baloo 2', sans-serif;
+  color: #f7efffa2;
+}
+
+.form-input, .form-textarea {
+  padding: 10px 15px;
+  border: 1px solid #5b00bc;
+  border-radius: 8px;
+  background: #1e0034;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Baloo 2', sans-serif;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-input:focus, .form-textarea:focus {
+  border-color: #a855f7;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.5);
+}
+
+.form-btn {
+  background: linear-gradient(45deg, #8400ff, #e600ff);
+  border: none;
+  padding: 12px 30px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.send-icon {
+  position: relative;
+  top: 1px;
+  right: 2px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.form-btn:hover {
+  scale: 1.02;
+}
+
+.form-btn:hover .send-icon {
+  scale: 1.2;
+  top: -1px;
+  right: -2px;
+}
+
+@media (max-width: 992px) {
+  .info-container {
+    flex: 1;
+  }
+
+  .form-container {
+    flex: 1;
+  }
+
+  .input-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .contact-form {
+    flex-direction: column-reverse;
+  }
+
+  .info-container {
+    border-radius: 0px 0px 15px 15px;
+  }
+
+  .form-container {
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  .info-detail {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 0px 30px;
+  }
+
+  .info-wrap {
+    min-width: 40%;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .info-container {
+    padding: 20px;
+  }
+
+  .form-container {
+    padding: 20px 20px 30px;
+  }
+
+  .info-head, .form-head {
+    font-size: 22px;
+    letter-spacing: 1px;
+    padding: 8px 0px;
+  }
+
+  .form-head {
+    padding-bottom: 20px;
+  }
+
+  .info-des {
+    line-height: 120%;
+  }
+
+  .info-icon {
+    font-size: 18px;
+    top: 5px;
+  }
+
+  .info-title {
+    font-size: 18px;
+  }
+
+  .form-info-des {
+    padding: 0px;
+    line-height: 120%;
+  }
+
+  .form-label {
+    font-size: 18px;
+    margin: 0px 0px 0px 5px;
+  }
+
+  .form-input::placeholder, .form-textarea::placeholder {
+    font-size: 15px;
+  }
+
+  .form-input, .form-textarea {
+    padding: 8px 15px;
+  }
+
+  .form-btn {
+    padding: 10px 15px;
+    margin-top: 30px;
+  }
+
+}

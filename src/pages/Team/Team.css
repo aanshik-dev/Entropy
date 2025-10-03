@@ -16,7 +16,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 75%;
+  width: 100%;
   -webkit-mask-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7));
   mask-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7));
   -webkit-mask-size: 100% 100%;
@@ -57,7 +57,7 @@
 }
 
 .t-title-text {
-  font-size: clamp(3rem, 7.5vw, 5.7rem);
+  font-size: clamp(2.8rem, 7.5vw, 5.7rem);
   font-weight: 700;
   color: #ffffff;
   font-family: 'Lexend Exa', 'Maven Pro', sant-serif;

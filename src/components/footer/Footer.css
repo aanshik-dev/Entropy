@@ -227,6 +227,12 @@
   margin: 10px 0px;
   align-self: flex-end;
   transition: all 0.3s ease-in;
+  border: none;
+
+  &:hover {
+    transform: scale(1.03);
+    opacity: 0.8;
+  }
 }
 
 .copyRight {

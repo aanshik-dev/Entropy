@@ -33,6 +33,20 @@ const Navbar = ({ activePage, switchPage }) => {
     }, t3)
   }
 
+  const click = (e, page, sectionId = null) => {
+    e.preventDefault();
+    window.location.hash = page;
+    if (sectionId) {
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    } else {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 50)
+    }
+  };
 
 
   return (
@@ -69,7 +83,7 @@ const Navbar = ({ activePage, switchPage }) => {
             </div>
             <div className="filler"></div>
 
-            <div className="navButton">Register</div>
+            <div onClick={(e) => click(e, 'events', 'eventTimeline')} className="navButton">Register</div>
           </div>
         </div>
       </div>
@@ -94,6 +108,7 @@ const Navbar = ({ activePage, switchPage }) => {
           }}>
             <Icon icon="mingcute:close-fill" />
           </div>
+
           <div className="phHeader">
             <div className="phTitle">
               <div className="phLogo">
@@ -105,9 +120,9 @@ const Navbar = ({ activePage, switchPage }) => {
             </div>
             <div className="phDes">
               <div className="phTag">Tech Fest</div>
-              <div className="phDates">October 15-17, 2025</div>
+              <div className="phDates">October 25-26, 2025</div>
             </div>
-            <div className="navButton phBtn">Register</div>
+            <div onClick={(e) => click(e, 'events', 'eventTimeline')} className="navButton phBtn">Register</div>
 
           </div>
 

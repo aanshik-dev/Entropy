@@ -118,9 +118,6 @@ const Merch = () => {
           </div>
         </div>
 
-
-
-
       </div>
     </>
   )

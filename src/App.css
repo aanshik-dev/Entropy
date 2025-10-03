@@ -235,6 +235,10 @@ section {
   :root {
     --section-margin: 7vw;
   }
+
+  .mid-head-info {
+    width: 80%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -272,6 +276,10 @@ section {
 
   .feature-data>p {
     font-size: 14px;
+  }
+
+  .mid-head-info {
+    font-size: 16px;
   }
 }
 
@@ -311,5 +319,10 @@ section {
 
   .title-ruler {
     height: 3px;
+  }
+
+  .mid-head-info {
+    width: 90%;
+    font-size: 14px;
   }
 }

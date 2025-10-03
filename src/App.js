@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import ParticlesBackground from './components/BgParticles';
 import './App.css';
 
 import ClickSpark from './components/ClickSpark';
@@ -44,6 +43,20 @@ function App() {
     }
   }
 
+  useEffect(() => {
+    const onHashChange = () => {
+      const pageFromHash = window.location.hash.replace('#', '');
+      if (pageFromHash) setCurPage(pageFromHash);
+    };
+
+    window.addEventListener('hashchange', onHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', onHashChange);
+    };
+  }, []);
+
+
 
   return (
     <>
@@ -59,7 +72,7 @@ function App() {
         <div className='mainWrapper'>
           <Navbar activePage={curPage} switchPage={(page) => setCurPage(page)} />
           {loadPage()}
-          <Footer />
+          <Footer activePage={curPage} switchPage={(page) => setCurPage(page)} />
 
         </div>
       </ClickSpark>

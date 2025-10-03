@@ -102,10 +102,10 @@ const Events = () => {
         </section>
 
 
-        <section className='event-carousel'>
+        <section className='event-carousel' id='eventCarousel' >
           <EventCarousel />
         </section>
-        <section className='event-timeline'>
+        <section className='event-timeline' id='eventTimeline'>
           <EventsTimeline />
         </section>
 

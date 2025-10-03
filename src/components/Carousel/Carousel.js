@@ -204,6 +204,21 @@ const Carousel = () => {
   };
 
 
+  const click = (e, page, sectionId = null) => {
+    e.preventDefault();
+    window.location.hash = page;
+    if (sectionId) {
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    } else {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 50)
+    }
+  };
+
   return (
     <>
       <div className="carousel-container">
@@ -270,7 +285,7 @@ const Carousel = () => {
 
         </div>
 
-        <div className="all-events-btn">
+        <div onClick={(e) => click(e, 'events', 'eventTimeline')} className="all-events-btn">
           <span>View All</span>
           <span><Icon icon='solar:double-alt-arrow-right-line-duotone' /></span>
         </div>
