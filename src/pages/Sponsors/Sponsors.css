@@ -127,14 +127,16 @@
 
 .s-hero-anime {
   width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .s-hero-anime>img {
   height: 400px;
   animation: Rotation 15s linear infinite;
+  scale: 1.2;
   position: relative;
-  scale: 2.3;
-  left: 70%;
 }
 
 
@@ -248,7 +250,8 @@
   }
 
   .s-hero-anime>img {
-    scale: 1.8;
+    scale: 1;
+    opacity: 0.5;
   }
 
 
@@ -275,7 +278,7 @@
   }
 
   .s-hero-anime {
-    width: 80%;
+    width: 90%;
     position: absolute;
     top: 0%;
     overflow: hidden;

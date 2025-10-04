@@ -1,8 +1,7 @@
-import { use, useRef } from 'react';
+import { useRef } from 'react';
 import './navbar.css';
 
-import NavParticles from '../NavParticles';
-import Logo from '../../assets/Entropy.webp';
+import { imgPath } from '../../utils/utilityFunctions'
 import { Icon } from '@iconify/react/dist/iconify.js';
 
 
@@ -56,7 +55,7 @@ const Navbar = ({ activePage, switchPage }) => {
         <div className="navBox">
           <div className="navLeft">
             <div className="logo">
-              <img src={Logo} alt="Entropy" />
+              <img src={imgPath("Entropy.webp")} alt="SBI Logo" />
             </div>
             <div className='logoText'>
               <span className="entropyTitle">Entropy</span>
@@ -112,7 +111,7 @@ const Navbar = ({ activePage, switchPage }) => {
           <div className="phHeader">
             <div className="phTitle">
               <div className="phLogo">
-                <img src={Logo} alt="Entropy" />
+                <img src={imgPath("Entropy.webp")} alt="SBI Logo" />
               </div>
               <div className="phEntropy">
                 Entropy<span>2025</span>

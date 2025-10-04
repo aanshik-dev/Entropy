@@ -1,11 +1,8 @@
 import './Footer.css'
 import { Icon } from "@iconify/react";
 
-import Logo from '../../assets/Logo.webp'
-import IIITG from '../../assets/IIITG.webp'
 import { useState } from 'react';
-
-
+import { imgPath } from '../../utils/utilityFunctions'
 
 
 const Footer = () => {
@@ -71,8 +68,8 @@ const Footer = () => {
 
             <div className="media">
               <div className="logos">
-                <img src={Logo} alt="Entropy" />
-                <img src={IIITG} alt="IIITG" />
+                <img src={imgPath("Logo.webp")} alt="Entropy" />
+                <img src={imgPath("IIITG.webp")} alt="IIITG" />
               </div>
               <div className="outro">
                 <div className="footEntropy">
