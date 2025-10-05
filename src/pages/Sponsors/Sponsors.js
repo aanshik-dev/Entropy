@@ -36,7 +36,6 @@ const Sponsors = () => {
   return (
     <>
 
-      {/* Sponsors Page */}
       <main className="sponsors">
         <section className="s-hero-content">
           <div className="s-hero-mask">
