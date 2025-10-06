@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Entropy/static/css/main.ece0caae.css",
-    "main.js": "/Entropy/static/js/main.931249d2.js",
+    "main.css": "/Entropy/static/css/main.500ee698.css",
+    "main.js": "/Entropy/static/js/main.2ceca62d.js",
     "static/media/TlEventBg.jpg": "/Entropy/static/media/TlEventBg.45c6ad895f091c9e6097.jpg",
     "static/media/TeamDes.jpg": "/Entropy/static/media/TeamDes.3bb10822bf5f05eed941.jpg",
     "index.html": "/Entropy/index.html",
-    "main.ece0caae.css.map": "/Entropy/static/css/main.ece0caae.css.map",
-    "main.931249d2.js.map": "/Entropy/static/js/main.931249d2.js.map"
+    "main.500ee698.css.map": "/Entropy/static/css/main.500ee698.css.map",
+    "main.2ceca62d.js.map": "/Entropy/static/js/main.2ceca62d.js.map"
   },
   "entrypoints": [
-    "static/css/main.ece0caae.css",
-    "static/js/main.931249d2.js"
+    "static/css/main.500ee698.css",
+    "static/js/main.2ceca62d.js"
   ]
 }
