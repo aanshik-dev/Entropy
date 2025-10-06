@@ -10,6 +10,8 @@ import Team from './pages/Team/Team';
 import Sponsors from './pages/Sponsors/Sponsors';
 import Contacts from './pages/Contacts/Contacts';
 import Footer from './components/footer/Footer';
+import Counter from "./components/Counter/Counter";
+
 
 function App() {
   const [curPage, setCurPage] = useState(() => {
@@ -69,6 +71,7 @@ function App() {
         duration={400}
       >
 
+        <Counter />
         <div className='mainWrapper'>
           <Navbar activePage={curPage} switchPage={(page) => setCurPage(page)} />
           {loadPage()}

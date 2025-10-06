@@ -1,0 +1,253 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 100000;
+  pointer-events: none;
+  display: flex;
+  overflow: scroll;
+}
+
+
+.laser {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+.counter-box {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 70%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #15002188, #3500369f);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 2px solid #9d00ff;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  color: #ffffff;
+  z-index: 6;
+}
+
+
+.counter-info {
+  color: #ffffff;
+  background-color: #9d00ff3a;
+  padding: 35px 25px 25px;
+  border-radius: 20px 0px 0px 20px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-infoHead {
+  font-size: 40px;
+  color: #ffdd00;
+  font-family: 'league spartan', Arial, sans-serif;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 5px;
+}
+
+.c-infoTag {
+  font-size: 18px;
+  color: #c46cff;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  line-height: 120%;
+  font-family: 'maven pro', Arial, sans-serif;
+}
+
+.eventWrap {
+  flex: 1;
+  padding-bottom: 10px;
+}
+
+.eventTime {
+  font-size: 16px;
+  color: #ffffffc5;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 0px 0px 0px;
+}
+
+.eventTime>span>* {
+  width: 25px;
+}
+
+.counter-wrap {
+  z-index: 10;
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 35px 25px 25px;
+  flex: 3;
+}
+
+.timer-title {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #ff00f7, #9900ff);
+  ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.timerContent {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.timerUnit {
+  background: rgba(204, 0, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid rgba(225, 0, 255, 0.69);
+  min-width: 100px;
+}
+
+.unitVal {
+  font-Size: 35px;
+  font-weight: 600;
+  background: linear-gradient(-45deg, #ffdd00, #ee00ffff, #b300ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.unitLabel {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+.instruct {
+  font-size: 16px;
+  opacity: 0.6;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .counter-box {
+    width: 85%;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+
+  .counter-box {
+    width: 80%;
+  }
+
+  .counter-info, .counter-wrap {
+    padding: 25px 20px 20px;
+  }
+
+  .c-infoHead, .timer-title {
+    font-size: clamp(2rem, 4vw, 4rem);
+  }
+
+  .timerContent {
+    flex-wrap: wrap;
+  }
+
+  .timerUnit {
+    width: 40%;
+    min-width: 80px;
+  }
+
+  .unitVal {
+    font-size: 30px;
+  }
+
+  .unitLabel {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .counter-box {
+    width: 80%;
+    top: 20%;
+    flex-direction: column;
+    border-radius: 15px;
+  }
+
+  .counter-info {
+    border-radius: 15px 15px 0px 0px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .counter-info, .counter-wrap {
+    padding: 15px 15px 10px;
+  }
+
+  .c-infoHead, .timer-title {
+    font-size: clamp(1.5rem, 4vw, 4rem);
+    text-align: center;
+  }
+
+  .c-infoTag {
+    line-height: 100%;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .eventWrap {
+    align-self: start;
+    padding-left: 20px;
+  }
+
+  .eventTime {
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .timerContent {
+    gap: 15px;
+  }
+
+  .timerUnit {
+    width: auto;
+    padding: 5px;
+    min-width: none;
+  }
+
+  .unitVal {
+    font-size: 25px;
+  }
+
+  .instruct {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .counter-box {
+    width: 80%;
+    top: 30%;
+  }
+
+  .timerUnit {
+    width: 40%;
+  }
+}

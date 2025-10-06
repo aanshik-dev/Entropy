@@ -1,7 +1,5 @@
 import './Home.css';
-import { useRef, useState, useEffect } from 'react';
 import { imgPath } from '../../utils/utilityFunctions'
-import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react/dist/iconify.js';
 import TextUp from '../../components/TextUp';
 import CountUp from '../../components/CountUp';
