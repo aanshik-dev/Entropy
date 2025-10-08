@@ -147,13 +147,13 @@ const Navbar = ({ activePage, switchPage }) => {
             <div className="phHead">Social</div>
 
             <div className="phSocial">
-              <a href="https://www.instagram.com/entropy.iiitg/" target='_blank' rel='noopener noreferrer'>
+              <a href="https://www.instagram.com/entropy_iiitg/" target='_blank' rel='noopener noreferrer'>
                 <Icon icon="simple-icons:instagram" />
               </a>
-              <a href="https://www.linkedin.com/company/entropy-iiitg" target='_blank' rel='noopener noreferrer'>
+              <a href="https://www.linkedin.com/company/entropy-iiit-guwahati/" target='_blank' rel='noopener noreferrer'>
                 <Icon icon="simple-icons:linkedin" />
               </a>
-              <a href="https://www.facebook.com/entropyiiitg" target='_blank' rel='noopener noreferrer'>
+              <a href="https://www.facebook.com/iiitghy" target='_blank' rel='noopener noreferrer'>
                 <Icon icon="simple-icons:facebook" />
               </a>
             </div>

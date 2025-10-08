@@ -64,7 +64,7 @@ const Team = () => {
           mail: 'entropy@iiitg.ac.in',
         },
         {
-          name: 'Ansik',
+          name: 'Tony Stark',
           role: 'Team Lead',
           level: '1',
           image: 'teams/tech/Tony.jpg',
@@ -130,31 +130,55 @@ const Team = () => {
       Team: 'Tech',
       data: [
         {
-          name: 'Natasha Romanoff',
+          name: 'Anuj Parota',
           role: 'Head Coordinator',
           level: '2',
-          image: 'teams/tech/Natasha.jpg',
+          image: 'teams/tech/Tom.jpg',
           pos: 'center',
-          github: 'https://github.com/aanshik-dev',
-          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
-          insta: '',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
+          github: 'https://github.com/anujOparota',
+          linkedin: 'https://www.linkedin.com/in/anuj-parota-315125323',
+          insta: 'https://www.instagram.com/anujparota',
+          phone: '7023553165',
+          mail: 'anuj.parota24b@iiitg.ac.in',
         },
         {
-          name: 'Tony Stark',
+          name: 'Ansik Singh Tomar',
           role: 'Team Lead',
           level: '1',
           image: 'teams/tech/Tony.jpg',
           pos: 'center',
-          github: '',
-          linkedin: '',
+          github: 'https://github.com/aanshik-dev',
+          linkedin: 'https://www.linkedin.com/in/ansik-singh-tomar-506690279/',
           insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
+          phone: '8822630829',
+          mail: 'ansik.tomar24b@iiitg.ac.in',
         },
         {
-          name: 'Peter Parker',
+          name: 'Nikhil Mehrotra',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/NikhilMeh',
+          linkedin: 'https://www.linkedin.com/in/nikhil-mehrotra-516032312',
+          insta: 'https://www.instagram.com/mehnikhil22?igsh=MWcwZ2Q4MjZkYnNrMg==',
+          phone: '9389943737',
+          mail: 'nikhil.mehrotra24b@iiitg.ac.in',
+        },
+        {
+          name: 'Harsh Brijesh Dubey',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: 'https://github.com/Hxrshthetic',
+          linkedin: 'https://www.linkedin.com/in/hxrshthetic',
+          insta: 'https://www.instagram.com/hxrsh.dubey',
+          phone: '9580010704',
+          mail: 'harsh.dubey24b@iiitg.ac.in',
+        },
+        {
+          name: 'Jay Rajoriya',
           role: 'Team Member',
           level: '3',
           image: 'teams/tech/Tom.jpg',
@@ -166,10 +190,10 @@ const Team = () => {
           mail: 'entropy@iiitg.ac.in',
         },
         {
-          name: 'Peter Parker',
+          name: 'Sara Khan',
           role: 'Team Member',
           level: '3',
-          image: 'teams/tech/Tom.jpg',
+          image: 'teams/tech/Natasha.jpg',
           pos: 'center',
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
@@ -177,54 +201,6 @@ const Team = () => {
           phone: '7999999999',
           mail: 'entropy@iiitg.ac.in',
         },
-        {
-          name: 'Peter Parker',
-          role: 'Team Member',
-          level: '3',
-          image: 'teams/tech/Tom.jpg',
-          pos: 'center',
-          github: 'https://github.com/aanshik-dev',
-          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
-          insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
-        },
-        {
-          name: 'Peter Parker',
-          role: 'Team Member',
-          level: '3',
-          image: 'teams/tech/Tom.jpg',
-          pos: 'center',
-          github: 'https://github.com/aanshik-dev',
-          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
-          insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
-        },
-        {
-          name: 'Peter Parker',
-          role: 'Team Member',
-          level: '3',
-          image: 'teams/tech/Tom.jpg',
-          pos: 'center',
-          github: 'https://github.com/aanshik-dev',
-          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
-          insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
-        },
-        {
-          name: 'Peter Parker',
-          role: 'Team Member',
-          level: '3',
-          image: 'teams/tech/Tom.jpg',
-          pos: 'center',
-          github: 'https://github.com/aanshik-dev',
-          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
-          insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
-        }
       ]
     },
 
@@ -232,52 +208,76 @@ const Team = () => {
       Team: 'event',
       data: [
         {
-          name: 'Natasha Romanoff',
-          role: 'Head Coordinator',
-          level: '2',
-          image: 'teams/tech/Natasha.jpg',
-          pos: 'center',
-          github: 'https://github.com/aanshik-dev',
-          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
-          insta: '',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
-        },
-        {
-          name: 'Tony Stark',
-          role: 'Team Lead',
-          level: '1',
+          name: 'Arjun Kumar',
+          role: 'Team Member',
+          level: '3',
           image: 'teams/tech/Tony.jpg',
           pos: 'center',
           github: '',
+          linkedin: 'https://www.linkedin.com/in/arjun-kumar-1096a6343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+          insta: 'https://www.instagram.com/arjunshroff19?igsh=azZqeDJ6N21mMWtt%0a',
+          phone: '95093555661',
+          mail: 'arjun.kumar24b@iiitg.ac.in',
+        },
+        {
+          name: 'Abhinav Singh Chauhan',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: '',
+          linkedin: 'https://www.linkedin.com/in/abhinav-singh-chauhan-a68b74319',
+          insta: 'https://www.instagram.com/abhi.nav7_?igsh=NHA2Yno3emJ0MWs1',
+          phone: '91193344766',
+          mail: 'abhinav.chauhan24b@iiitg.ac.in',
+        },
+        {
+          name: 'Siddhant Vats',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: '',
+          linkedin: 'https://www.linkedin.com/in/siddhant-vats-74135b323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+          insta: 'https://www.instagram.com/siddhant_vats?igsh=MWpteThzdXVlMmc5bA==',
+          phone: '9236819580',
+          mail: 'siddhant.vats24b@iiitg.ac.in',
+        },
+        {
+          name: 'Vedant Chaudhari',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: '',
+          linkedin: 'https://www.linkedin.com/in/vedant-chaudhari-520bba266/',
+          insta: 'https://www.instagram.com/vedantchaudhari13/?igsh=NDJnZnRvYzdtZ2x3',
+          phone: '9326634353',
+          mail: 'vedant.chaudhari24b@iiitg.ac.in',
+        },
+        {
+          name: 'Anurag Singh',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
+          pos: 'center',
+          github: '',
           linkedin: '',
-          insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
+          insta: 'https://www.instagram.com/mirchii.0?utm_source=qr&igsh=MTV6azZoYnQ1Z2Jwcw==',
+          phone: '9236770869',
+          mail: 'anurag.singh24b@iiitg.ac.in',
         },
         {
-          name: 'Peter Parker',
+          name: 'Ashish Sinha',
           role: 'Team Member',
           level: '3',
           image: 'teams/tech/Tom.jpg',
           pos: 'center',
-          github: 'https://github.com/aanshik-dev',
-          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
-          insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
-        },
-        {
-          name: 'Peter Parker',
-          role: 'Team Member',
-          level: '3',
-          image: 'teams/tech/Tom.jpg',
-          pos: 'center',
-          github: 'https://github.com/aanshik-dev',
-          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
-          insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
+          github: '',
+          linkedin: 'https://www.linkedin.com/in/ashish-sinha-283667328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+          insta: 'https://www.instagram.com/ashish_sinha_31/',
+          phone: '8318895695',
+          mail: 'ashish.sinha24b@iiitg.ac.in',
         }
       ]
     },
@@ -286,46 +286,46 @@ const Team = () => {
       Team: 'Sponsors',
       data: [
         {
-          name: 'Natasha Romanoff',
-          role: 'Head Coordinator',
-          level: '2',
-          image: 'teams/tech/Natasha.jpg',
+          name: 'Kuldeep Sharma',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
           pos: 'center',
-          github: 'https://github.com/aanshik-dev',
-          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
-          insta: '',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
+          github: '',
+          linkedin: 'https://www.linkedin.com/in/kuldeepsharma-iiitg',
+          insta: 'https://www.instagram.com/kulu_it/',
+          phone: '7014208868',
+          mail: 'kuldeep.sharma24b@iiitg.ac.in',
         },
         {
-          name: 'Tony Stark',
+          name: 'Akshat Keshri',
           role: 'Team Lead',
           level: '1',
           image: 'teams/tech/Tony.jpg',
           pos: 'center',
           github: '',
-          linkedin: '',
-          insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
+          linkedin: 'https://www.linkedin.com/in/akshat-keshri-018196274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+          insta: 'https://www.instagram.com/akshat_keshri_17?igsh=MXY4NjJ3d3l0aTA1Mg==',
+          phone: '7870720851',
+          mail: 'akshat.keshri24b@iiitg.ac.in',
         },
         {
-          name: 'Peter Parker',
+          name: 'Mudavath Arun Nayak',
           role: 'Team Member',
           level: '3',
           image: 'teams/tech/Tom.jpg',
           pos: 'center',
-          github: 'https://github.com/aanshik-dev',
-          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
-          insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
+          github: '',
+          linkedin: '',
+          insta: 'https://www.instagram.com/arun.chowhan.5621?igsh=MXFuaWZpd2FlaXFlaQ==/',
+          phone: '9392727540',
+          mail: 'mudavath.nayak24b@iiitg.ac.in',
         },
         {
-          name: 'Peter Parker',
+          name: 'Semal Priya',
           role: 'Team Member',
           level: '3',
-          image: 'teams/tech/Tom.jpg',
+          image: 'teams/tech/Natasha.jpg',
           pos: 'center',
           github: 'https://github.com/aanshik-dev',
           linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
@@ -340,28 +340,29 @@ const Team = () => {
       Team: 'marketing',
       data: [
         {
-          name: 'Natasha Romanoff',
-          role: 'Head Coordinator',
-          level: '2',
-          image: 'teams/tech/Natasha.jpg',
-          pos: 'center',
-          github: 'https://github.com/aanshik-dev',
-          linkedin: 'https://www.linkedin.com/in/abhishekgupta/',
-          insta: '',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
-        },
-        {
-          name: 'Tony Stark',
-          role: 'Team Lead',
-          level: '1',
-          image: 'teams/tech/Tony.jpg',
+          name: 'Shashank Kumar',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Tom.jpg',
           pos: 'center',
           github: '',
-          linkedin: '',
-          insta: 'https://www.instagram.com/aanshiq_singh/',
-          phone: '7999999999',
-          mail: 'entropy@iiitg.ac.in',
+          linkedin: 'https://www.linkedin.com/in/shashank-kumar-60873a323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+          insta: 'https://www.instagram.com/damn.shasha.nk',
+          phone: '9554429656',
+          mail: 'shashank.kumar24b@iiitg.ac.in',
+        },
+
+        {
+          name: 'Hansika Kumari',
+          role: 'Team Member',
+          level: '3',
+          image: 'teams/tech/Natasha.jpg',
+          pos: 'center',
+          github: '',
+          linkedin: 'https://www.linkedin.com/in/hansika-kumari-50494132a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+          insta: 'https://www.instagram.com/hansi_kaa?igsh=djJ4c3dodGlyZGF0',
+          phone: '63937031966',
+          mail: 'hansika.kumari24b@iiitg.ac.in',
         },
         {
           name: 'Peter Parker',
@@ -699,7 +700,7 @@ const Team = () => {
                                     {
                                       item.github && (
                                         <div className="t-mem-link">
-                                          <a href={item.github}>
+                                          <a href={item.github} target="_blank" rel="noopener noreferrer">
                                             <Icon icon="cib:github" />
                                           </a>
                                         </div>
@@ -708,7 +709,7 @@ const Team = () => {
                                     {
                                       item.linkedin && (
                                         <div className="t-mem-link">
-                                          <a href={item.linkedin}>
+                                          <a href={item.linkedin} target="_blank" rel="noopener noreferrer">
                                             <Icon icon="brandico:linkedin-rect" />
                                           </a>
                                         </div>
@@ -717,7 +718,7 @@ const Team = () => {
                                     {
                                       item.insta && (
                                         <div className="t-mem-link">
-                                          <a href={item.insta}>
+                                          <a href={item.insta} target="_blank" rel="noopener noreferrer">
                                             <Icon icon="bi:instagram" />
                                           </a>
                                         </div>
@@ -726,7 +727,7 @@ const Team = () => {
                                     {
                                       item.phone && (
                                         <div className="t-mem-link">
-                                          <a href={`tel:+91${item.phone}`}>
+                                          <a href={`tel:+91${item.phone}`} target="_blank" rel="noopener noreferrer">
                                             <Icon icon="el:phone" />
                                           </a>
                                         </div>
@@ -735,7 +736,7 @@ const Team = () => {
                                     {
                                       item.mail && (
                                         <div className="t-mem-link">
-                                          <a href={`mailto:${item.mail}`}>
+                                          <a href={`mailto:${item.mail}`} target="_blank" rel="noopener noreferrer">
                                             <Icon icon="streamline:mail-send-envelope-solid" />
                                           </a>
                                         </div>

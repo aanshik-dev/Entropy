@@ -21,7 +21,7 @@ const LaserImage = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 480) {
-        setVOffset(0.2);
+        setVOffset(0.35);
       } else if (window.innerWidth <= 768) {
         setVOffset(0.3);
       } else {
@@ -36,7 +36,7 @@ const LaserImage = () => {
 
 
   // Set your launch date here
-  const launchDate = new Date('2025-10-20T23:59:59').getTime();
+  const launchDate = new Date('2025-10-22T23:59:59').getTime();
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -145,18 +145,18 @@ const LaserImage = () => {
                   <Icon icon="mage:hour-glass-fill" />
                 </span>
                 <div>
-                  Website live on 20th October 2025
+                  Website live on 23th October 2025
                 </div>
               </div>
             </div>
-            <div className="social">
-              <a href="https://www.linkedin.com/company/entropy-iiitg" target='_blank' className='linkedin' rel='noopener noreferrer'>
+            <div className="social clickable">
+              <a href="https://www.linkedin.com/company/entropy-iiit-guwahati/" target='_blank' className='linkedin' rel='noopener noreferrer'>
                 <Icon icon="simple-icons:linkedin" />
               </a>
-              <a href="https://www.instagram.com/entropy.iiitg/" target='_blank' rel='noopener noreferrer' className='insta' >
+              <a href="https://www.instagram.com/entropy_iiitg/" target='_blank' rel='noopener noreferrer' className='insta' >
                 <Icon icon="simple-icons:instagram" />
               </a>
-              <a href="https://www.facebook.com/entropyiiitg" target='_blank' rel='noopener noreferrer' className='facebook'>
+              <a href="https://www.facebook.com/iiitghy" target='_blank' rel='noopener noreferrer' className='facebook'>
                 <Icon icon="simple-icons:facebook" />
               </a>
             </div>
@@ -175,7 +175,7 @@ const LaserImage = () => {
             </div>
 
             <p className='instruct'>
-              Move your cursor to reveal what's behind !!
+              Move your cursor to reveal what's behind!
             </p>
           </div>
 

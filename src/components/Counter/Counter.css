@@ -7,7 +7,6 @@
   z-index: 100000;
   pointer-events: none;
   display: flex;
-  overflow: scroll;
 }
 
 
@@ -90,6 +89,11 @@
   font-family: Arial, Helvetica, sans-serif;
   padding: 35px 25px 25px;
   flex: 3;
+}
+
+.clickable {
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .timer-title {
@@ -212,7 +216,7 @@
 
   .eventWrap {
     align-self: start;
-    padding-left: 20px;
+    padding-left: 10px;
   }
 
   .eventTime {
@@ -242,9 +246,10 @@
 
 
 @media screen and (max-width: 480px) {
+
   .counter-box {
-    width: 80%;
-    top: 30%;
+    width: 82%;
+    top: 15%;
   }
 
   .timerUnit {

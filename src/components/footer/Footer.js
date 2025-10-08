@@ -81,13 +81,13 @@ const Footer = () => {
 
 
                 <div className="social">
-                  <a href="https://www.linkedin.com/company/entropy-iiitg" target='_blank' className='linkedin' rel='noopener noreferrer'>
+                  <a href="https://www.linkedin.com/company/entropy-iiit-guwahati/" target='_blank' className='linkedin' rel='noopener noreferrer'>
                     <Icon icon="simple-icons:linkedin" />
                   </a>
-                  <a href="https://www.instagram.com/entropy.iiitg/" target='_blank' rel='noopener noreferrer' className='insta' >
+                  <a href="https://www.instagram.com/entropy_iiitg/" target='_blank' rel='noopener noreferrer' className='insta' >
                     <Icon icon="simple-icons:instagram" />
                   </a>
-                  <a href="https://www.facebook.com/entropyiiitg" target='_blank' rel='noopener noreferrer' className='facebook'>
+                  <a href="https://www.facebook.com/iiitghy" target='_blank' rel='noopener noreferrer' className='facebook'>
                     <Icon icon="simple-icons:facebook" />
                   </a>
                 </div>

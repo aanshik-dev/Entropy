@@ -9,6 +9,8 @@ const ParticleBackground = () => {
   useEffect(() => {
     const computeParticles = () => {
       const num = Math.floor((window.innerWidth * window.innerHeight) / 7000);
+
+      console.log(num);
       setCount(num);
     };
     computeParticles();
@@ -140,6 +142,7 @@ const ParticleBackground = () => {
     <Particles
       id="tsparticles"
       options={options}
+      key="Countparticle"
     />
   );
 };
