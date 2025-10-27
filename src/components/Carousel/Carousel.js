@@ -5,18 +5,16 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 
 const Carousel = () => {
 
-
-
   const SlideData = [
     {
-      icon: 'fa7-solid:robot',
+      icon: 'mdi:rocket-launch',
       iconBg: '#FFD700',
       iconColor: '#000000',
-      title: 'AI Showdown',
+      title: 'Entropy 2025 Inauguration',
       headColor: '#FF1497',
-      desc: 'Pit your AI models against others in this thrilling competition.',
+      desc: 'Kickstart Entropy 2025 with a grand opening — witness the unveiling, guest appearances, and electrifying performances that set the stage for innovation.',
       tag: 'Day 1',
-      data: '10:00 AM',
+      data: '09:00 AM',
       dataColor: '#FFD700',
       button: 'Register Now'
     },
@@ -24,65 +22,76 @@ const Carousel = () => {
       icon: 'fa6-solid:vr-cardboard',
       iconBg: '#a74affff',
       iconColor: '#FFFFFF',
-      title: 'Gaming Tournament',
+      title: 'Protocol Breach',
       headColor: '#FFD700',
-      desc: 'Step into the quantum realm with our immersive VR experience.',
+      desc: 'Dive into the virtual chaos! Test your reflexes and logic in this high-tech VR challenge full of puzzles and futuristic simulations.',
+      tag: 'Day 2',
+      data: '02:00 PM',
+      dataColor: '#FF1493',
+      button: 'Register Now'
+    },
+    {
+      icon: 'fa7-solid:robot',
+      iconBg: '#FFD700',
+      iconColor: '#000000',
+      title: 'Robo Sangraam',
+      headColor: '#FF1497',
+      desc: 'Witness the ultimate robot battle as powerful bots clash in an arena of engineering excellence and raw innovation.',
       tag: 'Day 2',
       data: '09:00 AM',
-      dataColor: '#FF1493',
+      dataColor: '#FFD700',
       button: 'Register Now'
     },
     {
       icon: 'uil:processor',
       iconBg: '#FF1493',
       iconColor: '#FFFFFF',
-      title: 'Workshop',
+      title: 'Tech Quiz - Round 2',
       headColor: '#FFD700',
-      desc: 'Learn the fundamentals of quantum computing and how it can revolutionize the world of technology.',
-      tag: 'Day 3',
-      data: '10:00 AM',
+      desc: 'Challenge your tech IQ with questions spanning AI, robotics, and modern innovation — only the sharpest minds move ahead.',
+      tag: 'Day 2',
+      data: '12:00 PM',
       dataColor: '#FF1493',
       button: 'Book a Seat'
     },
     {
-      icon: 'fa7-solid:robot',
+      icon: 'mdi:shield-lock',
       iconBg: '#FFD700',
       iconColor: '#000000',
       headColor: '#FF1493',
-      title: 'Quantum Radio',
-      desc: 'Experience the power of quantum radio and uncover hidden signals in the noise.',
-      tag: 'Day 4',
-      data: '09:00 AM',
+      title: 'Cybersecurity Quiz',
+      desc: 'Test your ethical hacking instincts and outsmart digital threats in this thrilling cybersecurity knowledge face-off.',
+      tag: 'Day 1',
+      data: '02:00 PM',
       dataColor: '#FFD700',
       button: 'Register Now'
     },
     {
-      icon: 'fa6-solid:vr-cardboard',
+      icon: 'mdi:code-tags',
       iconBg: '#a74affff',
       iconColor: '#FFFFFF',
-      title: 'Quantum Radio',
+      title: 'Code Baazar',
       headColor: '#FFD700',
-      desc: '48-hour coding marathon to build quantum algorithms and applications.',
-      tag: 'Day 5',
-      data: '11:00 AM',
+      desc: 'Showcase your coding skills, crack problem statements, and build creative software solutions in this coding carnival.',
+      tag: 'Day 1',
+      data: '03:00 PM',
       dataColor: '#FF1493',
       button: 'Register Now'
     },
     {
-      icon: 'ion:radio',
+      icon: 'mdi:gamepad-variant',
       iconBg: '#FF1493',
       iconColor: '#FFFFFF',
-      title: 'Quantum Radio',
+      title: 'E-Sports Tournament',
       headColor: '#FFD700',
-      desc: 'Advanced techniques in quantum radio signal processing.',
-      tag: 'Day 6',
-      data: '11:00 AM',
+      desc: 'Battle it out in a high-energy gaming showdown — strategy, speed, and skill will decide the ultimate champion.',
+      tag: 'Day 1',
+      data: '05:00 PM',
       dataColor: '#FF1493',
       button: 'Register Now'
     }
-
-
   ];
+
 
   const [visibleSlides, setVisibleSlides] = useState(3);
   const totalSlides = SlideData.length;

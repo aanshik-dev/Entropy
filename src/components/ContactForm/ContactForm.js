@@ -80,7 +80,7 @@ const ContactForm = () => {
                 Phone
               </div>
               <div className="form-info-des">
-                +91 94xx551024
+                +91 88828 96275
               </div>
             </div>
           </div>

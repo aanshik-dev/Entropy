@@ -8,7 +8,7 @@ import BgParticles from '../../components/BgParticles';
 
 import Hsponsors from '../../components/Hsponsors/Hsponsors';
 import Carousel from '../../components/Carousel/Carousel';
-import HomeSpeakers from '../../components/HomeSpeakers/HomeSpeakers';
+// import HomeSpeakers from '../../components/HomeSpeakers/HomeSpeakers';
 import Merch from '../../components/Merch/Merch';
 
 const Home = () => {
@@ -104,7 +104,7 @@ const Home = () => {
                 <div className="h-hero-updates">
                   <div className="blink"></div>
                   <div className="h-hero-live">
-                    Registration Live Soon
+                    Registration Live
                   </div>
                 </div>
               </div>
@@ -181,7 +181,7 @@ const Home = () => {
               <div className="stat-value">
                 <CountUp
                   from={0}
-                  to={20}
+                  to={5}
                   separator=","
                   direction="up"
                   duration={1}
@@ -229,7 +229,7 @@ const Home = () => {
               <div className="stat-value">
                 ₹<CountUp
                   from={0}
-                  to={50}
+                  to={20}
                   separator=","
                   direction="up"
                   duration={1}
@@ -257,6 +257,8 @@ const Home = () => {
           </div>
         </section>
 
+
+
         <section className='merch-section appear'>
           <div className="main-title">
             <span className='title-dark'>Grab</span>
@@ -269,7 +271,7 @@ const Home = () => {
 
         </section>
 
-        <section className='speaker-section'>
+        {/* <section className='speaker-section'>
           <div className="main-title appear" >
             <span className='title-dark'>Visionary</span>
             <span className='title-light'>Speaker</span>
@@ -279,7 +281,7 @@ const Home = () => {
             <HomeSpeakers />
           </div>
 
-        </section>
+        </section> */}
 
         <section className='sponsors-section'>
           <div className="main-title appear" >

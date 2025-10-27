@@ -6,7 +6,7 @@ import { imgPath } from '../../utils/utilityFunctions'
 
 
 const Footer = () => {
-  const mobile = "+91 94xx551024";
+  const mobile = "+91 88828 96275";
   const mail = "entropy@iiitg.ac.in";
 
   const click = (e, page, sectionId = null) => {

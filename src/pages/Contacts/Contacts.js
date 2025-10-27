@@ -64,7 +64,7 @@ const Contacts = () => {
                 <div className="c-hero-tags">
                   <div className="c-hero-tag c-tag1">
                     <Icon icon="solar:phone-bold-duotone" />
-                    <div>+91 88888 88888</div>
+                    <div>+91 88828 96275</div>
                   </div>
                   <div className="c-hero-tag c-tag2">
                     <Icon icon="dashicons:email" />
@@ -79,7 +79,7 @@ const Contacts = () => {
             </div>
           </div>
         </section>
-{/* 
+        {/* 
         <section className="h-description">
           <div className="main-title">
             <span className='title-dark'>Team</span>

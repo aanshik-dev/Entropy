@@ -13,21 +13,21 @@ const Sponsors = () => {
 
   const sponsorData = [
     {
-      name: "State Bank Of India",
-      img: 'sponsors/sbi.svg',
-      description: "India's largest public sector bank",
+      name: "Spnsorship Partner",
+      img: 'sponsors/partner.webp',
+      description: "Funding Entropy 2025",
       level: 1
     },
     {
-      name: "State Bank Of India",
-      img: 'sponsors/sbi.svg',
-      description: "India's largest public sector bank",
+      name: "Spnsorship Partner",
+      img: 'sponsors/partner.webp',
+      description: "Funding Entropy 2025",
       level: 1
     },
     {
-      name: "State Bank Of India",
-      img: 'sponsors/sbi.svg',
-      description: "India's largest public sector bank",
+      name: "Spnsorship Partner",
+      img: 'sponsors/partner.webp',
+      description: "Funding Entropy 2025",
       level: 1
     },
   ]

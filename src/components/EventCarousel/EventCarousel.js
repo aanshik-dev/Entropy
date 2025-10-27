@@ -10,62 +10,75 @@ const EventCarousel = () => {
 
   const SlideData = [
     {
-      image: 'HomeDes.png',
+      image: 'Opening.webp',
+      pos: '50% 70%',
       icon: 'material-symbols:rocket-launch-rounded',
       title: 'Inauguration Ceremony',
       tagline: 'Where ideas ignite and Entropy begins',
-      desc: 'Begin the journey of Entropy 2025 with a spectacular Inauguration—honoring special guests, unveiling the theme, and electrifying performances.',
+      desc: 'Kickstart Entropy 2025 with an inspiring opening ceremony — featuring special guests, mesmerizing performances, and the grand reveal of this year’s theme!',
       venue: 'Town Hall',
-      date: '10:00 AM'
+      date: '25th Oct'
     },
     {
-      image: 'Event2.png',
-      icon: 'fa6-solid:vr-cardboard',
-      title: 'AI Showdown',
-      tagline: 'Where ideas ignite and Entropy begins',
-      desc: 'Begin the journey of Entropy 2025 with a spectacular Inauguration—honoring special guests, unveiling the theme, and electrifying performances.',
+      image: 'Robo.webp',
+      pos: '50% 60%',
+      icon: 'fa7-solid:robot',
+      title: 'Robo Sangraam',
+      tagline: 'Where metal meets might!',
+      desc: 'Watch bots clash in a thrilling test of design, power, and control! The ultimate arena where only the toughest robots survive and emerge victorious.',
       venue: 'Town Hall',
-      date: '10:00 AM'
+      date: '26th Oct'
+    },
+    {
+      image: 'Protocol1.webp',
+      icon: 'mdi:radar',
+      title: 'Protocol Breach',
+      tagline: 'Decode. Run. Conquer.',
+      desc: 'Embark on a campus-wide cyber hunt filled with riddles, clues, and hidden codes! Only the fastest and smartest code hunters will crack the final riddle and reach the finish line first.',
+      venue: 'Lecture Gallery',
+      date: '25th Oct'
+    },
+    {
+      image: 'esports.png',
+      pos: '50% 40%',
+      icon: 'fa6-solid:vr-cardboard',
+      title: 'FIFA Tournament',
+      tagline: 'Where virtual meets victory!',
+      desc: 'Step onto the digital pitch and battle it out in FIFA — where precision, strategy, and passion define the ultimate gamer. Compete, score, and celebrate your victory!',
+      venue: 'Town Hall',
+      date: '26th Oct'
+    },
+    {
+      image: 'CodeBaazar.webp',
+      icon: 'material-symbols:code-rounded',
+      title: 'Code Baazar',
+      tagline: 'Buy. Sell. Trade your code skills!',
+      desc: 'Step into a coding marketplace full of creative challenges, quirky tasks, and quick problem-solving battles. A fun, fast-paced event where logic meets laughter!',
+      venue: 'Lecture Gallery',
+      date: '25th Oct'
+    },
+    {
+      image: 'TechQuiz.webp',
+      pos: '50% 45%',
+      icon: 'mdi:brain',
+      title: 'Tech Quiz',
+      tagline: 'Test your tech IQ!',
+      desc: 'From AI to algorithms, from gadgets to geniuses — challenge your brain in the ultimate quiz of wit and wisdom. Only the sharpest minds will prevail!',
+      venue: 'Lecture Gallery',
+      date: '25th Oct'
     },
     {
       image: 'Event3.png',
-      icon: 'fa7-solid:robot',
-      title: 'AI Showdown',
-      tagline: 'Where ideas ignite and Entropy begins',
-      desc: 'Begin the journey of Entropy 2025 with a spectacular Inauguration—honoring special guests, unveiling the theme, and electrifying performances.',
-      venue: 'Town Hall',
-      date: '10:00 AM'
+      pos: '50% 55%',
+      icon: 'mdi:shield-lock',
+      title: 'Cyber Security Quiz',
+      tagline: 'Think like a hacker, act like a defender.',
+      desc: 'Dive into the world of cyber threats, cryptography, and digital defense. Prove your cyber awareness and claim the title of ultimate security guru!',
+      venue: 'Lecture Gallery',
+      date: '25th Oct'
     },
-    {
-      image: 'Event4.png',
-      icon: 'fa7-solid:robot',
-      title: 'AI Showdown',
-      tagline: 'Where ideas ignite and Entropy begins',
-      desc: 'Begin the journey of Entropy 2025 with a spectacular Inauguration—honoring special guests, unveiling the theme, and electrifying performances.',
-      venue: 'Town Hall',
-      date: '10:00 AM'
-    },
-    {
-      image: 'Event5.png',
-      icon: 'material-symbols:rocket-launch-rounded',
-      title: 'AI Showdown',
-      tagline: 'Where ideas ignite and Entropy begins',
-      desc: 'Begin the journey of Entropy 2025 with a spectacular Inauguration—honoring special guests, unveiling the theme, and electrifying performances.',
-      venue: 'Town Hall',
-      date: '10:00 AM'
-    },
-    {
-      image: 'Event5.png',
-      icon: 'material-symbols:rocket-launch-rounded',
-      title: 'AI Showdown',
-      tagline: 'Where ideas ignite and Entropy begins',
-      desc: 'Begin the journey of Entropy 2025 with a spectacular Inauguration—honoring special guests, unveiling the theme, and electrifying performances.',
-      venue: 'Town Hall',
-      date: '10:00 AM'
-    },
-
-
   ];
+
 
   const [visibleSlides, setVisibleSlides] = useState(1);
   const totalSlides = SlideData.length;
@@ -210,7 +223,7 @@ const EventCarousel = () => {
                   <div className="ev-slide" style={index === currentIndex ? opacityStyle : {}}>
                     <div className="ev-slide-banner">
                       <div className="slide-image">
-                        <img src={imgPath(slide.image)} alt="Home-img" />
+                        <img style={{ objectPosition: slide.pos }} src={imgPath(slide.image)} alt="Home-img" />
                       </div>
                     </div>
                     <div className="ev-slide-data">

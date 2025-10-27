@@ -44,7 +44,7 @@
   height: 100%;
   opacity: 0.9;
   border-radius: inherit;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .h-sponsor-info {

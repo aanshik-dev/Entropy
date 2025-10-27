@@ -71,7 +71,7 @@ function App() {
         duration={400}
       >
 
-        <Counter />
+        {/* <Counter /> */}
         <div className='mainWrapper'>
           <Navbar activePage={curPage} switchPage={(page) => setCurPage(page)} />
           {loadPage()}
